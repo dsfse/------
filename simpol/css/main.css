@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR);
+/* main css에 default.css 삽입 - 호출 */
+@import url(default.css);
+header {
+    height: 100px;
+    padding: 0 50px;
+}
+header h1 {
+    float: left;
+    margin: 31px 0 0 0;
+}
+header nav {
+    float: right;
+}   
+header nav ul {
+    float: left;
+}
+header nav ul li {
+    float: left;
+}
+header nav ul li a {
+    display: block;
+    padding: 35px 24px;
+    color: #1D1D1D;
+    font-size: 20px;
+    font-weight: 700;
+}
+header nav .market {
+    float: left;
+    display: block;
+    padding: 4px 19px 4px 52px;
+    margin: 32px 0 0 85px;
+    border: 1px solid #13A94F;
+    border-radius: 30px;
+    background-image: url(../images/market_ico.png);
+    background-position: left 20px top 10px;
+    background-repeat: no-repeat;
+    color: #13A94F;
+    font-size: 20px;
+    font-weight: 700;
+}
+.visual {
+    padding: 0 40px;
+    color: #FFFFFF;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+.visual .inner {
+    height: 700px;
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.visual strong {
+    display: block; /* strong 인라인 태그에 margin/padding을 주기 위한 값 */
+    padding: 207px 0 0 0;
+    font-size: 50px;
+    font-weight: 400;
+}
+.visual h2 {
+    margin: 10px 0 29px 0;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.category .tit strong {
+    display: block;
+    margin: 123px 0 6px 0;
+    font-weight: 700;
+}
+.category .tit h2 {
+    margin: 0 0 36px 0;
+    line-height: 1.1; /* strong과 h2 사이의 행간 때문에 발생한 여백 삭제*/
+    font-size: 40px;
+    font-weight: 300;
+}
