@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+@import url(default.css);
+body, section, p, div, ul ,li, h1, h2, h3, h4, h5, h6, nav, button, header, footer { 
+    padding: 0;
+    margin: 0;
+}
+ul, li {
+    list-style: none; 
+}
+.clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+body {
+    min-width: 1280px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color:#3d3d3d;
+    letter-spacing: -0.05em;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.visual h1 {
+    margin: 60px 0 0 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.visual span {
+    margin: 20px 0 0 0;
+    color: #07B53B;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.visual p {
+    margin: 10px 0 20px 0;
+}
+.visual a {
+    display: inline-block;
+    padding: 8px 42px;
+    margin: 0px 11px 20px 11px;
+    border: 1px solid #07B53B;
+    color: #07B53B;
+}
+.wave {
+    width: 1920px;
+    height: 598px;
+    margin: 157px 0;
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.wave h2 {
+    padding: 60px 0 0 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.wave p {
+    color: #ffffff;
+    margin: 20px 0 0 0;
+}
+.wave a {
+    display: inline-block;
+    padding: 8px 42px;
+    margin: 24px 11px 42px 11px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
