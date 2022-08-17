@@ -157,7 +157,9 @@
         overflow: hidden;
     }
 } /* media 종료 */
-
+.banner h2 {
+    display: none; /* 숨김 */
+}
 .banner ul li {
     float: left;
     width: 550px;
@@ -181,7 +183,7 @@
     display: block;
     height: 350px;
     color: #FFF;
-    padding: 69px 0 0 17px;
+    padding: 69px 0 0 50px;
 }
 .banner ul li:first-child a {
     height: 700px;
