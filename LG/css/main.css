@@ -58,6 +58,16 @@ header .tnb button i {
 header .tnb button span {
     display: none;
 }
+header.fixed { /* header가 고정했을때 jquery가 class를 추가 */
+    position: fixed;
+    background-color: #fff;
+}
+header.fixed ul li a {
+    color: #1d1d1d;
+}
+header.fixed button i {
+    color: #1d1d1d;
+}
 
 @media screen and (max-width:640px) {
     header {
@@ -89,6 +99,9 @@ header .tnb button span {
     }
     header .tnb {
         display: none;
+    }
+    header.fixed .gnb button i {
+        color: #1d1d1d;
     }
 }
 /* media 종료 */
@@ -280,4 +293,92 @@ header .tnb button span {
         width: 340px;
     }
 }
+/* media 종료 */
+
+.purpose {
+    position: relative;
+    height: 400px;
+    margin: 0 0 200px 0;
+    background-image: url(../imges/purpose_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+.purpose::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.2);
+    content: "";
+}
+.purpose .inner {
+    position: relative;
+    z-index: 1;
+}
+.purpose h2 {
+    padding: 100px 0 40px 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+.purpose h2 strong {
+    position: relative;
+}
+.purpose h2 strong::before {
+    left: -80px;
+    top: -21px;
+    content: '"';
+}
+.purpose h2 strong::after {
+    right: -34px;
+    bottom: -1px;
+    content: '"';
+}
+.purpose h2 strong::before, .purpose h2 strong::after {
+    position: absolute;
+    color: rgba(255,255,255,0.5);
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 1;
+    
+}
+
+@media screen and (max-width:640px) {
+    .purpose {
+        height: auto;
+        margin: 0 0 50px 0;
+    }
+    .purpose::before {
+        background-color: rgb(0,0,0,0.3);
+    }
+    .purpose h2 {
+        padding: 34px 0 20px 0;
+        font-size: 20px;
+        line-height: 1.05;
+    }
+    .purpose h2 strong::before {
+        left: -99px;
+        top: -13px;
+        content: '"';
+    }
+    .purpose h2 strong::after {
+        right: -33px;
+        bottom: 31px;
+    }
+    .purpose h2 strong::before, .purpose h2 strong::after {
+        position: absolute;
+        color: rgba(255,255,255,0.5);
+        font-size: 70px;
+    }
+    .purpose h2 span {
+        display: block;
+    }
+    .purpose p {
+        padding: 0 0 30px 0 ;
+    }
+}   
 /* media 종료 */
