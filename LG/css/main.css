@@ -515,3 +515,31 @@ footer .fnav li a:first-child {
 footer .finfo {
     margin: 30px 0 0 0;
 }
+
+@media screen and (max-width:640px) {
+    footer {
+        padding: 26px 0 56px 20px;
+    }
+    footer .family {
+        float: none;
+    }
+    footer .family button {
+        width: 118px;
+    }
+    footer .inner {
+        float: none;
+        margin: 20px 0 0 0;
+    }
+    footer .fnav li::after {
+        right: 14px;
+        top: 5px;
+        height: 10px;
+    }
+    footer .fnav li a {
+        padding: 0 29px;
+    }
+    footer .finfo {
+        margin: 10px 0 0 0;
+    }
+}
+/* media 종료 */
