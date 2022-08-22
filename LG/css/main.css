@@ -25,6 +25,9 @@ header h1 {
 }
 header h1 a {
     display: block;
+    width: 105px;
+    height: 46px;
+    background: url(../imges/LGlogo_w.svg) no-repeat center center / 100%;
 }
 header .gnb {
     float: left;
@@ -62,6 +65,9 @@ header.fixed { /* header가 고정했을때 jquery가 class를 추가 */
     position: fixed;
     background-color: #fff;
 }
+header.fixed h1 a {
+    background-image: url(../imges/LGlogo.svg);
+}
 header.fixed ul li a {
     color: #1d1d1d;
 }
@@ -76,8 +82,9 @@ header.fixed button i {
     header h1 {
         margin: 15px 0 0 0;
     }
-    header h1 a img {
-        width: 34px; /* 모바일에서는 로고사이즈가 변경됨*/
+    header h1 a {
+        width: 34px;
+        height: 15px;
     }
     header .gnb {
         float: right;
@@ -382,3 +389,129 @@ header.fixed button i {
     }
 }   
 /* media 종료 */
+.news {
+    margin: 0 0 200px 0;
+}
+.news h2 {
+    display: none; 
+    /* 웹표준 상 section은 반드시 heading태그를 포함해야 하기 때문에 h2를 주고 숨김처리 함 */
+}
+.news ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+    box-shadow: 0 0  10px rgba(0,0,0,0.1);
+}
+.news ul li:last-child {
+    margin-right: 0;
+}
+.news ul li a {
+    display: block;
+}
+.news ul li a img {
+    width: 100%;
+}
+.news ul li a .cate {
+    display: block;
+    margin: 20px 10px 0 10px;
+    font-weight: 700;
+}
+.news ul li a .tit {
+    display: block;
+    margin: 10px 10px 20px 10px;
+    font-size: 17px;
+    font-weight: 400;
+    /* 2줄 고정 */
+    line-height: 1.2;
+    height: 2.6em; /* 행간/줄수 - 단위 em */
+    overflow: hidden;
+}
+.news ul li a .date {
+    display: block;
+    margin: 0 10px 50px 10px;
+    color: #666666;
+}
+
+@media screen and (max-width:640px) {
+    .news {
+        margin: 0 0 50px 0;
+    }
+    .news ul li {
+        display: none;
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    .news ul li:first-child {
+        display: block; 
+        /* 한개의 li만 나오도록 하기 위해서 모든 li를 숨기고 첫번째 li만 남도록 */
+    }
+    .news ul li a .cate {
+        margin: 22px 0 0 10px;
+        font-size: 13px;
+    }
+    .news ul li a .tit {
+        margin: 10px 10px 30px 10px;
+        font-size: 15px;
+        height: auto; /* 행간/줄수 - 단위 em */
+        overflow: visible;
+    }
+    .news ul li a .date {
+        display: block;
+        padding: 0 10px 35px 0;
+    }  
+}
+/* media 종료 */
+
+footer {
+    padding: 42px 0 85px 0;
+    background-color: #303030;
+    color: rgba(255,255,255,0.8);
+}
+footer .family {
+    float: right;
+}
+footer .family button {
+    width: 140px;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    border: 1px solid rgba(255,255,255,0.8);
+    /* button 태그는 높이를 주면 글자가 위아래 가운데 세로 정렬을 함 
+    a였다면 padding이나 lineheight로 세로 정렬 값을 별도로 줘야함 */
+}
+footer .family button span {
+    float: left;
+}
+footer .family button i {
+    float: right;
+}
+footer .inner {
+    float: left;
+}
+footer .fnav li {
+    float: left;
+    position: relative;
+}
+footer .fnav li::after {
+    position: absolute;
+    right: 17px;
+    top: 4px;
+    width: 1px;
+    height: 14px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .fnav li:last-child:after {
+    display: none;
+    /* li중에 마지막 li의 after를 숨김 */
+}
+footer .fnav li a {
+    display: block;
+    padding: 0 38px;
+}
+footer .fnav li a:first-child {
+    padding-left: 0;
+}
+footer .finfo {
+    margin: 30px 0 0 0;
+}
