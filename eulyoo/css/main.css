@@ -299,3 +299,103 @@ header .tnb  ul li button i {
     } 
 
 }
+
+.interview {
+    margin: 0 0 183px 0;
+    padding: 0 0 172px 0;
+    background-color: #F6DFC0;
+}
+.interview h2 {
+    padding: 62px 0 55px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.interview .colgroup {
+    position: relative; /* pic_box 정렬의 기준점 */
+}
+.interview .pic_box {
+    position: absolute;
+    left: 0;
+    top: 52px;
+}
+.interview .cnt_box {
+    margin: 0 0 0 110px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+.interview .cnt_box .inner {
+    margin: 0 44px 0 550px ;
+}
+.interview .cnt_box h3 {
+    padding: 90px 0 18px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.interview .cnt_box p {
+    margin: 0 0 39px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+.interview .cnt_box a {
+    display: block;
+    width: 130px;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+    white-space: nowrap;
+    /* 버튼디자인에서 글자를 높이의 위아래 가운데 배치하기 위해서는 제일 쉬운
+    방법인 행간을 높이값과 동일하게 주는 것이다. */
+    border: 1px solid #3d3d3d;
+}
+.interview .cnt_box a span {
+    float: left;
+}
+.interview .cnt_box a i {
+    margin: 7px 0 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+@media screen and (max-width:640px) {
+    .interview {
+        margin: 0 0 50px 0;
+        padding: 0 0 20px 0;
+    }
+    .interview h2 {
+        padding: 20px 0 20px 0;
+        font-size: 30px;
+    }
+    .interview .pic_box {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+    .interview .pic_box img {
+        width: 100%;
+    }
+    .interview .cnt_box {
+        margin: 0;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .interview .cnt_box .inner {
+        margin: 0;
+    }
+    .interview .cnt_box h3 {
+        padding: 20px 0 10px 0;
+        font-size: 15px;
+    }
+    .interview .cnt_box p {
+        margin: 0 0 20px 0;
+        font-size: 13px;
+    }
+    .interview .cnt_box a {
+        width: 106px;
+    }
+    .interview .cnt_box a i {
+        font-size: 13px;
+    }
+}
