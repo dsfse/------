@@ -10,7 +10,7 @@
     <title>을유문화사</title>
 </head>
 <body>
-    <div class="wrap"> <!-- 홈페이지 전체를 감싸는 요소 -->
+    <div id="wrap"> <!-- 홈페이지 전체를 감싸는 요소 -->
         <header>
             <div class="wrapper">
                 <h1><a href="#">을유문화사 로고</a></h1>
@@ -27,15 +27,15 @@
                 </nav>
                 <div class="tnb">  
                     <ul>
-                        <li>
+                        <li class="mypage">
                             <button>
-                                <span>마이페이지</span>
+                                <span>회원서비스 열기</span>
                                 <i class="material-symbols-outlined">person</i>
                             </button>
                         </li>
-                        <li>
+                        <li class="search">
                             <button>
-                                <span>검색</span>
+                                <span>검색 열기</span>
                                 <i class="material-symbols-outlined">search</i>
                             </button>
                         </li>
@@ -54,11 +54,74 @@
                     기틀을 다져 왔습니다.</p>
             </div>
         </section>
-        <section class="book">
-            <div class="wrapper"></div>
+        <section class="book clearfix">
+            <div class="wrapper">
+                <div class="tit clearfix">
+                    <h2>을유 도서</h2>
+                    <p>을유문화사에서 <br /> 발간한 도서 목록입니다.</p>
+                    <div class="btn">
+                        <button>
+                            <span>이전 책 보기</span>
+                            <i class="material-symbols-outlined">arrow_back_ios</i>
+                        </button>
+                        <button>
+                            <span>다음 책 보기</span>
+                            <i class="material-symbols-outlined">arrow_forward_ios</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">
+                                <img src="images/book01.png" alt="서경 책 표지" />
+                                <strong class="subject">서경</strong>
+                                <span class="writer">지은이 미상 ,이세동</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book02.png" alt="몸은 기억한다 책 표지" />
+                                <strong class="subject">몸은 기억한다</strong>
+                                <span class="writer">베셀 반 데어 콜크 ,제효영</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book03.png" alt="살며 사랑하며 기르며책 표지" />
+                                <strong class="subject">살며 사랑하며 기르며</strong>
+                                <span class="writer">재키 콜리스 하비 ,김미정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book04.png" alt="소크라테스 헬스클럽 책 표지" />
+                                <strong class="subject">소크라테스 헬스클럽</strong>
+                                <span class="writer">현상필</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book05.png" alt="사랑하는 사람과 저녁 식탁에서 죽음을 이야기합시다 책 표지" />
+                                <strong class="subject">사랑하는 사람과 저녁 식탁에서 죽음을 이야기합시다</strong>
+                                <span class="writer">마이클 헵 ,박정은</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/book06.png" alt="앙리 카르티에 브레송책 표지" />
+                                <strong class="subject">앙리 카르티에 브레송</strong>
+                                <span class="writer">피에르 아술린 ,정재곤</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="interview">
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <h2>을유 인터뷰 </h2>
+            </div>
         </section>
         <section class="news">
             <div class="wrapper"></div>
