@@ -9,12 +9,14 @@ header {
     height: 100px;
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: 0.5s;
 }
 header .logo  {
     float: left;
     margin: 28px 157px 0 0;
     font-size: 0;
     line-height: 0;
+    transition: 0.5s;
 }
 header .gnb  {
     float: left;
@@ -32,6 +34,7 @@ header .gnb > ul > li > a {
     white-space: nowrap;
     /* 행간으로 위아래 여백을 처리해버리는 경우 절대 2줄이 
     되지 못하도록 white-space: nowrap(줄바꿈 금지)*/
+    transition: 0.5s;
 }
 header .gnb > ul > li > ul {
     /* 2차메뉴 */
@@ -57,6 +60,22 @@ header .tnb a span {
 header .tnb a i {
     font-size: 26px;
     margin-left: 10px;
+}
+header.fixed {
+    position: fixed;
+    height: 100px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+header.fixed .logo  {
+    margin-top: 28p;
+}
+header.fixed .gnb > ul > li > a {
+    line-height: 100px;
+}
+header.fixed .tnb {
+    margin: 36px 0 0 0;
+    transition: 0.5s;
 }
 
 @media screen and (max-width:640px){
@@ -87,6 +106,18 @@ header .tnb a i {
     }
     header .tnb {
         display: none;
+    }
+    header.fixed {
+        height: 45px;
+    }
+    header.fixed .logo  {
+        margin-top: 15px;
+    }
+    header.fixed .gnb > ul > li > a {
+        line-height: 100px;
+    }
+    header.fixed .tnb {
+        margin: 36px 0 0 0;
     }
 }
 
@@ -362,52 +393,447 @@ header .tnb a i {
 
 @media screen and (max-width:640px){
     .step {
-        height: 600px;
-        margin: 50px 0 0 0;
-        background: url(../images/step_bg.png) no-repeat center center / cover;
-        color: #fff;
+        height: auto;
+        padding: 0 0 81px 0;
+        margin: 70px 0 0 0;
     }
     .step .tit {
-        padding: 70px 0 50px 0;
+        padding: 40px 0 24px 0;
     }
     .step .tit h2 {
-        float: left;
-        color: #fff;
-        font-size: 50px;
-        font-weight: 700;
+        float: none;
+        font-size: 30px;
     }
     .step .tit p {
-        float: left;
-        margin: 35px 0 0 20px;
-        font-size: 20px;
+        float: none;
+        margin: 0;
+        font-size: 13px;
     }
     .step .ctrl {
+        display: block;
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+    .step .ctrl button span {
         display: none;
     }
-    .step .list ol li {
-        float: left;
-        width: 200px;
-        height: 220px;
-        margin: 0 40px 0 0;
-        padding: 10px 10px 0 10px;
-        border: 1px solid rgba(255,255,255,0.2);
+    .step .ctrl button {
+        width: 30px;
+        height: 30px;
+        margin: 0 7px;
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.8);
     }
-    .step .list ol li:last-child {
-        margin-right: 0;
+    .step .ctrl button i {
+        margin: 5px 0 5px 0;
+        font-size: 20px;
+        color: rgba(255,255,255,0.8);
+    }
+    .step .list {
+        overflow: hidden;
+        position: relative;
+        height: 170px;
+    }
+    /*  
+        jquery에서 ol을 움직일 예정 그럼 반드시 ol이 absolut이어야 함
+        감싸는 요소는 overflow가 들어감 긴 ol을 일부만 보이게 하기 위해서
+        ol이 absolute면 감싸는 요소가 절대 인식을 못함
+        그래서 감싸는 요소는 반드시 ol의 높이감을 가지고 있어야함
+    */
+    .step .list ol {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .step .list ol li {
+        width: 200px;
+        height: 170px;
+        margin: 0 16px 0 0;
+        padding: 10px 10px 0 10px;
     }
     .step .list ol li strong {
-        display: block;
-        color: rgba(255,255,255,0.6);
-        font-size: 50px;
-        font-weight: 700;
+        font-size: 30px;
     }
     .step .list ol li h3 {
-        margin: 10px 0 20px 0;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 15px;
     }
-    .step .list ol li p {
-        color: rgba(255,255,255,0.8);
+  
+}
+
+@media screen and (max-width:640px){
+    .step .list ol li {
+        height: 170px;
+    }
+}
+
+.news {
+    padding: 0 0 150px 0;
+    background-color: #DCE5EA;
+}
+.news .inner {
+    position: relative;
+}
+.news .tit {
+    padding: 150px 0 50px 0;
+}
+.news .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.news .tit p {
+    float: left;
+    margin: 35px 0 0 20px;
+    font-size: 20px;
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 175px;
+}
+.news .more a {
+    display: block;
+    width: 159px;
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px solid #3D3D3D;
+}
+.news .more a span {
+    font-size: 20px;
+    float: left;
+}
+.news .more a i {
+    float: right;
+    font-size: 29px;
+}
+.news .more a:hover {
+    color: #00AE4D;
+    border-bottom-color:#00AE4D ;
+}
+.news ul li {
+    float: left;
+    width: 560px;
+}    
+.news ul li a {
+    display: block;
+    height: 151px;
+    padding: 30px 30px 0 30px;
+    background-color: #fff;
+}
+.news ul li a:hover {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+.news ul li a .pic {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.news ul li a .pic img {
+    transition: 0.5s;
+}
+.news ul li a:hover .pic img {
+    transform: scale3d(1.2,1.2,1);
+}
+.news ul li a .subject {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 20px;
+    font-weight: 700;
+    /* 1줄 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* 2줄 
+       line-height:1.5;
+       height:3em;
+       overflow:hidden;
+    */
+}
+.news ul li a .date {
+    display: block;
+    color: #666;
+}
+.news ul li a .date span:first-child {
+    position: relative;
+    margin: 0 28px 0 0;
+}
+.news ul li a .date span:first-child::after {
+    position: absolute;
+    right: -18px;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: #CCCCCC;
+    content: "";
+}
+.news ul li:first-child {
+    width: 800px;
+    margin: 0 40px 0 0;
+}
+.news ul li:first-child a {
+    height: 342px;
+}
+.news ul li:first-child a .pic {
+    float: left;
+}
+.news ul li:first-child a .inner2 {
+    float: right;
+    width: 330px;
+}
+.news ul li:first-child a .subject {
+    margin: 30px 0 0 0;
+    /* 1줄 -> 2줄 
+        white-space: nomal;
+        line-height: 1.5;
+        height: 3em;
+    */
+}
+.news ul li:first-child a .inner2 .content {
+    display: block;
+    margin: 20px 0 20px 0;
+    /* 6줄 */
+    line-height: 1.5;;
+    height: 9em;
+    overflow: hidden;
+}
+.news ul li:nth-child(2) {
+    margin: 0 0 40px 0;
+}
+
+@media screen and (max-width:640px){
+    .news {
+        padding: 0 0 72px 0;
+    }
+    .news .tit {
+        padding: 15px 0 20px 0;
+    }
+    .news .tit h2 {
+        float: none;
+        font-size: 30px;
+    }
+    .news .tit p {
+        float: none;
+        margin: 10px 0 0 0;
+        font-size: 13px;
+    }
+    .news .more {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 25px 0 0 0;
+        text-align: center;
+    }
+    .news .more a {
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        padding: 0 5px 0 5px;
+        line-height: 40px;
+        border: 1px solid #3D3D3D;
+        border-radius: 20px;
+    }
+    .news .more a span {
+        font-size: 15px;
+    }
+    .news .more a i {
+        margin: 10px 0 0 0;
+        font-size: 20px;
+    }
+    .news ul li {
+        float: none;
+        width: auto;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+    .news ul li:last-child {
+        border-bottom: 0;
+    }
+    .news ul li a {
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+    }
+    .news ul li a .pic {
+        display: block;
+        margin: 0 0 13px 0;
+    }
+    .news ul li a .pic img {
+        width: 100%;
+    }
+    .news ul li a .subject {
+        margin: 20px 0 13px 0;
+        font-size: 15px;
+        font-weight: 700;
+        /* 1줄 */
+        white-space: inherit;
+        overflow: visible;
+    }
+    .news ul li a .date span:first-child {
+        margin: 0 28px 0 0;
+    }
+    .news ul li a .date span:first-child::after {
+        right: -16px;
+        top: 6px;
+        height: 8px;
+    }
+    .news ul li a .date {
+        margin: 0 0 20px 0;
+    }
+    .news ul li:first-child {
+        width: auto;
+        margin: 0;
+    }
+    .news ul li:first-child a {
+        height: auto;
+    }
+    .news ul li:first-child a .pic {
+        float: none;
+    }
+    .news ul li:first-child a .inner2 {
+        float: none;
+        width: auto;
+    }
+    .news ul li:first-child a .subject {
+        margin: 0;
+    }
+    .news ul li:first-child a .inner2 .content {
+        display: block;
+        margin: 0 0 10px 0;
+        /* 6줄 */
+        height: 6em;
+        overflow: hidden;
+    }
+    .news ul li:nth-child(2) {
+        margin: 0;
+    }
+}
+
+footer {
+    background-color: #3D3D3D;
+    color: rgba(255,255,255,0.7);
+}
+footer .inner {
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+footer .family button {
+    width: 200px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+footer .family button span {
+    float: left;
+}
+footer .family button i {
+    float: right;   
+    margin: 2px 0 0 0;
+    font-size: 20px;
+}
+footer .family button.close {
+    display: none;
+}
+footer .family ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 35px;;
+    width: 100%;
+    box-shadow: -3px -3px 10px rgba(0,0,0,0.1);
+    
+}
+footer .family.fa_open ul {
+    display: block;
+}
+footer .family.fa_open button.close {
+    display: block;
+}
+footer .family.fa_open button.open {
+    display: none;
+}
+footer .family ul li {
+    border-bottom: 1px solid #CCCCCC;
+}
+footer .family ul li:last-child {
+    border-bottom: 0;
+}
+footer .family ul li a {
+    display: block;
+    padding: 0 0 0 10px;
+    line-height: 35px;
+    background-color: #fff;
+    color: #3D3D3D;
+}
+footer .family ul li a:hover {
+    color: #00AE4D;
+    font-weight: 700;
+}
+footer .fnav {
+    padding: 50px 0 0 0;
+}
+footer .fnav li {
+    position: relative;
+    float: left;
+    margin: 0 34px 0 0;
+}
+footer .fnav li::after {
+    position: absolute;
+    right: -18px;
+    top: 6px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+}
+footer .fnav li:last-child::after {
+    display: none;
+}
+footer .fnav li.privacy {
+    font-weight: 700;
+}
+footer .finfo {
+    margin: 27px 0 10px 0;
+}
+footer .copyright {
+    padding: 0 0 89px 0;
+}
+
+@media screen and (max-width:640px){
+    footer .family {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 180px;
+        margin: 0 auto;
+        padding: 34px 0 0 0;
+    }
+    footer .family button {
+        width: 180px;
+    }
+    footer .family button i { 
+        font-size: 16px;
+    }
+    footer .fnav {
+        padding: 30px 0 0 0;
+    }
+    footer .fnav li {
+        margin: 0 30px 0 0;
+    }
+    footer .fnav li::after {
+        right: -17px;
+        top: 5px;
+        height: 8px;
+    }
+    footer .finfo {
+        margin: 30px 0 10px 0;
+    }
+    footer .copyright {
+        padding: 0 0 87px 0;
     }
     
 }
