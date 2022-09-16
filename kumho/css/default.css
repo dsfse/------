@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* 모든 태그의 스타일 초기화 */
+
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
 body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd {
     padding: 0;
@@ -18,7 +19,7 @@ em, address {
     font-style: normal;
 }
 /* 항목 앞에 동그라미 삭제 */
-ul, li, ol {
+ul, ol, li {
     list-style: none;
 }
 button {
@@ -34,3 +35,4 @@ button {
        자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
     cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
 }
+
