@@ -149,6 +149,7 @@ html, body {
        --> 높이값을 주면 됨.
        */
 }
+
 .header .gnb > ul > li > ul > li > a {
     display: block;
     line-height: 36px;
@@ -256,7 +257,6 @@ html, body {
 .header.menu_open .lang button i {
     color: #666;
 }
-
 @media screen and (max-width:640px){
     .header {
         height: 45px;
@@ -271,18 +271,18 @@ html, body {
     .header .gnb .open {
         display: block; /* 모바일에서만 나타남 */
         float: right;
-        padding: 11px 20px; /* 버튼의 크기를 키우기 위해 여백을 padding으로 줌 */
+        padding: 11px 20px; /* 버튼을 크기를 키우기 위해서 여백을 padding으로 줌 */
     }
     .header .gnb .open i {
         font-size: 22px;
     }
     .header .gnb .close {
-        display: none;
+        display: none; /* 모바일에서만 나타남 */
         position: absolute;
         right: 0;
         top: 0;
         /* 코딩에 순서상 메뉴 뒤에 있지만 오른쪽 상단에 배치하기 위해서 */
-        padding: 11px 20px; 
+        padding: 11px 20px;
     }
     .header .gnb .close i {
         font-size: 22px;
@@ -291,7 +291,6 @@ html, body {
         display: none;
         margin: 0;
         padding: 67px 20px 0 20px;
-        
     }
     .header .gnb > ul > li {
         width: auto;
@@ -306,7 +305,7 @@ html, body {
     .header .gnb > ul > li > a::after {
         position: absolute;
         right: 0;
-        top: 10px;
+        top: 9px;
         color: #666;
         font-family: 'Material Symbols Rounded';
         font-weight: normal;
@@ -323,6 +322,10 @@ html, body {
         -webkit-font-smoothing: antialiased;
         content: "\e5cf";
     }
+    /* hover이 요소를 클릭해도 스타일이 적용됨 */
+    .header .gnb > ul > li:hover > a > span::after {
+        display: none;
+    }
     .header .gnb > ul > li > ul {
         display: none; /* 2차메뉴 */
         position: relative;
@@ -331,13 +334,16 @@ html, body {
         width: auto;
         height: auto;
         padding: 5px 0 5px 34px;
-        margin: 7px 0;
-        border-top: 1px solid #EDEDED ;
-        border-bottom: 1px solid #EDEDED ;
+        margin: 5px 0;
+        border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+    }
+    .header .gnb > ul > li > ul > li > a {
+        font-size: 15px;
     }
     /* 서브메뉴가 열렸을때 */
     .header .gnb > ul > li.sub_open > ul {
-        display: block;
+        display: block; 
     }
     .header .gnb > ul > li.sub_open > a {
         color: #ED1C24;
@@ -346,9 +352,6 @@ html, body {
     .header .gnb > ul > li.sub_open > a::after {
         color: #ED1C24;
         content: "\e5ce";
-    }
-    .header .gnb > ul > li > ul > li > a {
-        font-size: 15px;
     }
     .header .lang {
         display: none;
@@ -379,7 +382,7 @@ html, body {
     }
     .header .lang ul li:first-child {
         position: relative;
-        margin: 0 20px 0 0 ;
+        margin: 0 17px 0 0;
     }
     .header .lang ul li:first-child::after {
         position: absolute;
@@ -387,16 +390,11 @@ html, body {
         top: 6px;
         width: 1px;
         height: 8px;
-        background-color: #666;
+        background-color: #ccc;
         content: "";
     }
     .header .lang ul li a {
         line-height: 1.5;
-    }
-    .header .lang ul li a:hover, 
-    .header .lang ul li.active a {
-        color: #ED1C24;
-        font-weight: 700;
     }
     /* lang가 열렸을때 */
     .header .lang.lang_open ul {
@@ -412,10 +410,11 @@ html, body {
     /*
         모바일에서 메뉴가 열리면 
         header .menu_mobile 클래스 추가
-        1. gnb open 숨김 / gnb close 나타남
+        1. gnb open 숨김
+           gnb close 나타남
         2. 흰색이 전체에 꽉차게 들어감
         3. gnb ul 나타남
-        4. logo의 이미지가 변경
+        4. logo가 이미지 변경
         5. lang 나타남
     */
     .header.menu_mobile {
@@ -429,7 +428,7 @@ html, body {
         height: 100%;
         background-color: #FFF;
         content: "";
-        /* position: fixed는 무조건 body를 기준으로만 정렬함 */
+        /* position fixed는 무조건 body를 기준으로만 정렬함 */
     }
     .header.menu_mobile .logo a {
         background-image: url(../images/common/logo.svg);
@@ -440,10 +439,12 @@ html, body {
     .header.menu_mobile .gnb .close {
         display: block; 
     }
+    
     .header.menu_mobile .gnb > ul {
         display: block;
     }
     .header.menu_mobile .lang {
         display: block;
     }
-}
+
+}/* header 반응형 종료 */
