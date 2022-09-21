@@ -492,7 +492,7 @@ html, body {
     bottom: 40px;
     width: 100%;
     padding: 16px 0 21px 21px;
-    border: 1px soild rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.6);
     border-bottom-width: 0;
     border-radius: 5px 5px 0 0;
     background-color: #121212;
