@@ -56,6 +56,10 @@
 }
 
 .lnb {
+    position: relative;
+    z-index: 90;
+    /* lnb가 콘텐츠에 깔리지 않도록 하기 위해서 z-index를 줌
+       콘텐츠에 z-index를 주면 절대 90이상을 주면 x */
     height: 50px;
     line-height: 50px;
     /* 높이가 제한되고 요소들이 좌우로 배치되어 있는 디자인은 높이만큼 행간을 줌 */
@@ -156,6 +160,96 @@
     display: flex;
 }
 
+@media screen and (max-width:640px){
+    .lnb {
+        height: 35px;
+        line-height: 35px;
+        /* 높이가 제한되고 요소들이 좌우로 배치되어 있는 디자인은 높이만큼 행간을 줌 */
+    }
+    .lnb .wrapper {
+        /* wrapper의 기본 여백을 lnb에서는 삭제 */
+        margin: 0;
+    }
+    .lnb .menu {
+        width: calc(100% - 35px);
+    }
+    .lnb .menu .home {
+        width: 35px;
+        border-left: 0;
+    }
+    .lnb .menu .home i {
+        font-size: 20px;
+        margin: 8px 0 0 0;
+    }
+    /*
+            home : 35px
+            1차메뉴 : depth
+            2차메뉴 : depth
+        lnb_btn - 35px
+
+        lnb_wrap - 100%
+            - menu : 100% - 35px
+                - 자식에게는 menu의 넓이가 100%
+                - home : 35px 고정
+                - depth 1차 메뉴 : (100% - 35px)의 절반
+                - depth 2차 메뉴 
+            - lnb_btn : 35px 고정
+
+        home,lnb_btn의 넓이는 고정
+        depth의 넓이는 가변 - 전체넓이(100%)에서 home,lnb_btn의 넓이를 뺸 나머지의 절반씩
+    */
+
+    .lnb .menu .depth {
+        width: clac((100% - 35px) / 2);
+    }
+    .lnb .menu .depth button {
+        padding: 0 10px 0 13px;
+    }
+    .lnb .menu .depth button i {
+        font-size: 20px;
+    }
+    .lnb .menu .depth ul {
+        top: 35px;
+    }
+    .lnb .menu .depth ul li a {
+        line-height: 25px;
+    }
+    .lnb .lnb_btn ul li {
+        width: 35px;
+        border-left: 0;
+    }
+    .lnb .lnb_btn ul li.print {
+        display: none;
+        /* 모바일 인쇄 버튼 안보임 */
+    }
+    .lnb .lnb_btn ul li:last-child {
+        border-right: 0;
+    }
+    .lnb .lnb_btn ul li button {
+        height: 35px; /* lnb 높이 */
+    }
+    .lnb .lnb_btn ul li button i {
+        margin: 8px 0 0 0;
+        font-size: 20px;
+    }
+    
+    /*
+        1차메뉴/2차메뉴가 열렸을때
+        1. btn_open 사라짐
+        2. ul이 나타남
+        3. btn_close 나타남
+    */
+    .lnb .menu .depth.open .btn_open {
+        display: none;
+    }
+    .lnb .menu .depth.open ul {
+        display: block;
+    }
+    .lnb .menu .depth.open .btn_close {
+        display: flex;
+    }
+}
+
 .container {
     min-height: 300px;
     /* 
@@ -165,8 +259,25 @@
         그래서 min-height를 통해 최소 높이를 주고 코딩함
      */
 }
-
-.container .sub_tit h2 {
+.container .sub_tit {
+    margin: 50px 0 50px 0;
+}
+.container .sub_tit h2 { 
     font-size: 30px;
     font-weight: 700;
+}
+.container #contents {
+    margin: 0 0 100px 0;
+}
+
+@media screen and (max-width:640px){
+    .container .sub_tit {
+        margin: 30px 0 17px 0;
+    }
+    .container .sub_tit h2 { 
+        font-size: 20px;
+    }
+    .container #contents {
+        margin: 0 0 50px 0;
+    }
 }
