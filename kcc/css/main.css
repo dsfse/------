@@ -1,0 +1,286 @@
+@import url(default.css);
+
+.visual h2 {
+    display: none;
+}
+.visual {
+    color: #FFF;
+}
+.visual .visual_01 {
+    width: 50%;
+    height: 800px;
+    background : url(../images/visual_bg01.png) no-repeat center center / cover;
+}
+.visual .visual_02 {
+    width: 50%;
+    height: 800px;
+    background : url(../images/visual_bg02.png) no-repeat center center / cover;
+}
+.visual  .visual_bg .visual_01 {
+    padding: 170px 460px 0 0;
+}
+.visual  .visual_bg .visual_02 {
+    padding: 330px 0 0 460px;
+}
+.visual .visual_01 .inner {
+    padding: 61px 0 0 60px ;
+    width: 500px;
+    height: 300px;
+    background-color: #B70002;
+}
+.visual  .visual_bg .visual_01 .inner span {
+    font-size: 35px;
+}
+.visual  .visual_bg .visual_01 .inner p {
+    margin: 15px 0 42px 0;
+}
+.visual .visual_02 .inner {
+    padding: 61px 0 0 60px;
+    width: 500px;
+    height: 300px;
+    background-color: #023665;
+}
+.visual  .visual_bg .visual_02 .inner span {
+    font-size: 35px;
+}
+.visual  .visual_bg .visual_02 .inner p {
+    margin: 15px 0 0 0;
+}
+.visual .visual_bg .visual_01 {
+    float: right;
+}
+
+
+@media screen and (max-width:640px){
+    .visual .visual_01 {
+        width: auto;
+        height: 200px;
+    }
+    .visual .visual_02 {
+        width: auto;
+        height: 200px;
+    }
+    .visual  .visual_bg .visual_01 {
+        padding: 95px 0 0 0;
+    }
+    .visual  .visual_bg .visual_02 {
+        padding: 0;
+    }
+    .visual .visual_01 .inner {
+        margin: 0 0 0 76px;
+        padding: 20px 0 0 20px;
+        width: auto;
+        height: 105px;
+    }
+    .visual  .visual_bg .visual_01 .inner span {
+        font-size: 18px;
+    }
+    .visual  .visual_bg .visual_01 .inner p {
+        display: none;
+        margin: 0;
+    }
+    .visual .visual_02 .inner {
+        margin: 0 76px 95px 0;
+        padding: 20px 0 0 100px;
+        width: auto;
+        height: 105px;
+    }
+    .visual  .visual_bg .visual_02 .inner span {
+        font-size: 18px;
+    }
+    .visual  .visual_bg .visual_02 .inner p {
+        display: none;
+        margin: 0;
+    }
+    .visual .visual_bg .visual_01 {
+        float: none;
+    }
+}
+
+.social {
+    background-image: url(../images/social_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    color: #FFF;
+}
+.social .social_tit {
+    text-align: center;
+}
+.social h3 {
+    padding: 204px 0 0 0;
+    font-weight: 700;
+}
+.social strong {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+.social .mobile_txt {
+    display: none;
+}
+.social .icon ul {
+    display: flex;
+    justify-content: space-around;
+}
+.social .icon ul li i {
+    margin: 70px 0 8px 0;
+    font-size: 50px;
+}
+.social .icon ul li span {
+    display: block;
+    font-size: 17px;
+}
+
+@media screen and (max-width:640px){
+    .social {
+        width: auto;
+        height: auto;
+    }
+    .social h3 {
+        padding: 74px 0 0 0;
+    }
+    .social strong {
+        font-size: 25px;
+        margin: 10px 0 0 0;
+    }
+    .social .mobile_txt {
+        display: block;
+    }
+    .social .pc_txt {
+        display: none;
+        margin: 6px 0 0 0;
+    }
+    .social .icon ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .social .icon ul li i {
+        margin: 42px 0 5px 0;
+        font-size: 30px;
+    }
+    .social .icon ul li span {
+        margin: 0 0 90px 0;
+        font-size: 13px;
+    }
+}
+
+
+.people {
+    background-image: url(../images/people_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+.people .people_tit {
+    padding: 204px 0 0 0;
+    color: #FFF;
+    text-align: center;
+}
+.people .people_tit strong {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+.people .inner ul li {
+    float: left;
+    width: 230px;
+    height: 316px;
+    margin: 83px 0 0 20px;
+    padding: 51px 0 0 30px;
+    background-color: #FFF;
+}
+.people .inner ul li:first-child {
+    width: 510px;
+    height: 316px;
+    margin: 83px 20px 0 0;
+    background-color: #023665;
+    color: #FFF;
+    padding-left: 50px;
+}
+.people .inner ul li strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+}
+.people .inner ul li span {
+    display: block;
+    padding: 25px 0 56px 0;
+}
+.people .inner ul li a {
+    display: flex;
+    align-items: center;
+}
+.people .inner ul li a p {
+    margin: 0 5px 0 0;
+}
+.people .inner ul li a i {
+    font-size: 16px;
+}
+
+@media screen and (max-width:640px){
+    .people {
+        width: auto;
+        height: 516px;
+    }
+    .people .people_tit {
+        padding: 70px 0 0 0;
+    }
+    .people .people_tit strong {
+        font-size: 25px;
+    }
+    .people .people_tit span {
+        margin: 5px 0 0 0;
+    }
+    .people .inner ul li {
+        width: 96px;
+        height: 60px;
+        margin: 16px 15px 0 0; 
+        padding: 19px 0 19px 7px;
+    }
+    .people .inner ul li:first-child {
+        width: 320px;
+        height: 146px;
+        margin: 67px 20px 0 0;
+        padding: 20px 0 28px 10px;
+        background-color: #023665;
+        color: #FFF;
+        padding-left: 50px;
+    }
+    .people .inner ul li:nth-child(2) ul li span ,
+    .people .inner ul li:nth-child(3) ul li span ,
+    .people .inner ul li:last-child ul li span {
+        display: none;
+    }
+    .people .inner ul li:nth-child(2) ul li a p,
+    .people .inner ul li:nth-child(3) ul li a p,
+    .people .inner ul li:last-child ul li a p {
+        display: none;
+    }
+    .people .inner ul li strong {
+        font-size: 20px;
+    }
+    .people .inner ul li span {
+        display: none;
+        padding: 25px 0 56px 0;
+    }
+    .people .inner ul li:first-child span {
+        display: block;
+        padding: 0 0 27px 0;
+    }
+    .people .inner ul li a {
+        display: flex;
+        align-items: center;
+    }
+    .people .inner ul li a p {
+        display: none;
+    }
+    .people .inner ul li a i {
+        display: none;  
+    }
+
+}
