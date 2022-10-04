@@ -14,4 +14,10 @@ $(document).ready(function(){
         $('.notice ul li').removeClass('active');
         $(this).addClass('active');
     });
-});
+
+    
+    /* 스크롤 애니메이션 라이브러리 */
+    AOS.init();
+
+
+});//document.ready
