@@ -1,0 +1,103 @@
+/* content */
+
+.content {
+    padding: 103px 0;
+    background-color: #F3F3F3;
+}
+.content .content_txt {
+    position: relative;
+    float: left;
+    width: 1050px;
+    height: 1300px;
+    margin: 0 55px 40px 55px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.content .content_txt span {
+    display: block;
+    margin: 40px 0 40px 0;
+    font-size: 30px;
+    text-align: center;
+}
+.content .content_txt span .rest1 {
+    position: absolute;
+    left: 186px;
+    top: -15px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #00AE4D;
+    content: "";
+}
+.content .content_txt span .rest2 {
+    position: absolute;
+    right: 186px;
+    top: -15px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #00AE4D;
+    content: "";
+}
+.content .content_txt span strong {
+    font-weight: 700;
+    color: #00AE4D;
+}
+.content .content_txt p {
+    margin: 40px 40px 0 40px;
+    font-size: 20px;
+    text-align: justify;
+    word-break: normal;
+}
+.content .content_txt p strong {
+    font-weight: 700;
+    color: #00AE4D;
+}
+.content .content_img .pic {
+    display: flex;
+    flex-direction: column;
+    width: 705px;
+    height: 630px;
+}
+.content .content_img .conent_img01 {
+    margin: 0 0 40px 0;
+}
+
+@media screen and (max-width:640px){
+    .content {
+        padding: 30px 0;
+    }
+    .content .content_txt {
+        float: none;
+        width: auto;
+        height: auto;
+        margin: 0 20px 50px 20px;
+    }
+    .content .content_txt span {
+        display: inline-block;
+        margin: 20px 0 20px 0;
+        font-size: 15px;
+    }
+    .content .content_txt span .rest1 {
+        left: 343px;
+        top: -19px;
+        font-size: 45px;
+    }
+    .content .content_txt span .rest2 {
+        right: 343px;
+        top: -19px;
+        font-size: 45px;
+    }
+    .content .content_txt p {
+        margin: 18px 11px 0 11px;
+        font-size: 13px;
+    }
+    .content .content_img .pic {
+        width: auto;
+        height: auto;
+    }
+    .content .content_img .pic .conent_img01 {
+        margin: 30px 0 30px 0;
+    }
+    .content .content_img .pic .conent_img02 {
+        margin: 0 0 30px 0;
+    }
+}
