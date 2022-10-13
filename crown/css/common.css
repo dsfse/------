@@ -1,12 +1,10 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 html, body {
     color: #3D3D3D;
     line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    /* 폰트 적용 우선순위
-       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
-       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
     font-size: 15px;
     font-weight: 400;
     /* letter-spacing: -0.05em; */
@@ -15,31 +13,33 @@ html, body {
 #wrap { /* id="wrap" */
     overflow: hidden;
     position: relative;
-    min-width: 1400px;
-    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
-       최소 넓이를 줌 */
+    min-width: 320px;
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
-    width: 1400px;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
     margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400px 이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점 
+       부드럽게 여백을 유지하면서 전환 
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌 */
+}
+@media screen and (max-width:1000px){
+    html, body {
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:640px){
-    /* 640px 이하의 디바이스에서만 아래 css가 적용
-      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
-      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
-      구현방식이 달라서 고정값을 모두 삭제 */
     html, body {
         font-size: 13px;
     }
-    #wrap {
-        min-width: 350px;
-    }
-    .wrapper {
-        width: auto;
-        margin: 0 20px;
-    }
 }/* media 종료 */
+
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
 
@@ -69,418 +69,4 @@ html, body {
 }
 .skip_nav a:focus {
     top: 0;
-}
-
-.haeder {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 300; 
-    /* haeder와 서브메뉴(lnb)와 footer에서 풀다운 메뉴가  
-       중복될때 haeder가 맨 위에 올라가려고 제일 높은 숫자
-       haeder - 300 , lnb - 200 , footer - 100 */
-    width: 100%;
-    height: 100px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    color: #FFF;
-}
-.haeder .logo {
-    float: left;
-    margin: 31px 0 0 30px;
-}
-.haeder .logo a {
-    display: block;
-    width: 157px;
-    height: 35px;
-    background-image: url(../images/common/logo_w.svg); 
-    background-repeat: no-repeat;
-    background-position: center center; 
-    background-size: contain;
-    font-size: 0;
-    line-height: 0;
-}
-
-@media screen and (min-width:641px){
-    /* 브라우저 사이즈 641px 이상에서만 적용하는 스타일 */
-    .haeder .gnb {
-        float: right;
-        margin: 0 30px 0 0;
-    }
-    .haeder .gnb .gnb_open {
-        display: none; /* 모바일에서만 보임 */
-    }
-    .haeder .gnb .gnb_close {
-        display: none; /* 모바일에서만 보임 */
-    }
-    .haeder .gnb > ul > li {
-        float: left;
-        width: 204px;
-    }
-    .haeder .gnb > ul > li > a { /* 1차메뉴 */
-        display: block;
-        line-height: 100px;
-        font-size: 20px;
-        text-align: center;
-    }
-    .haeder .gnb > ul > li {
-        position: relative;
-    }
-    .haeder .gnb > ul > li > ul { /* 2차메뉴 */
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 100px; /* 1차메뉴 높이 제외하고 정확하게 그 아래 배치 */
-        width: 100%;
-        height: 465px;
-        padding: 31px 0 0 0;
-        border-left: 1px solid #CCCCCC;
-    }
-    .haeder .gnb > ul > li > ul > li > a {
-        display: block;
-        line-height: 40px;
-        padding: 0 0 0 50px;
-    }
-    /* 오버스타일 */
-    .haeder .gnb > ul > li:hover > a {
-        color: #004485;
-        font-weight: 700;
-    }
-    .haeder .gnb > ul > li:hover > ul {
-        background-color: #004485;
-        color: #FFF;
-    }
-    .haeder .gnb > ul > li > ul > li > a:hover {
-        font-weight: 700;
-    }
-}
-/* gnb의 pc 스타일*/
-
-/* haeder가 고정됬을때 & 메뉴가 열렸을때 */
-.haeder.fixed {
-    /* 무조건 body와만 정렬 - 넓이 100% - 1400px 이하에서
-       window의 넓이 만큼만 널이를 인식해서 메뉴 깨짐 */
-    position: fixed; 
-    min-width: 1400px; /* 최소넓이 */
-    background-color: #FFF;
-    box-shadow: 0 5px 10px #CCCCCC;
-}
-.haeder.fixed, .haeder.menu_open {
-    color: #3D3D3D;
-}
-.haeder.fixed .logo a, .haeder.menu_open .logo a {
-    background-image: url(../images/common/logo.svg); 
-}
-.haeder.menu_open::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    /* position 속성이 있는 요소와 없는 요소가 나란히 존재하면 무조건 
-       position 있는 요소가 위로 올라감. 
-       이때 position 있는 요소를 일반 요소 아래로 내리는 방법 z-index : -1; */
-    width: 100%;
-    height: 565px;
-    background-color: #FFF;
-    box-shadow: 0 5px 10px #CCCCCC;
-    content: "";
-}
-.haeder.menu_open::after {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: 1px;
-    background-color: #CCCCCC;
-    content: "";
-}
-.haeder.menu_open .gnb > ul > li > ul {  /* 2차메뉴 */
-    display: block;
-}
-
-@media screen and (max-width:640px){     
-    .haeder {
-        height: 60px;
-    }
-    .haeder .logo {
-        margin: 18px 0 0 21px;
-    }
-    .haeder .logo a {
-        width: 96px;
-        height: 22px;
-    }
-    .haeder .gnb {
-        float: right;
-        overflow-y: auto; /* 모바일 메뉴가 길어지면 메뉴가 스크롤 되도록 하는 값 */
-    }
-    .haeder .gnb button { /* gnb_open, gnb_close  */
-        height: 60px;
-        padding: 0 20px;
-    }
-    .haeder .gnb .gnb_open span {
-        display: none; /* 글자숨김 (웹표준) */
-    }
-    .haeder .gnb .gnb_open i {
-        font-size: 16px;
-    }
-    .haeder .gnb > ul {
-        display: none;
-        margin: 60px 20px;
-    }
-    .haeder .gnb > ul > li {
-        border-top: 1px solid #CCCCCC;
-    }
-    .haeder .gnb > ul > li:last-child {
-        border-bottom: 1px solid #CCCCCC;
-    }
-    .haeder .gnb > ul > li > a {
-        display: block;
-        position: relative;
-        padding: 0 0 0 20px;
-        font-size: 18px;
-        line-height: 60px;
-    }
-    .haeder .gnb > ul > li > a::after {
-        position: absolute;
-        right: 0;
-        top: 22px;
-        color: #3D3D3D;
-        font-size: 13px;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        line-height: 1;
-        text-rendering: auto;
-        font-weight: 900;
-        font-family: "Font Awesome 6 Free";
-        content: "\f078";
-    }
-    .haeder .gnb > ul > li > ul {
-        display: none;
-        padding: 20px 0;
-        background-color: #004485;
-        color: #FFF;
-    }
-    .haeder .gnb > ul > li > ul > li > a {
-        display: block;
-        padding: 0 0 0 20px;
-        font-size: 15px;
-        line-height: 30px;
-    }
-    .haeder .gnb .gnb_close {
-        display: none;
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-    .haeder .gnb .gnb_close span {
-        display: none;
-    }
-    .haeder .gnb .gnb_close i {
-        font-size: 20px;
-    }
-    /* 서브메뉴가 열렸을때 */
-    .haeder .gnb > ul > li.sub_open > a {
-        font-weight: 700;
-        color: #004485;
-    } 
-    .haeder .gnb > ul > li.sub_open > a::after {
-        color: #004485;
-        content: "\f077";
-    }
-    .haeder .gnb > ul > li.sub_open > ul  {
-        display: block;
-    }
-    /* 메뉴가 열렸을때 */
-    .haeder.menu_mobile .gnb {
-        position: fixed; /* fixed는 무조건 body와만 정렬 */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #FFF;
-        color: #3D3D3D;
-    }
-    .haeder.menu_mobile .gnb .gnb_open{
-        display: none;
-    }
-    .haeder.menu_mobile .gnb > ul{
-        display: block;
-    }
-    .haeder.menu_mobile .gnb .gnb_close{
-        display: block;
-    }
-    /* header 고정 */
-    .haeder.fixed {
-        min-width: 350px; /* 최소넓이 */
-    }
-    .haeder.fixed, .haeder.menu_open {
-        color: #3D3D3D;
-    }
-    .haeder.fixed .gnb .gnb_open i {
-        color: #004485;
-    }
-}
-
-/* common.css 모든 페이지에서 호출 .top이라고만 스타일을 주면 다른 콘텐츠에서 top이라고
-   클래스명을 주면 해당 스타일이 적용됨 . 절대 콘텐츠 페이지에서 사용하지 않을 이름으로 줘야함
-   aside 라는 태그가 거의 사용하지 않는 태그라 aside.top이라고 선언한다. */
-aside.top {
-    display: none;
-    position: fixed;
-    right: 50px;
-    bottom: 200px;
-    z-index: 250;
-}
-aside.top button {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #004485;
-    color: #FFF;
-}
-aside.top button span{
-    display: none;
-}
-aside.top i {
-    font-size: 23px;
-}
-
-@media screen and (max-width:640px){
-    aside.top {
-        position: absolute;
-        right: 20px;
-        bottom: 218px;
-    }
-    aside.top button {
-        width: 21px;
-        height: 21px;
-        border-radius: 5px;
-    }
-    aside.top i {
-        font-size: 10px;
-    }
-}
-
-.footer {
-    background-color: #3D3D3D;
-    color: #fff;
-}
-.footer .sns {
-    position: absolute;
-    right: 0;
-    top: 70px;
-}
-.footer .sns ul li {
-    float: left;
-    border-width: 1px 1px 1px 0; 
-    border-style: solid; 
-    border-color: #FFF;
-}
-.footer .sns ul li:first-child {
-    border-left-width: 1px;
-}
-.footer .sns ul li a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    /* img를 a영역에 위아래/좌우 가운데 배치하기 위해서 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.footer .flogo {
-    float: left;
-    margin: 70px 70px 0 0;
-}
-.footer .flogo img {
-    width: 145px;
-}
-.footer .inner {
-    float: left;
-    margin: 70px 0 0 0;
-}
-.footer .fnav li {
-    position: relative;
-    float: left;
-    margin: 0 50px 0 0;
-}
-.footer .fnav li::after {
-    position: absolute;
-    right: -26px;
-    top: 4px;
-    width: 1px;
-    height: 12px;
-    background-color: rgba(255,255,255,0.3);
-    content: "";
-}
-.footer .fnav li:last-child::after {
-    display: none;
-}
-.footer .finfo {
-    display: inline-block;
-    margin: 20px 0 20px 0;
-}
-.footer .finfo span {
-    display: inline-block;
-    /* 전화번호나 팩스처럼 짧은 span 태그로 묶인 요소들이 display:inline-block;을 주면
-       모바일에서 전화번호, 팩스가 2줄로 분리되어 나타나지 않음 */
-    margin: 0 50px 0 0;
-}
-.footer .copyright {
-    margin: 0 0 140px 0;
-}
-
-@media screen and (max-width:640px){ 
-    .footer .sns {
-        position: relative;
-        right: auto;
-        top: auto;
-        height: 60px;
-        /* ul을 가운데 정렬 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .footer .sns::after {
-        position: absolute;
-        left: -20px;
-        bottom: 0;
-        width: calc(100% + 40px);
-        height: 1px;
-        background-color: rgba(255,255,255,0.2);
-        content: "";
-    }
-    .footer .sns ul li {
-        border-width: 0; 
-    }
-    .footer .sns ul li:first-child {
-        border-left-width: 0;
-    }
-    .footer .flogo {
-        float: none;
-        margin: 30px 0 20px 0;
-    }
-    .footer .flogo img {
-        width: 96px;
-    }
-    .footer .inner {
-        float: none;
-        margin: 0;
-    }
-    .footer .fnav li {
-        margin: 0 32px 0 0;
-    }
-    .footer .fnav li::after {
-        right: -17px;
-        top: 6px;
-        height: 10px;
-    }
-    .footer .finfo span {
-        margin: 0 30px 0 0;
-    }
-    .footer .copyright {
-        margin: 0 0 60px 0;
-    }
 }
