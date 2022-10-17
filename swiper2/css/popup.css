@@ -1,0 +1,244 @@
+@import url(default.css);
+@import url(common.css);
+
+body {
+    padding-bottom: 100px;
+}
+.popup {
+    height: 800px;
+}
+.popup ul li .txt {
+    position: absolute;
+    left: calc(50% - 700px);
+    top: calc(50% - 100px);
+    color: #FFF;
+    transform: translate(0, - 50%); /* 해당 요소의 넓이를 기준으로 %를 계산 */
+}
+.popup ul li .txt span {
+    display: block;
+}
+.popup ul li .txt strong {  
+    display: block;
+    font-size: 70px;
+    font-weight: 700;
+}
+.popup ul li img { /* 팝업에 이미지를 imh태그로 처리한 경우 img에 주는 필수 값 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup .btn_prev, .popup .btn_next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+}
+.popup .btn_prev {
+    left: 20px;
+}
+.popup .btn_next {
+    right: 20px;
+}
+.popup .btn_prev::before, .popup .btn_next::before {
+    position: absolute;
+    top: -80px; 
+    width: 50px;
+    height: 100px;
+    background: url(../images/pop_arrow.svg) no-repeat center center / contain;
+    opacity: 0.5;
+    content: "";
+}
+.popup .btn_prev::before {
+    left: 0;
+}
+.popup .btn_next::before {
+    right: 0;
+    transform: rotate(180deg); /* 회전 */
+}
+.popup .ctrl_wrap {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    z-index: 10;
+    transform: translate(-50%, 0);
+}
+/* css스타일이 중복 될 때 - 플러그인에서 준 스타일을 수정할 떼 
+   css 선택자를 우선 적용될 수 있도록 설계해야 함
+   1. 더 요소부터 선언함 (body부터 지정)
+   2. 스타일을 줄 요소를 정확하게 지칭해야 함 
+        태그명보다 스타일명이 더 정확한 지칭임 (적용 우선순위가 높음) 
+        span 
+        .swiper-pagination-bullet 
+        span.swiper-pagination-bullet
+   3. css가 우선 적용도지 않을때 
+      속성에 important를 추가해서 무조건 적용되게 한다.
+      예시, width: 10px !important;
+*/
+.popup .btn_paging span.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    opacity: 1;
+    background-color: #FFF;
+}
+/* .popup .btn_paging span.swiper-pagination-bullet-active 
+    이렇게만 지정하면 .popup .btn_paging span.swiper-pagination-bullet 스타일과 충돌 */
+.popup .btn_paging span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 13px;
+    height: 13px;
+    background-color: #000;
+    opacity: 0.8;
+}
+.popup .btn_stop {
+    width: 16px;
+    height: 15px;
+    margin-left: 12px;
+    background-image: url(../images/pop_stop.svg);
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.popup .btn_stop.play {
+    background-image: url(../images/pop_play.svg);
+}
+@media screen and (max-width:1440px){
+    .popup ul li .txt {
+        left: 10%;
+    }
+}
+@media screen and (max-width:1000px){
+    .popup {
+        height: 600px;
+    }
+    .popup ul li .txt strong {  
+        font-size: 60px;
+    }
+    .popup ul li .txt {
+        top: calc(50% - 80px);
+    }
+    .popup .btn_prev::before, .popup .btn_next::before {
+        top: -70px; 
+        width: 40px;
+        height: 80px;
+    }
+}
+@media screen and (max-width:800px){
+    .popup {
+        height: 500px;
+    }
+    .popup ul li .txt strong {  
+        font-size: 40px;
+    }
+    .popup ul li .txt {
+        top: calc(50% - 70px);
+    }
+    .popup .btn_prev::before, .popup .btn_next::before {
+        top: -60px; 
+        width: 30px;
+        height: 70px;
+    }
+    .popup .btn_paging span.swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+    .popup .btn_paging span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 11px;
+        height: 11px;
+    }
+}
+@media screen and (max-width:640px){
+    .popup {
+        height: 400px;
+    }
+    .popup ul li .txt strong {  
+        font-size: 25px;
+    }
+    .popup ul li .txt {
+        top: calc(50% - 60px);
+        left: 5%;
+    }
+    .popup .btn_prev, .popup .btn_next {
+        display: none;
+    }
+}
+
+h1 {
+    margin: 50px 0 10px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+@media screen and (max-width:1000px){
+    h1 {
+        margin: 40px 0 10px 0;
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width:800px){
+    h1 {
+        margin: 30px 0 10px 0;
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width:640px){
+    h1 {
+        margin: 30px 0 10px 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.banner1 ul li img {
+    width: 100%; /* li 사이즈에 맞춰서 가로를 꽉채워 들어감 - 높이는 비율에 맞게 */
+}
+.banner1 ul li strong {
+    display: block;
+    font-size: 20px;
+}
+.banner2 ul li {
+    width: 290px;
+}
+.banner2 ul li img {
+    width: 100%; /* li 사이즈에 맞춰서 가로를 꽉채워 들어감 - 높이는 비율에 맞게 */
+}
+.banner2 ul li strong {
+    display: block;
+    font-size: 20px;
+}
+@media screen and (max-width:1000px){
+    h1 {
+        margin: 40px 0 10px 0;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .banner2 ul li {
+        width: 250px;
+    }
+}
+@media screen and (max-width:800px){
+    h1 {
+        margin: 30px 0 10px 0;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .banner2 ul li {
+        width: 200px;
+    }
+}
+@media screen and (max-width:640px){
+    h1 {
+        margin: 30px 0 10px 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .banner2 ul li {
+        width: 170px;
+    }
+}
