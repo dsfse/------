@@ -3,18 +3,17 @@
 
 .visual h2 {
     position: absolute;
-    left: 50%;
+    left: calc(50% - 700px);
     top: 50%;
     z-index: 12;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 700;
-    line-height: 1.4;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    /* fullpage.js 플러그인에서 한 section에 글자 딱 하나만 존재할 때
-       해당 글자에 line-height가 들어가면 해당 section에서는 scroll이
+    line-height: 1.1;
+    color: #FFF;
+    transform: translate(0, -50%);
+    /* fullpage.js 플러그인에서 한 section에 글자 딱 하나만 존재할때 ]
+       해당 글자에 line-height이 들어가면 해당 section에서는 scroll이 
        작동되지 않을 수 있음 */
-    text-align: center;
 }
 .visual video {
     position: absolute;
@@ -32,123 +31,132 @@
     top: 0;
     right: 0;
     bottom: 0;
-    /* top, bottopm, left, right를 모두 0으로 주면 width:100%와 동일하게 적용됨 */
+    /* top, bottom, left, right를 모두 0으로 주면 width:100%; height:100%;와 동일하게 적용됨 */
     z-index: 11;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
 }
-@media screen and (max-width:1220px){
+
+@media screen and (max-width:1440px){
+    .visual h2 {
+        left: 20px;
+    }
+}
+@media screen and (max-width:1200px){
+    .visual h2 {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:1000px){
     .visual h2 {
         font-size: 40px;
     }
 }
-@media screen and (max-width:980px){
-    .visual h2 {
-        font-size: 35px;
+
+@media screen and (max-width:640px){    
+    /* 만약 fullpage를 모바일에서 해제하고 높이를 제한해야한다.
+      section 클래스를 준 요소 말고 그 안에 있는 요소한테 
+      높이를 줘야함. */
+    .visual .inner {
+        height: 330px;
     }
-}
-@media screen and (max-width:860px){
-    .visual h2 {
-        font-size: 30px;
-    }
-}
-@media screen and (max-width:760px){
     .visual h2 {
         font-size: 25px;
     }
 }
-@media screen and (max-width:640px){
-    .fp-responsive .fp-is-overflow.fp-section {
-        min-height: auto !important;
-        /*
-           fullpage.js에서 640이하일때는 fullpage 적용하지 않도록 함 
-           근데 이때 min-height가 해제가 않되서 이전 fullpage 높이가 잡힘
-           그래서 min-height:auto;를 줘야하는 상황
-           visual에 min-heighy:auto; 적용되지 않음 (css 적용 우선순위)
-           이때 절대 내가 적용하는 값을 먼저 적용하게 하는게
-           min-height: auto !important; 
-
-           이렇게 플러그인을 써서 내가 주지 않을 스타일을 고쳐서 쓸때 !important;
-        */
-    }
-    /* 만약 fullpage를 모바일에서 해제하고 높이를 제한 해야 한다면 
-       section 클래스를 준 요소 말고 그 안에 있는 요소한테 높이를 줘야함. */
-    .visual .inner {
-        height: 400px;
-    }
-    .visual h2 {
-        font-size: 20px;
-    }
-}
 
 .count {
+    /* padding: 50px 0 0 0;  */
+    /* 컨텐츠가 haeder의 높이와 무관하게 위아래 가운데 배치되어 
+       약간의 상단 여백이 부족해 보임 - 그래서 상단 여백을 추가로 줌 */
     background-color: #DA281F;
-    color: #fff;
+    color: #FFF;
 }
 .count .tit {
-    margin: 0 0 0 120px;
+    margin: 0 0 0 8.6%; /* 120/1400*100 = 1400px 영역에서 여백의 비율 */
 }
 .count .tit h2 {
-    margin: 0 0 30px 0;
-    font-size: 30px;
+    margin: 0 0 29px 0;
+    font-size: 40px;
+    line-height: 1.2;
 }
 .count .tit h2 strong {
     font-weight: 700;
-}
-.count .tit p {
-    font-size: 20px;
 }
 .count .tit p span {
     display: block;
 }
 .count .rate {
     position: absolute;
-    left: calc(50% + 194px);
-    top: 10%;
-    transform: translate(0, 50%);
+    left: calc(50% + 140px);
+    top: 50%; 
+    width: 50%;
+    transform: translate(0,-50%);
 }
-.count .rate ul li {
-    margin: 0 0 50px 0;
+.count .rate li {
+    position: relative;
+    margin: 0 0 70px 0;
 }
-.count .rate ul li:last-child {
+.count .rate li:last-child {
     margin-bottom: 0;
 }
-.count .rate ul li .exp {
-    margin-bottom: 10px;
+.count .rate li::after {
+    position: absolute;
+    left: 0;
+    top: 93px;
+    z-index: -1; /* 어쩔수없이 position:absolute이지만 다른 요소보다 아래 */
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
 }
-.count .rate ul li .num strong {
-    font-size: 50px;
+.count .rate li .num strong {
+    display: inline-block;
+    background-color: #DA281F;
+    font-size: 70px;
     font-weight: 700;
     line-height: 1.2;
 }
-.count .rate ul li .num span {
+.count .rate li .num span {
+    display: inline-block;
     position: relative;
-    margin: 0 0 0 10px;
-    font-size: 20px;
+    padding: 0 10px 0 5px;
+    background-color: #DA281F;
+    font-size: 30px;
     font-weight: 700;
 }
-.count .rate ul li .num span::after {
+/* .count .rate li .num span::after {
     position: absolute;
-    left: 105%;
-    top: 24px;
-    width: 1000000%;
+    left: 140%;
+    top: 33px;
+    width: 10000%;
     height: 1px;
-    background-color: #ccc;
+    background-color: rgba(255,255,255,0.6);
     content: "";
-}
-@media screen and (max-width:640px){
-    .count {
-        padding: 40px 0 30px 0;
-    }
+} */
+
+@media screen and (max-width:1200px){
     .count .tit {
-        margin: 0;
+        margin: 0; /* 120/1400*100 = 1400px 영역에서 여백의 비율 */
     }
     .count .tit h2 {
-        margin: 0 0 22px 0;
-        font-size: 20px;
+        font-size: 35px;
     }
-    .count .tit p {
-        margin: 0 0 20px 0;
-        font-size: 13px;
+    .count .rate {
+        left: 50%;
+    }
+    .count .rate li::after {
+        top: 84px;
+    }
+    .count .rate li .num strong {
+        font-size: 60px;
+    }
+    .count .rate li .num span {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:900px){
+    .count .tit {
+        margin: 0 0 40px 0; /* 120/1400*100 = 1400px 영역에서 여백의 비율 */
     }
     .count .tit p span {
         display: inline;
@@ -157,45 +165,400 @@
         position: relative;
         left: auto;
         top: auto;
-        width: auto;
-        transform: translate(0,0%);
+        width: calc(100% + 20px);
+        transform: translate(0,0);
     }
-    .count .rate ul li {
-        margin: 0 0 23px 0;
+    .count .rate li {
+        margin: 0 0 40px 0;
     }
-    .count .rate ul li .num strong {
+    .count .rate li::after {
+        top: 82px;
+    }
+    
+}
+@media screen and (max-width:750px){
+    .count .tit {
+        margin: 0 0 30px 0; /* 120/1400*100 = 1400px 영역에서 여백의 비율 */
+    }
+    .count .tit h2 {
+        font-size: 25px;
+    }
+    .count .rate li {
+        margin: 0 0 30px 0;
+    }
+    .count .rate li::after {
+        top: 67px;
+    }
+    .count .rate li .num strong {
+        font-size: 45px;
+    }
+    .count .rate li .num span {
+        font-size: 20px;
+    }
+    
+}
+@media screen and (max-width:640px){
+    .count {
+        padding: 40px 0 33px 0;
+     }
+     .count .tit {
+        margin: 0 0 20px 0; /* 120/1400*100 = 1400px 영역에서 여백의 비율 */
+    }
+    .count .tit h2 {
+        margin: 0 0 22px 0;
+        font-size: 20px;
+    }
+    .count .rate li .num strong {
         font-size: 30px;
     }
-    .count .rate ul li .num span {
-        margin: 0 0 0 5px;
+    .count .rate li .num span {
+        padding: 0 5px 0 10px;
         font-size: 13px;
     }
-    .count .rate ul li .num span::after {
-        left: 105%;
-        top: 16px;
-        width: 1000000%;
+    .count .rate li {
+        margin: 0 0 23px 0;
     }
+    .count .rate li::after {
+        top: 51px;
+    }
+
 }
 
 .biz {
     background-color: #F5E9DD;
 }
+.biz .biz_wrap {
+    display: flex;
+    align-items: center;
+}
+.biz img {
+    width: calc(100% - 620px);/* wrapper 1440, 그안에 이미지가 780 = 780/1440*100 = 55.71%*/
+    margin: 0 60px 0 0;
+}
+.biz .inner {
+    display: block;
+    width: 480px; /* 480/1440*100 =  33.33%*/
+}
+.biz a strong {
+    font-size: 20px;
+}
+.biz a h2 {
+    margin: 10px 0 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.biz a p {
+    font-size: 20px;
+}
+.biz a .exp {
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+}
+.biz a .more {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3D3D3D;
+    border-radius: 50%; /* 정사격형에 border-radius: 50%를 주면 사이즈에 상관없이 원이 됨 */
+    transition: 0.5s;
+}
+.biz a .more::before {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #3D3D3D;
+    content: "";
+}
+.biz a .more::after {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 1px;
+    height: 50%;
+    background-color: #3D3D3D;
+    content: "";
+}
+.biz a:hover .more {
+    transform: rotate(270deg);
+}
+@media screen and (max-width:1200px){
+    .biz img {
+        width: calc(100% - 620px);
+        margin: 0 50px 0 0;
+    }
+    .biz .inner {
+        width: 400px; 
+    }
+    .biz a strong {
+        font-size: 18px;
+    }
+    .biz a h2 {
+        font-size: 25px;
+    }
+    .biz a p {
+        font-size: 15px;
+    }
+    .biz a .exp {
+        margin: 20px 0 0 0;
+        font-size: 15px;
+    }
+    .biz a .more {
+        display: none;
+    }
+}
+@media screen and (max-width:1000px){
+    .biz img {
+        width: calc(100% - 550px);
+        margin: 0 30px 0 0;
+    }
+    .biz .inner {
+        width: 350px; 
+    }
+    .biz a strong {
+        font-size: 15px;
+    }
+    .biz a h2 {
+        margin: 10px 0 10px 0;
+        font-size: 20px;
+    }
+    .biz a p {
+        font-size: 14px;
+    }
+    .biz a .exp {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:850px){
+    
+    .biz a strong {
+        font-size: 15px;
+    }
+    .biz a p {
+        font-size: 13px;
+    }
+    .biz a .exp {
+        margin: 10px 0 0 0;
+        font-size: 13px;
+    }
+    .biz a .more {
+        display: none;
+    }
+}
+@media screen and (max-width:800px){
+    .biz {
+        padding: 30px 0 65px 0;
+    }
+    .biz .biz_wrap {
+        display: block;
+    }
+    .biz img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .biz .inner {
+        width: auto;
+    }
+}
 
 .news {
     background-color: #DA281F;
+    color: #FFF;
+}
+.news .cnt_wrap {
+    position: relative;
+}
+.news h2 {
+    margin: 0 0 30px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li a span {
+    display: block;
+    overflow: hidden;font-size: 0;
+    line-height: 0;
+}
+.news .list ul li a span img {
+    width: 100%;
+    transition: 0.5s;
+}
+.news .list ul li a:hover span img {
+    transform: scale3d(1.2,1.2,1);
+}
+.news .list ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+}
+.news .more {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%; /* 정사격형에 border-radius: 50%를 주면 사이즈에 상관없이 원이 됨 */
+    transition: 0.5s;
+    font-size: 0;
+    line-height: 0;
+    transition: 0.5s;
+}
+.news .more::before {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+    content: "";
+}
+.news .more::after {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 1px;
+    height: 50%;
+    background-color: #fff;
+    content: "";
+}
+.news .more:hover {
+    transform: rotate(270deg);
+}
+.news .list .btn_paging {
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.news .list .btn_paging span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid #2D2D2D;
+    background-color: #fff;
+    opacity: 1;
+}
+.news .list .btn_paging span.swiper-pagination-bullet-active {
+    background-color: #2D2D2D;
+}
+
+@media screen and (max-width:1200px){
+    .news h2 {
+        font-size: 25px;
+    }
+    .news .list ul li a strong {
+        font-size: 18px;
+    }
+    .news .more {
+        top: 0;
+    }
+}
+@media screen and (max-width:900px){
+    .news .list ul li a strong {
+        font-size: 15px;
+    }
+    .news .more {
+        top: 0;
+    }
+}
+@media screen and (max-width:640px){
+    .news {
+        padding: 30px 0 30px 0; 
+    }
+    .news h2 {
+        font-size: 20px;
+        margin: 0 60px 20px 0;
+    }
+    .news .list ul li a strong {
+        font-size: 13px;
+    }
 }
 
 .support {
     background-color: #F5E9DD;
+}
+.support .support_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.support .inner {
+    margin: 0 0 0 5.7%;
+}
+.support .inner h2 {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 1.2;
+}
+.support .inner h2 strong {
+    display: block;
+    font-weight: 700;
+}
+.support .inner h2 span {
+    display: block; /* pc에서만 줄바꿈 */
+}
+.support ul {
+    width: 47.14%; /* 660/1400*100 = 47.14% */
+    margin: 0 4.2% 0 0;
+    
+}
+.support ul li {
+    float: left;
+    /* width: 45.45%; ul의 넓이가 660px - li한개의 넓이 300px : 300/660*100 = 45.45% */
+    width: calc(50% - 30px); 
+    /* 여백이 고정일때 100%/li 갯수 = 50% 
+    - 한줄에 들어가야하는 모든 여백의 합 ((60px)/ li의 갯수) 
+    (100/2)% - (60/2)px = calc(50% - 30px) */
+    background-color: #FFF;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    margin: 30px 60px 30px 0;  /* 오른쪽 여백은 (100-(li 하나의 넓이*2))*/
+}
+.support ul li:nth-child(1),
+.support ul li:nth-child(3) {
+    transform: translate(0, -50px);
+}
+.support ul li:nth-child(2),
+.support ul li:nth-child(4) {
+    margin-right: 0;
+    transform: translate(0, 50px);
+}
+.support ul li a {
+    display: block;
+    height: 170px;
+    padding: 10% 10%; 
+    /* a의 사이즈를 기준으로 % 코딩 - 30/300*100 = 10
+       가로는 브라우저의 넓이에 따라서 사이즈의 변화가 심함. %로 여백을 주면 좋지만 
+       높이 대부분 px로 줌. 위아래 여백 px로 주는게 더 좋음 */
+}
+.support ul li a span {
+    display: block;
+}
+.support ul li a strong {
+    display: block;
+    margin: 5px 0 0 0;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .footer {
 
 }
 
+/* fullpage 공통사항 */
+
+
 /* 오른쪽 네비게이션 디자인 변경 
-   선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면 
-   body 부터 선언한 요소가 먼저 적용됨.(단, 나머지 선택자는 동일)*/
+   선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
+   body 부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일)*/
 body #fp-nav ul li {
     width: 12px;
     height: 12px;
@@ -206,60 +569,79 @@ body #fp-nav ul li:last-child { /* footer 삭제 */
 }
 body #fp-nav ul li a span,
 body #fp-nav ul li:hover a span {
-    height: 10px;
-    width: 10px;
-    border: 1px solid #2d2d2d;
-    background: #fff;
-    left: 10px;
-    top: 10px;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    left: 0;
+    top: 0;
     margin: 0;
 }
-body #fp-nav ul li a.active span,
-body #fp-nav ul li:hover a.active span  {
-    width: 100%;
+body #fp-nav ul li a.active span, 
+body #fp-nav ul li:hover a.active span {
     height: 100%;
+    width: 100%;
     margin: 0;
-    background: #2d2d2d;
+    background: #1D1D1D;
 }
 body #fp-nav ul li .fp-tooltip {
     overflow: visible;
-    top: 5px;
+    top: -6px;
     width: auto;
-    padding: 0 17px;
-    background-color: #2d2d2d;
+    max-width: max-content; /* 콘텐츠 있는 만큼 다 */
+    padding: 2px 10px;
+    background-color: #1D1D1D;
+    border-radius: 5px;
     color: #fff;
-    border-radius: 3px;
-    max-width: max-content;
     font-size: 15px;
-    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;    
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
 }
 body #fp-nav ul li .fp-tooltip::after {
     position: absolute;
     right: -4px;
-    top: 7px;
+    top: 8px;
     width: 8px;
     height: 8px;
-    background-color: #2d2d2d;
+    background-color: #1D1D1D;
     transform: rotate(45deg);
     content: "";
 }
-
 /* 어두운 툴팁 */
 body #fp-nav.black ul li a span,
 body #fp-nav.black ul li:hover a span {
-    background: #fff;
+    background: #CCCCCC;
 }
-body #fp-nav.black ul li a.active span,
-body #fp-nav.black ul li:hover a.active span  {
-    background: #DA281F;
+body #fp-nav.black ul li a.active span, 
+body #fp-nav.black ul li:hover a.active span {
+    background: #ED1B2D;
 }
 body #fp-nav.black ul li .fp-tooltip {
-    background-color: #DA281F;
+    background-color: #ED1B2D;
+    color: #fff;
 }
 body #fp-nav.black ul li .fp-tooltip::after {
-    background-color: #DA281F;
+    background-color: #ED1B2D;
 }
 
 .fp-watermark { /* fullpage copyright 삭제 */
     display: none;
+}
+
+/* 모바일에서는 fullpage 적용 안하는데 발생하는 오류 수정 */
+body .section .fp-overflow {
+    overflow: visible;
+}
+@media screen and (max-width:640px){
+    .fp-responsive .fp-is-overflow.fp-section {
+        min-height: auto !important;
+        /* fullpage.js에서 640이하일때는 fullpage 적용하지 않도록 함.
+           근데 이때 min-height가 해제가 않되서 이전 fullpage 높이가 잡힘ㄴ
+           그래서 min-height:auto;를 줘야하는 상황
+            visual에 min-height: auto; 적용되지 않음 (css 적용 우선순위에 밀려서)
+            이때 절대 내가 적용하는 값을 먼저 적용하게 하는게 
+            min-height: auto !important; 
+
+            이렇게 플러그인을 써서 내가 주지않을 스타일을 고쳐서 쓸때 !important;
+        */
+    }
+    
 }
