@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="wrap">
-        <header class="header">
+        <header class="header fixed"> <!-- fullpage 안들어갔을때만 스크롤 내리면 fixed 추가 -->
             <h1 class="logo"><a href="index.html">세이브더칠드런</a></h1>
             <nav class="gnb">
                 <button class="gnb_open"><span>메뉴열기</span><span></span><span></span></button>
@@ -127,25 +127,25 @@
                             <p>어떤 후원을 선택할지 고민되세요? 원하는 후원을 찾아보세요.</p>
                         </div>
                         <ul>
-                            <li>
+                            <li class="list01">
                                 <a href="#n">
                                     <span>환영편지와 후원자카드 발송</span>
                                     <strong>발송하기</strong>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list02">
                                 <a href="#n">
                                     <span>후원자 만남의 날</span>
                                     <strong>참여하기</strong>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list03">
                                 <a href="#n">
                                     <span>매년 7만원 정기후원</span>
                                     <strong>후원하기</strong>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list04">
                                 <a href="#n">
                                     <span>다짐의 순간을 기부</span>
                                     <strong>기념일기부</strong>
@@ -156,8 +156,24 @@
                 </div>
             </section>
             <footer class="section footer fp-auto-height">
-                <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치 할 수 있음-->
-                <div<<br><br>footer<br><br></div>
+                <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치 할 수 있음 -->
+                <div class="wrapper">
+                    <ul class="fnav">
+                        <li>
+                            <a href="#n">이용약관 </a>
+                        </li>
+                        <li>
+                            <a href="#n">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#n">이메일 집단수집거부</a>
+                        </li>
+                    </ul>
+                    <div class="inner">
+                        <div class="flogo"></div>
+                        <div class="copyright">COPYRIGHT 2021@SAVE THE CHILDEN KOREA ALL RIGHTS RESERVED.</div>
+                    </div>
+                </div>
             </footer>
         </div> 
     </div>    

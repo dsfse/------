@@ -177,3 +177,79 @@ html, body {
         background-color: #1d1d1d;
     }
 }
+
+@media screen and (max-width:640px){
+    .header.fixed {
+        background-color: rgba(255,255,255,0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .header.fixed .logo a {
+        background-image: url(../images/common/logo.svg);
+    }
+    .header.fixed .gnb .gnb_open span {
+        background-color: #1d1d1d;
+    }
+}
+
+.footer {
+    border-top: 1px solid #CCCCCC ;
+}
+.footer .fnav {
+    float: right;
+    margin: 70px 0 154px 0;
+}
+.footer .fnav li a {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: right;
+}
+.footer .inner {
+    float: left;
+    margin: 70px 0 0 0;
+}
+.footer .flogo {
+    width: 80px;
+    height: 84px;
+    background: url(../images/common/logo.svg) no-repeat left top / auto 84px;
+}
+.footer .copyright {
+    margin: 30px 0 0 0;
+    color: #666;
+}
+@media screen and (max-width:1000px){
+    .footer .fnav li a {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width:800px){
+    .footer .fnav li a {
+        font-size: 20px;
+    }
+    .footer .flogo {
+        width: 70px;
+        height: 74px;
+        background: url(../images/common/logo.svg) no-repeat left top / auto 74px;
+    }
+}
+@media screen and (max-width:700px){
+    .footer .fnav {
+        float: none;
+        margin: 20px 0 20px 0;
+    }
+    .footer .fnav li a {
+        font-size: 18px;
+    }
+    .footer .inner {
+        float: none;
+        margin: 0;
+    }
+    .footer .flogo {
+        display: none;
+    }
+    .footer .copyright {
+        margin: 0 0 70px 0;
+    }
+}
