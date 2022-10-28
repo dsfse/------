@@ -10,6 +10,7 @@ html, body {
     /* letter-spacing: -0.05em; */
     word-break: keep-all; /* 단어별 줄바꿈 */
 }
+
 #wrap { /* id="wrap" */
     overflow: hidden;
     position: relative;
@@ -72,9 +73,9 @@ html, body {
 
 /* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
-::selection{background:#483E35;color:#A39161;}
-::-moz-selection{background:#483E35;color:#A39161;}
-::-webkit-selection{background:#483E35;color:#A39161;} 
+::selection{background:#CBA585;color:#3E3E3F;}
+::-moz-selection{background:#CBA585;color:#3E3E3F;}
+::-webkit-selection{background:#CBA585;color:#3E3E3F;} 
 
 .header {
     position: absolute;
@@ -83,79 +84,55 @@ html, body {
     z-index: 300;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
     .logo {
         float: left;
-        margin: 29px 0 0 100px;
+        margin: 30px 0 0 40px;
     }
     .gnb {
         float: right;
-        margin: 0 100px 0 0;
+        margin: 0 40px 0 0;
         .gnb_open {
             display: none;
         }
         ul {
-            li{
+            li {
                 float: left;
                 a {
                     display: block;
-                    padding: 0 23px;
+                    padding: 0 24px;
                     color: $w_tit_color;
-                    font-size: 18px;
+                    font-size: 22px;
                     line-height: 100px; /* header의 높이 */
                 }
             }
         }
     }
 }
-@media screen and (max-width:1400px){
-    .header .logo {
-        margin: 29px 0 0 80px;
-    }
+@media screen and (max-width:1440px){
     .header .logo a img {
-        width: 140px;
-        height: 35px;
-    }
-    .header .gnb {
-        margin: 0 80px 0 0;
+        width: 130px;
     }
     .header .gnb ul li a {
-        font-size: 15px;
-        padding: 0 20px;
+        font-size: 18px;
     }
 }
-@media screen and (max-width:1200px){
-    .header .logo {
-        margin: 29px 0 0 60px;
-    }
-    .header .gnb {
-        margin: 0 60px 0 0;
-    }
-    .header .gnb ul li a {
-        font-size: 13px;
-        padding: 0 17px;
-    }
-}
-@media screen and (max-width:1000px){
-    .header .logo {
-        margin: 33px 0 0 40px;
-    }
+@media screen and (max-width:1440px){
     .header .logo a img {
         width: 120px;
-        height: 32px;
     }
-    .header .gnb {
-        margin: 0 40px 0 0;
+    .header .gnb ul li a {
+        padding: 0 15px;
+        font-size: 17px;
     }
 }
-@media screen and (max-width:900px){
+
+@media screen and (max-width:1000px){
     .header {
-        height: 70px;
+        height: 60px;
         .logo {
-            margin: 20px 0 0 20px;
+            margin: 16px 0 0 20px;
             a img {
                 width: 108px;
-                height: 29px;
             }
         }
         .gnb {
@@ -163,26 +140,26 @@ html, body {
             .gnb_open {
                 display: block;
                 position: relative;
-                width: 58px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
                 strong {
                     display: none;
                 }
                 span {
                     position: absolute;
                     right: 20px;
-                    width: 18px;
+                    width: 21px;
                     height: 2px;
                     background-color: #FFF;
-                    &.line1 { /* span.line1 */
-                        top: 28px;
+                    &.line1 {   /*  span.line1  */
+                        top: 25px;
                     }
                     &.line2 {
-                        top: 34px;
-                        width: 15px;
+                        top: 32px;
+                        width: 16px;
                     }
                     &.line3 {
-                        top: 40px;
+                        top: 39px;
                     }
                 }
             }
