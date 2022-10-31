@@ -277,18 +277,44 @@
         padding: 0 0 70px 560px;
         font-size: 45px;
         font-weight: 700;
+        
     }
     .list {
         @include clearfix;
         position: relative;
         .tit {
             @include font_serif;
-            position: absolute;
-            left: 0;
+            /* position: sticky는 감싸는 요소에 overflow;hidden이 없어야 한다.
+               하지만 홈페이지 전체에 "id = wrap" 이 스타일에 overflow:hidden;이 들어감
+               overflow를 주지 않고 코딩은 어려움. 그래서 sticky는 사용불가
+               
+               고정될 요소에 고정될때는position:fixed를 줘야함.
+               fixed는 body와만 정렬 
+               <div class="list">   -- realtive
+                   <div class="tit"></div>   -- absolute
+               </div>
+               tit이 absolute일때는 realtive를 준 list를 기준으로 정렬함
+               하지만 fixed로 변경되면 무조건 body랑 정렬
+               정렬의 기준값이 변경됨... (left가 fixed일때랑 absolute일때랑 바뀜)
+               실제 화면상에도 left의 위치는 변경x
+               absolute일때와 fixed일때 위치를 동일하게 left값을 줘야함.
+            */
+            position: absolute; 
+            left: calc(50% - 700px);
             top: 0;
             color: $w_basic_color;
             font-size: 30px;
             line-height: 1.4;
+
+            &.fixed {
+                position: fixed;
+                top: 200px;
+            }
+            &.end {
+                position: absolute;
+                top: auto;
+                bottom: 110px;
+            }
         }
         ul {
             float: right;
@@ -338,8 +364,11 @@
         font-size: 40px;
     }
     .product .list .tit {
-        left: 20px;
+        left: 0;
         font-size: 25px;
+        &.fixed {
+            left: 20px;
+        }
     }
     .product .list ul {
         &.item1 {
@@ -355,8 +384,19 @@
         padding: 0 0 60px 400px;
         font-size: 35px;
     }
-    .product .list .tit {
-        font-size: 22px;
+    .product .list{
+        .tit {
+            font-size: 22px;
+            &.fixed {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+            &.end {
+                position: relative;
+                bottom: auto;
+            }
+        }
     }
     .product .list ul {
         &.item1 {
@@ -386,7 +426,7 @@
         font-size: 30px;  
     }
 }
-@media screen and (max-width:820px){
+@media screen and (max-width:830px){
     .product {
         padding: 0 0 30px 0;
         h2 {
@@ -422,4 +462,136 @@
             }
         }
     }
+}
+
+.news {
+    position: relative;
+    margin: 0 0 280px 0;
+    h2 {
+        @include font_serif;
+        margin: 100px 0 70px 0;
+        font-size: 45px;
+        font-weight: 700;
+    }
+    .list {
+        ul {
+            li {
+                width: 320px;
+                font-size: 0; /* 이미지 하단 여백 삭제 */
+                line-height: 0;
+                a {
+                    display: block;
+                    overflow: hidden;
+                    border-radius: 30px;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:nth-child(1), &:nth-child(3), &:nth-child(5) {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .bg_txt {
+        @include font_serif;
+        position: absolute;
+        left: 0;
+        top: 331px;
+        color: #cccccc;
+        font-size: 180px;
+        font-weight: 700;
+        white-space: nowrap;
+        
+        animation-name: bg_txt_ani;
+        animation-duration: 50s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+@keyframes bg_txt_ani {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+}
+@media screen and (min-width:1441px){
+    .news .list {
+        width: calc(100% + 680px); // 320 + 320 + 40 = 680px
+        margin-left: -360px !important;
+    }  
+}
+@media screen and (max-width:1439px){
+    .news h2 {
+        margin: 80px 0 50px 0;
+        font-size: 40px;
+    }
+    .news .bg_txt {
+        top: 324px;
+        font-size: 160px;
+    }
+}
+@media screen and (max-width:1300px){
+    .news h2 {
+        margin: 60px 0 40px 0;
+        font-size: 35px;
+    }
+    .news .bg_txt {
+        top: 285px;
+        font-size: 140px;
+    }
+}
+@media screen and (max-width:1199px){
+    .news h2 {
+        margin: 60px 0 40px 0;
+        font-size: 35px;
+    }
+    .news .bg_txt {
+        top: 257px;
+        font-size: 120px;
+    }
+}
+@media screen and (max-width:1000px){
+    .news h2 {
+        margin: 60px 0 40px 0;
+        font-size: 35px;
+    }
+    .news .bg_txt {
+        top: 210px;
+        font-size: 100px;
+    }
+}
+@media screen and (max-width:819px){
+    .news h2 {
+        margin: 40px 0 30px 0;
+        font-size: 30px;
+    }
+    .news .bg_txt {
+        top: 271px;
+        font-size: 120px;
+    }
+    
+}
+@media screen and (max-width:700px){
+    .news .list ul li {
+        &:nth-child(1), &:nth-child(3), &:nth-child(5) {
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .news {
+        h2 {
+            margin: 30px 0 25px 0;
+            font-size: 25px;
+        }
+        .list {
+            ul {
+                li {
+                    width: 152px;
+                }
+            }
+        }
+    }   
 }

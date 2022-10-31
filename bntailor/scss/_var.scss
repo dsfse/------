@@ -5,7 +5,7 @@ $gray_light_color: #F4F4F4; /* 밝은 회색 */
 $w_basic_color: rgba(255,255,255,0.8); /* 어두운 배경에 기본 흰글씨 */
 $w_tit_color: #FFFFFF; /* 어두운 배경에 제목 흰글씨 */
 $w_dark_light_color: rgba(255,255,255,0.6);
-$w_light_color: rgba(255,255,255,0.1);
+$w_light_color: rgba(0,0,0,0.3);
 $point_color: #9D856D;
 
 @mixin font_serif {
