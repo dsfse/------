@@ -206,10 +206,10 @@ html, body {
 .header .gnb .gnb_open {
   display: none;
 }
-.header .gnb ul li {
+.header .gnb .gnb_wrap ul li {
   float: left;
 }
-.header .gnb ul li a {
+.header .gnb .gnb_wrap ul li a {
   display: block;
   padding: 0 24px;
   color: #FFFFFF;
@@ -226,7 +226,7 @@ html, body {
 .header.fixed .logo a {
   background-image: url(/dldldld/bntailor/images/common/logo_b.svg);
 }
-.header.fixed .gnb ul li a {
+.header.fixed .gnb .gnb_wrap ul li a {
   color: #3d3d3d;
 }
 
@@ -234,7 +234,7 @@ html, body {
   .header .logo a {
     width: 130px;
   }
-  .header .gnb ul li a {
+  .header .gnb .gnb_wrap ul li a {
     font-size: 18px;
   }
 }
@@ -242,7 +242,7 @@ html, body {
   .header .logo a {
     width: 120px;
   }
-  .header .gnb ul li a {
+  .header .gnb .gnb_wrap ul li a {
     padding: 0 15px;
     font-size: 17px;
   }
@@ -252,7 +252,7 @@ html, body {
     height: 60px;
   }
   .header .logo {
-    margin: 16px 0 0 20px;
+    margin: 10px 0 0 20px;
   }
   .header .logo a {
     width: 108px;
@@ -263,6 +263,7 @@ html, body {
   .header .gnb .gnb_open {
     display: block;
     position: relative;
+    z-index: 2;
     width: 60px;
     height: 60px;
   }
@@ -275,6 +276,7 @@ html, body {
     width: 21px;
     height: 2px;
     background-color: #FFF;
+    transition: 0.3s;
   }
   .header .gnb .gnb_open span.line1 { /*  span.line1  */
     top: 25px;
@@ -286,8 +288,181 @@ html, body {
   .header .gnb .gnb_open span.line3 {
     top: 39px;
   }
-  .header .gnb ul {
-    display: none;
+  .header .gnb .gnb_wrap {
+    display: block;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 375px;
+    padding-top: 60px;
+    height: 100vh;
+    background-color: #FFF;
+    color: #3D3D3D;
+    transition: right 0.5s;
+  }
+  .header .gnb .gnb_wrap ul li {
+    float: none;
+    border-bottom: 1px solid #f4f4f4;
+  }
+  .header .gnb .gnb_wrap ul li a {
+    padding: 0;
+    color: #3d3d3d;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .header .gnb .gnb_wrap ul li:first-child {
+    border-top: 1px solid #f4f4f4;
+  }
+  .header .gnb::after {
+    /* 
+        메뉴하단에 검은 배경을 채울때는 
+        position: fixed;
+        left, right, top, bottom 사방을 모두 0으로 주면
+        left:0;, top:0;, width:100%, height:100%로 동일하게 들어감
+
+        <div class="gnb">
+            <button class = "gnb_open></button>
+            <div class = "gnb_wrap"></div>
+            ::after -- gnb::after 
+        </div>
+        이런 구조에서 
+        gnb_open과 gnb_wrap, gnb::after의 순서를 조정할 수 있음
+        z-index는 이렇게 나란히 들어간 요소들 사이에서 높은 숫자가 위로 올라감
+
+        <button class = "gnb_open></button>
+        <div class = "gnb_wrap">
+            ::after -- gnb_wrap::after 
+        </div>
+        이런 구조라면 gnb_wrap::after는 gnb_wrap 안에 존재하기 때문에
+        그 밖에 있는 gnb_open, gnb_wrap과의 순서를 절대 조정 불가능함
+
+     */
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+  }
+  .header .gnb.mobile_open .gnb_open {
+    right: 0;
+  }
+  .header .gnb.mobile_open .gnb_open span {
+    background-color: #3D3D3D;
+  }
+  .header .gnb.mobile_open .gnb_open span.line1 { /*  span.line1  */
+    top: 30px;
+    transform: rotate(45deg);
+  }
+  .header .gnb.mobile_open .gnb_open span.line2 {
+    right: -22px;
+  }
+  .header .gnb.mobile_open .gnb_open span.line3 {
+    top: 30px;
+    transform: rotate(-45deg);
+  }
+  .header .gnb.mobile_open::after {
+    opacity: 1;
+  }
+  .header .gnb.mobile_open .gnb_wrap {
+    right: 0;
+  }
+}
+.footer {
+  display: block;
+  padding: 50px 0 150px 0;
+  background-color: #483E35;
+  color: #FFF;
+}
+.footer::after {
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+}
+.footer .sns {
+  float: right;
+}
+.footer .sns ul li {
+  float: left;
+}
+.footer .sns ul li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.6);
+  font-size: 0;
+  line-height: 0;
+}
+.footer .sns ul li a::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* 배경이미지가 한개를 보이는 영역을 제한해서 써야하기 때문에 
+  before, after에서 표시. 이때 before,after의 사이즈는 내가 사용할 
+  아이콘의 넓이 - 저장할때 활용된 아이콘의 넓이 */
+  width: 30px;
+  height: 30px;
+  background-image: url(/dldldld/bntailor/images/common/footer_ico.svg);
+  background-repeat: no-repeat;
+  content: "";
+}
+.footer .sns ul li:first-child a {
+  border-left-width: 1px;
+}
+.footer .sns ul li.facebook a::before {
+  background-position: left top;
+}
+.footer .sns ul li.youtube a::before {
+  background-position: left -30px top;
+}
+.footer .sns ul li.insta a::before {
+  background-position: left -60px top;
+}
+.footer .inner {
+  float: left;
+}
+.footer .inner .finfo {
+  display: block;
+  padding: 0 0 30px 0;
+}
+.footer .inner .finfo span {
+  padding-right: 32px;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer .sns {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    padding: 30px 0 90px 0;
+  }
+  .footer .sns {
+    float: none;
+  }
+  .footer .sns ul {
+    display: flex;
+    justify-content: center;
+  }
+  .footer .inner .finfo {
+    padding: 0 0 30px 0;
+  }
+  .footer .inner .finfo span {
+    padding-right: 14px;
   }
 }
 /*
@@ -321,11 +496,19 @@ html, body {
 .visual .popup { /* .visual .popup */
   height: 100vh;
 }
+.visual .popup ul li {
+  /* 현재 나타나는 팝업에 swiper가 주는 class명 */
+}
 .visual .popup ul li img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale3d(1.1, 1.1, 1);
+  transition: 2s;
+}
+.visual .popup ul li.swiper-slide-active img {
+  transform: scale3d(1, 1, 1);
 }
 .visual .popup .btn_wrap {
   display: flex;
@@ -811,6 +994,9 @@ html, body {
   }
 }
 @media screen and (max-width: 1300px) {
+  .news {
+    margin: 0 0 250px 0;
+  }
   .news h2 {
     margin: 60px 0 40px 0;
     font-size: 35px;
@@ -821,6 +1007,9 @@ html, body {
   }
 }
 @media screen and (max-width: 1199px) {
+  .news {
+    margin: 0 0 210px 0;
+  }
   .news h2 {
     margin: 60px 0 40px 0;
     font-size: 35px;
@@ -830,37 +1019,72 @@ html, body {
     font-size: 120px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
+  .news {
+    margin: 0 0 170px 0;
+  }
   .news h2 {
     margin: 60px 0 40px 0;
     font-size: 35px;
   }
   .news .bg_txt {
-    top: 210px;
-    font-size: 100px;
+    top: 232px;
   }
 }
-@media screen and (max-width: 819px) {
-  .news h2 {
-    margin: 40px 0 30px 0;
-    font-size: 30px;
+@media screen and (max-width: 1000px) {
+  .news {
+    margin: 0 0 140px 0;
   }
   .news .bg_txt {
-    top: 271px;
+    top: 246px;
     font-size: 120px;
   }
 }
-@media screen and (max-width: 700px) {
-  .news .list ul li:nth-child(1), .news .list ul li:nth-child(3), .news .list ul li:nth-child(5) {
-    padding: 0;
+@media screen and (max-width: 950px) {
+  .news {
+    margin: 0 0 140px 0;
+  }
+  .news .bg_txt {
+    top: 218px;
+    font-size: 100px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 849px) {
+  .news {
+    margin: 0 0 120px 0;
+  }
+  .news .bg_txt {
+    top: 248px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .news {
+    margin: 0 0 100px 0;
+  }
   .news h2 {
     margin: 30px 0 25px 0;
     font-size: 25px;
   }
   .news .list ul li {
     width: 152px;
+  }
+  .news .bg_txt {
+    font-size: 100px;
+    top: 302px;
+  }
+  .news .list ul li:nth-child(1), .news .list ul li:nth-child(3), .news .list ul li:nth-child(5) {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .news .bg_txt {
+    font-size: 60px;
+    top: 314px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .news .bg_txt {
+    font-size: 60px;
+    top: 230px;
   }
 }

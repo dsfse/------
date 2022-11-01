@@ -32,11 +32,23 @@
     }
     .popup { /* .visual .popup */
         height: 100vh;
-        ul li img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        ul {
+            li {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transform: scale3d(1.1,1.1,1);
+                    transition: 2s;
+                }
+                /* 현재 나타나는 팝업에 swiper가 주는 class명 */
+                &.swiper-slide-active {
+                    img {
+                        transform: scale3d(1,1,1);
+                    }
+                }
+            }
         }
         .btn_wrap {
             display: flex;
@@ -533,6 +545,9 @@
     }
 }
 @media screen and (max-width:1300px){
+    .news {
+        margin: 0 0 250px 0;
+    }
     .news h2 {
         margin: 60px 0 40px 0;
         font-size: 35px;
@@ -543,6 +558,9 @@
     }
 }
 @media screen and (max-width:1199px){
+    .news {
+        margin: 0 0 210px 0;
+    }
     .news h2 {
         margin: 60px 0 40px 0;
         font-size: 35px;
@@ -553,6 +571,9 @@
     }
 }
 @media screen and (max-width:1050px){
+    .news {
+        margin: 0 0 170px 0;
+    }
     .news h2 {
         margin: 60px 0 40px 0;
         font-size: 35px;
@@ -562,18 +583,46 @@
     }
 }
 @media screen and (max-width: 1000px){
+    .news {
+        margin: 0 0 140px 0;
+    }
     .news .bg_txt {
         top: 246px;
         font-size: 120px;
     }
 }
+@media screen and (max-width: 950px){
+    .news {
+        margin: 0 0 140px 0;
+    }
+    .news .bg_txt {
+        top: 218px;
+        font-size: 100px;
+    }
+}
 @media screen and (max-width:849px){
+    .news {
+        margin: 0 0 120px 0;
+    }
     .news .bg_txt {
         top: 248px;
     }
-    
 }
 @media screen and (max-width:700px){
+    .news {
+        margin: 0 0 100px 0;
+    }
+    .news h2 {
+        margin: 30px 0 25px 0;
+        font-size: 25px;
+    }
+    .news .list ul li {
+        width: 152px;
+    }
+    .news .bg_txt {
+        font-size: 100px;
+        top: 302px;
+    }
     .news .list ul li {
         &:nth-child(1), &:nth-child(3), &:nth-child(5) {
             padding: 0;
@@ -581,17 +630,14 @@
     }
 }
 @media screen and (max-width:640px){
-    .news {
-        h2 {
-            margin: 30px 0 25px 0;
-            font-size: 25px;
-        }
-        .list {
-            ul {
-                li {
-                    width: 152px;
-                }
-            }
-        }
-    }   
+    .news .bg_txt {
+        font-size: 60px;
+        top: 314px;
+    }
+}
+@media screen and (max-width:550px){
+    .news .bg_txt {
+        font-size: 60px;
+        top: 230px;
+    }
 }
