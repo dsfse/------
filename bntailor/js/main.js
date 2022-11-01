@@ -150,7 +150,7 @@ $(document).ready(function(){
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
-            950: {    /* 1200px 이상일때 적용 */
+            850: {    /* 1200px 이상일때 적용 */
             slidesPerView: 4,
             spaceBetween: 40,
             },

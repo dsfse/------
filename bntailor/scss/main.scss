@@ -552,24 +552,24 @@
         font-size: 120px;
     }
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:1050px){
     .news h2 {
         margin: 60px 0 40px 0;
         font-size: 35px;
     }
     .news .bg_txt {
-        top: 210px;
-        font-size: 100px;
+        top: 232px;
     }
 }
-@media screen and (max-width:819px){
-    .news h2 {
-        margin: 40px 0 30px 0;
-        font-size: 30px;
-    }
+@media screen and (max-width: 1000px){
     .news .bg_txt {
-        top: 271px;
+        top: 246px;
         font-size: 120px;
+    }
+}
+@media screen and (max-width:849px){
+    .news .bg_txt {
+        top: 248px;
     }
     
 }
