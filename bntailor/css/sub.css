@@ -222,6 +222,9 @@ html, body {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.header.fixed .logo svg text {
+  fill: #3D3D3D;
+}
 .header.fixed .gnb .gnb_wrap ul li a {
   color: #3d3d3d;
 }
@@ -229,6 +232,9 @@ html, body {
 @media screen and (max-width: 1440px) {
   .header .logo svg {
     width: 130px;
+  }
+  .header .logo svg text {
+    fill: #3D3D3D;
   }
   .header .gnb .gnb_wrap ul li a {
     font-size: 18px;
@@ -595,4 +601,18 @@ html, body {
 }
 .lnb .lnb_wrap ul li:first-child {
   padding-left: 0;
+}
+.lnb .lnb_wrap ul li.active a {
+  position: relative;
+  color: #3d3d3d;
+  font-weight: 700;
+}
+.lnb .lnb_wrap ul li.active a::before {
+  position: absolute;
+  left: 31px;
+  top: 40px;
+  width: 141px;
+  height: 3px;
+  background-color: #3d3d3d;
+  content: "";
 }

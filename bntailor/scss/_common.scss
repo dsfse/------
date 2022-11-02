@@ -134,9 +134,11 @@ html, body {
         background-color: rgba(255,255,255,0.7);
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
         .logo {
-            // a {
-            //     background-image: url(/dldldld/bntailor/images/common/logo_b.svg);
-            // }
+           svg {
+                text {
+                    fill: #3D3D3D;
+                }
+            }
         }
         .gnb {
             .gnb_wrap {
@@ -155,6 +157,9 @@ html, body {
 @media screen and (max-width:1440px){
     .header .logo svg {
         width: 130px;
+    }
+    .header .logo svg text {
+        fill: #3D3D3D;
     }
     .header .gnb .gnb_wrap ul li a {
         font-size: 18px;
@@ -277,8 +282,6 @@ html, body {
             &.mobile_open {
                 .gnb_open {
                     right: 0;
-                    strong {
-                    }
                     span {
                         background-color: #3D3D3D;
                         &.line1 {   /*  span.line1  */
