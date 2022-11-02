@@ -188,14 +188,13 @@ html, body {
   float: left;
   margin: 30px 0 0 40px;
 }
-.header .logo a {
-  display: block;
+.header .logo svg {
   width: 161px;
-  height: 44px;
-  background-image: url(/dldldld/bntailor/images/common/logo.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+}
+.header .logo svg text {
+  fill: #FFF;
+}
+.header .logo a {
   font-size: 0;
   line-height: 0;
 }
@@ -223,23 +222,20 @@ html, body {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.header.fixed .logo a {
-  background-image: url(/dldldld/bntailor/images/common/logo_b.svg);
-}
 .header.fixed .gnb .gnb_wrap ul li a {
   color: #3d3d3d;
 }
 
 @media screen and (max-width: 1440px) {
-  .header .logo a {
+  .header .logo svg {
     width: 130px;
   }
   .header .gnb .gnb_wrap ul li a {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 1440px) {
-  .header .logo a {
+@media screen and (max-width: 1200px) {
+  .header .logo svg {
     width: 120px;
   }
   .header .gnb .gnb_wrap ul li a {
@@ -252,9 +248,9 @@ html, body {
     height: 60px;
   }
   .header .logo {
-    margin: 10px 0 0 20px;
+    margin: 15px 0 0 20px;
   }
-  .header .logo a {
+  .header .logo svg {
     width: 108px;
   }
   .header .gnb {

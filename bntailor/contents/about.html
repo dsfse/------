@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="/dldldld/bntailor/css/sub.css">
     <link rel="stylesheet" href="/dldldld/bntailor/css/contents.css">
     <!-- html에서는 scss를 컴파일한 css를 호출해서 사용 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>Chairman > About As > B&TAILOR</title>
 </head>
 <body>
     <div id="wrap">
         <header class="header">
-            <h1 class="logo"><a href="/dldldld/bntailor/index.html">B&TAILOR</a></h1>
+            <h1 class="logo">
+                <a href="/dldldld/bntailor/index.html">B&TAILOR</a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 44">
+                    <text id="logo" transform="translate(0 35)" font-size="30" font-family="NotoSerifKR-Bold, Noto Serif KR" font-weight="700"><tspan x="0" y="0">B&amp;TAILOR</tspan></text>
+                </svg>  
+            </h1>
             <!-- 
                 모바일에서 메뉴를 열면 gnb에 mobile_open 
                 gnb_open 버튼은 三 > X 애니메이션
@@ -51,7 +55,7 @@
             about us - sub_bg1
             line - sub_bg2
         -->
-        <div class="sub_visual">
+        <div class="sub_visual sub_bg1">
             <div class="wrapper">
                 <div class="location">
                     <span>home</span>
@@ -60,19 +64,34 @@
                 </div>
                 <div class="tit">About Us</div>
             </div>
+            <div class="sub_visual_bg"></div>
+            <div class="sub_visual_path">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="sub_visual_path" clipPathUnits="objectBoundingBox" transform="scale(0.00078125,0.0013888888888889)">
+                        <path d="M-12393.123,11015.271h0l-262.877-89.657V10408h1920v448.457Z" transform="translate(12656 -10407.999)"/>
+                    </clipPath>
+                </svg>
+            </div>
+            <!-- svg에 clipPath를 추가하면 svg는 화면에 출력되지 않습니다.
+                css에서 clip-path로 사용하기 위해서 변환한 것
+                svg가 눈에 안보이는 것 뿐 공간은 차지함.. 
+                display:none 으로 숨기면 clip-path효과가 사라짐(적용이 안됨)
+                absolute로 한쪽으로 치워두고 svg를 선택해서 1px로 작게 수정 -->
         </div>
         <nav class="lnb"> <!-- local navigation bar 서브 메뉴 -->
             <div class="wrapper">
-                <ul>
-                    <!-- 현재 메뉴에 active 클래스 추가 -->
-                    <li class="active"><a href="#n">Chairman</a></li>
-                    <li><a href="#n">FamilyOur</a></li>
-                    <li><a href="#n">Business</a></li>
-                </ul>
+                <div class="lnb_wrap">
+                    <ul>
+                        <!-- 현재 메뉴에 active 클래스 추가 -->
+                        <li class="active"><a href="#n">Chairman</a></li>
+                        <li><a href="#n">Family</a></li>
+                        <li><a href="#n">Our Business</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="container">
-              
+            
         </div>
         <footer class="footer">
             <div class="wrapper">

@@ -188,14 +188,13 @@ html, body {
   float: left;
   margin: 30px 0 0 40px;
 }
-.header .logo a {
-  display: block;
+.header .logo svg {
   width: 161px;
-  height: 44px;
-  background-image: url(/dldldld/bntailor/images/common/logo.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+}
+.header .logo svg text {
+  fill: #FFF;
+}
+.header .logo a {
   font-size: 0;
   line-height: 0;
 }
@@ -223,23 +222,20 @@ html, body {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.header.fixed .logo a {
-  background-image: url(/dldldld/bntailor/images/common/logo_b.svg);
-}
 .header.fixed .gnb .gnb_wrap ul li a {
   color: #3d3d3d;
 }
 
 @media screen and (max-width: 1440px) {
-  .header .logo a {
+  .header .logo svg {
     width: 130px;
   }
   .header .gnb .gnb_wrap ul li a {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 1440px) {
-  .header .logo a {
+@media screen and (max-width: 1200px) {
+  .header .logo svg {
     width: 120px;
   }
   .header .gnb .gnb_wrap ul li a {
@@ -252,9 +248,9 @@ html, body {
     height: 60px;
   }
   .header .logo {
-    margin: 10px 0 0 20px;
+    margin: 15px 0 0 20px;
   }
-  .header .logo a {
+  .header .logo svg {
     width: 108px;
   }
   .header .gnb {
@@ -466,6 +462,137 @@ html, body {
   }
 }
 /* 서브 공통 레이아웃 */
-.container svg path {
-  fill: #483E35;
+.sub_visual {
+  position: relative;
+  height: 657px;
+  margin: 0 0 18px 0;
+}
+.sub_visual .sub_visual_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 715px; /* clip-path로 위치가 정확하지 않아 배경을 별도의 요소에 줌 */
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  clip-path: url(#sub_visual_path);
+  /* html에서 입력한 svg clipPath에 지정된 id값을 url로 연결하면 해당요소의 path 값이 적용됨 
+      배경이 표시될 영역으로 활용됨.
+      path로 직접 경로를 사용했는데 안되는 경우, svg path의 크기를 변경해야 하는 경우
+      이런 방식으로 사용함.
+  */
+}
+.sub_visual.sub_bg1 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual1.png);
+}
+.sub_visual.sub_bg2 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual2.png);
+}
+.sub_visual.sub_bg3 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual3.png);
+}
+.sub_visual.sub_bg4 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual4.png);
+}
+.sub_visual.sub_bg5 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual5.png);
+}
+.sub_visual.sub_bg6 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual6.png);
+}
+.sub_visual.sub_bg7 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual7.png);
+}
+.sub_visual.sub_bg8 .sub_visual_bg {
+  background-image: url(/dldldld/bntailor/images/sub/sub_visual8.png);
+}
+.sub_visual .sub_visual_path {
+  position: absolute;
+  right: 0;
+  border: 0;
+}
+.sub_visual .sub_visual_path svg {
+  width: 1px;
+  height: 1px;
+}
+.sub_visual .location {
+  display: flex;
+  padding: 227px 0 0 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.sub_visual .location span {
+  position: relative;
+  margin-right: 20px;
+}
+.sub_visual .location span::after {
+  position: absolute;
+  right: -14px;
+  top: 9px;
+  width: 6px;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0.8);
+  clip-path: polygon(15% 0.3%, 51.1% 0%, 80% 51%, 51.1% 100%, 15% 100%, 51.4% 50%);
+  /* 
+     이미지로 하는 것이 아니라 svg를 이용해서 아이콘을 그리는데, 여러번 반복햇허 들어가는 경우 
+     css에서 원하는 도형의 크기와 넓이를 주고, 배경색으로 아이콘의 색상을 주고 
+     clip-path: 로 patg 값을 줌.. 
+     장점은 css로 여러요소를 선택해서 도형을 그릴 수 있다는 장점
+     단점은 사이즈 수정이 불가능함 (단,%로 path를 그릴 것은 가능)
+     - 작은 것은 적용 안됨..  
+     - 브라우저 호환성이 떨어짐(안되는 브라우저가 있음)
+     - path를 그리는 방법이 많은데.. 일부는 적용이 안됨(html에서는 되도 css에서는 안됨)
+  */
+  content: "";
+}
+.sub_visual .location span:last-child::after {
+  display: none;
+}
+.sub_visual .tit {
+  font-family: "Noto Serif KR", serif;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+  .sub_visual {
+    height: 350px;
+  }
+  .sub_visual .sub_visual_bg {
+    height: 100%; /* clip-path로 위치가 정확하지 않아 배경을 별도의 요소에 줌 */
+    clip-path: none;
+  }
+  .sub_visual .location {
+    padding: 162px 0 0 0;
+  }
+  .sub_visual .location span {
+    margin-right: 16px;
+  }
+  .sub_visual .location span::after {
+    right: -12px;
+    top: 6px;
+    width: 6px;
+    height: 9px;
+  }
+  .sub_visual .tit {
+    font-size: 40px;
+  }
+}
+.lnb {
+  height: 80px;
+}
+.lnb .lnb_wrap ul li {
+  float: left;
+}
+.lnb .lnb_wrap ul li a {
+  display: block;
+  padding: 0 28px;
+  font-size: 30px;
+  color: #CCCCCC;
+}
+.lnb .lnb_wrap ul li:first-child {
+  padding-left: 0;
 }
