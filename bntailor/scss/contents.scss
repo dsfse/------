@@ -1,1 +1,180 @@
+@import "_var.scss";
 /* 각각의 콘텐츠 페이지 스타일 */
+
+/* Chairman > About  Us > B&TALIOR */
+.cts_about1 {
+    @include font_serif;
+    margin: 12px 0 150px 0;
+    .about_top {
+        position: relative;
+        padding: 50px 0 0 0;
+        color: #fff;
+        strong {
+            position: absolute;
+            top: 216px;
+            left: 200px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        span {
+            position: absolute;
+            top: 283px;
+            left: 200px;
+            font-size: 30px;
+            font-weight: 400;
+            br {
+                display: none;
+            }
+        }
+        img {
+            position: absolute;
+            top: 0;
+            right: 88px;
+        }
+        .bg {
+            height: 554px; 
+            background: url(/dldldld/bntailor/images/contents/about_top_bg.png) no-repeat center center / cover;
+        }
+    }
+    .about_sub {
+        position: relative;
+        z-index: 10;
+        padding: 40px 0 20px 40px;
+        margin: -154px 0 0 560px;
+        background-color: #fff;
+        .inner {
+            .tit {
+                font-size: 30px;
+            }
+            .cnt {
+                margin: 20px 0;
+                font-size: 20px;
+            }
+            .sign {
+                float: right;
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+@media screen and (max-width:1400px){
+    .cts_about1 .about_top strong {
+        left: 150px;
+    }
+    .cts_about1 .about_top span {
+        left: 150px;
+    }
+    .cts_about1 .about_sub {
+        margin: 0;
+    }
+    .cts_about1 .about_top .bg {
+        height: 488px;
+    }
+}
+@media screen and (max-width:1200px){
+    .cts_about1 .about_top strong {
+        left: 120px;
+        top: 170px;
+        font-size: 35px;
+    }
+    .cts_about1 .about_top span {
+        left: 120px;
+        top: 225px;
+        font-size: 25px;
+    }
+    .cts_about1 .about_top img {
+        right: 0;
+        width: 40%;
+    }
+    .cts_about1 .about_top .bg {
+        height: 350px;
+    }
+    .cts_about1 .about_sub .inner .cnt {
+        font-size: 18px;
+    }
+    .cts_about1 .about_sub .inner .sign {
+        font-size: 23px;
+    }
+
+}
+@media screen and (max-width:1000px){
+    .cts_about1 .about_top strong {
+        left: 40px;
+        top: 150px;
+    }
+    .cts_about1 .about_top span {
+        left: 40px;
+        top: 205px;
+    }
+    .cts_about1 .about_top .bg {
+        height: 300px;
+    }
+}
+@media screen and (max-width:850px){
+    .cts_about1 .about_top strong {
+        left: 40px;
+        top: 130px;
+        font-size: 25px;
+    }
+    .cts_about1 .about_top span {
+        left: 40px;
+        top: 170px;
+        font-size: 20px;
+    }
+    .cts_about1 .about_top img {
+        right: 0;
+        width: 43%;
+    }
+    .cts_about1 .about_top .bg {
+        height: 250px;
+    }
+}
+@media screen and (max-width:640px){
+    .cts_about1 {
+        margin: 12px 0 100px 0;
+        .about_top {
+            padding: 18px 0 0 0;
+            strong {
+                top: 82px;
+                left: 15px;
+                font-size: 15px;
+            }
+            span {
+                top: 109px;
+                left: 15px;
+                font-size: 13px;
+            }
+            img {
+                width: 191px;
+            }
+            .bg {
+                height: 200px; 
+            }
+        }
+        .about_sub {
+            padding: 30px 0 0 0;
+            margin: 0;
+            background-color: #fff;
+            .inner {
+                .tit {
+                    font-size: 20px;
+                }
+                .cnt {
+                    font-size: 13px;
+                }
+                .sign {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .cts_about1 .about_top span {
+        br {
+            display: block;
+        }
+    }
+    
+}
