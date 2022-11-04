@@ -127,32 +127,16 @@ html, body {
             }
         }
     }
-    &.fixed { // header fixed header에 fixed 클래스가 추가됐을때 - header고정
+    &.fixed {
         position: fixed;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); // 브라우저 호환성 때문에
-        background-color: rgba(255,255,255,0.7);
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        .logo {
-           svg {
-                text {
-                    fill: #3D3D3D;
-                }
-            }
+        background-color: rgba(255,255,255,0.8);
+        .logo svg text {
+            fill: #3d3d3d;   
         }
-        .gnb {
-            .gnb_wrap {
-                ul {
-                    li {
-                        a {
-                            color: $basic_color;
-                        }
-                    }
-                }
-            }
+        .gnb .gnb_wrap ul li a {
+            color: #3d3d3d;   
         }
     }
-
 }
 @media screen and (max-width:1440px){
     .header .logo svg {
