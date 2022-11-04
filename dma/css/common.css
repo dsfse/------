@@ -1,0 +1,202 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Serif KR', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 320px;
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+@media screen and (max-width:1000px){
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.header .logo a {
+    display: block;
+    float: left;
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    width: 256px;
+    height: 31px;
+    background-image: url(../images/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb {
+    position: relative;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb .gnb_wrap ul {
+    float: left;
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+}
+.header .gnb .gnb_wrap ul li {
+    display: block;
+    float: left;
+    margin: 0 46px 0 0;
+    font-size: 20px;
+}
+.header .gnb .gnb_wrap ul li:last-child {
+    margin-right: 0;
+}
+.header .gnb .gnb_util ul {
+    float: right;
+    position: absolute;
+    right: 68px;
+    top: 35px;
+}
+.header .gnb .gnb_util ul li {
+    display: block;
+    float: left;
+    margin: 0 30px 0 0;
+    font-size: 20px;
+}
+.header .gnb .gnb_util ul li:last-child {
+    margin-right: 0;
+}
+.header .gnb .gnb_util ul li a i {
+    margin-right: 3px;
+    font-size: 17px;
+}
+.header .gnb .gnb_util ul li.red a {
+    color: #C10B12;
+    font-weight: 700;
+}
+@media screen and (max-width:1400px){
+    .header .logo a {
+        left: 60px;
+        top: 41px;
+        width: 230px;
+        height: 25px;
+    }
+    .header .gnb .gnb_wrap ul li {
+        margin: 0 40px 0 0;
+        font-size: 18px;
+    }
+    .header .gnb .gnb_util ul li {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1300px){
+    .header .logo a {
+        left: 40px;
+    }
+    .header .gnb .gnb_wrap ul li {
+        margin: 0 30px 0 0;
+        font-size: 15px;
+    }
+    .header .gnb .gnb_util ul li {
+        margin: 0 20px 0 0;
+        font-size: 15px;
+    }
+    .header .gnb .gnb_util ul li a i {
+        font-size: 13px;
+    }
+
+}
+@media screen and (max-width:1000px){
+    .header {
+        height: 60px;
+    }
+    .header .logo a {
+        position: absolute;
+        left: 20px;
+        top: 22px;
+        width: 131px;
+        height: 16px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 22px;
+    }
+    .header .gnb .gnb_open strong {
+        display: none;
+      }
+      .header .gnb .gnb_open span {
+        position: absolute;
+        right: 20px;
+        width: 13px;
+        height: 1px;
+        background-color: #FFF;
+        transition: 0.3s;
+      }
+      .header .gnb .gnb_open span.line1 { /*  span.line1  */
+        top: 0;
+      }
+      .header .gnb .gnb_open span.line2 {
+        top: 6px;
+        width: 9px;
+      }
+      .header .gnb .gnb_open span.line3 {
+        top: 12px;
+      }
+    .header .gnb .gnb_wrap ul {
+        display: none;
+    }
+    .header .gnb .gnb_util ul {
+        display: none;
+    }
+}
+
+
+
+
