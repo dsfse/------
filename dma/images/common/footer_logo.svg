@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="36.274" viewBox="0 0 120 36.274">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.955" y1="1.151" x2="-0.153" y2="0.067" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023"/>
+      <stop offset="0.378" stop-color="#eb3e22"/>
+      <stop offset="0.589" stop-color="#e33821"/>
+      <stop offset="0.758" stop-color="#d52e1f"/>
+      <stop offset="0.905" stop-color="#c2211c"/>
+      <stop offset="1" stop-color="#b1151a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1.068" x2="0.5" y2="-0.038" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023"/>
+      <stop offset="0.167" stop-color="#e93c22"/>
+      <stop offset="0.355" stop-color="#db3320"/>
+      <stop offset="0.552" stop-color="#c5231d"/>
+      <stop offset="0.691" stop-color="#b1151a"/>
+      <stop offset="0.867" stop-color="#b1151a"/>
+      <stop offset="1" stop-color="#960c10"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.96" y1="0.539" x2="0.087" y2="0.477" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023" stop-opacity="0"/>
+      <stop offset="0.515" stop-color="#960c10" stop-opacity="0"/>
+      <stop offset="0.553" stop-color="#920a0e" stop-opacity="0.114"/>
+      <stop offset="0.694" stop-color="#850608" stop-opacity="0.494"/>
+      <stop offset="0.821" stop-color="#7b0203" stop-opacity="0.769"/>
+      <stop offset="0.927" stop-color="#760000" stop-opacity="0.937"/>
+      <stop offset="1" stop-color="#740000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.023" y1="0.151" x2="0.966" y2="0.841" gradientUnits="objectBoundingBox">
+      <stop offset="0.248" stop-color="#ee4023"/>
+      <stop offset="0.392" stop-color="#e93c22"/>
+      <stop offset="0.554" stop-color="#db3320"/>
+      <stop offset="0.723" stop-color="#c5231d"/>
+      <stop offset="0.842" stop-color="#b1151a"/>
+      <stop offset="0.906" stop-color="#a91217"/>
+      <stop offset="0.998" stop-color="#960c10"/>
+      <stop offset="1" stop-color="#960c10"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023"/>
+      <stop offset="0.177" stop-color="#e93c22"/>
+      <stop offset="0.377" stop-color="#db3320"/>
+      <stop offset="0.586" stop-color="#c5231d"/>
+      <stop offset="0.733" stop-color="#b1151a"/>
+      <stop offset="1" stop-color="#960c10"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.482" y1="0.985" x2="0.53" y2="0.078" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023"/>
+      <stop offset="0.259" stop-color="#ca2a1b"/>
+      <stop offset="0.661" stop-color="#960c10"/>
+      <stop offset="1" stop-color="#740000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.13" y1="-0.021" x2="0.988" y2="1.208" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee4023" stop-opacity="0"/>
+      <stop offset="0.208" stop-color="#d4351d" stop-opacity="0.165"/>
+      <stop offset="0.591" stop-color="#901a0e" stop-opacity="0.592"/>
+      <stop offset="0.903" stop-color="#500000"/>
+      <stop offset="1" stop-color="#500000"/>
+    </linearGradient>
+  </defs>
+  <g id="footer_logo" transform="translate(-419.286 -169.079)">
+    <path id="패스_34" data-name="패스 34" d="M429.448,170.16H420.5a1.214,1.214,0,0,0-1.213,1.212v34.066h9.228V179.427h.934a15.861,15.861,0,0,1,15.863,15.862v.924h9.267v-.924A25.128,25.128,0,0,0,429.448,170.16Z" transform="translate(0 -0.085)" fill="url(#linear-gradient)"/>
+    <path id="패스_35" data-name="패스 35" d="M540.83,196.126,525.988,169.6a.764.764,0,0,0-1.406-.084l-.006-.012-20.058,35.853h10.573l10.164-18.169,5,8.942H520.253l-5.163,9.228h30.9Z" transform="translate(-6.709 -0.001)" fill="url(#linear-gradient-2)"/>
+    <g id="그룹_11" data-name="그룹 11" transform="translate(508.382 196.126)">
+      <path id="패스_36" data-name="패스 36" d="M521.157,198.437l-5.163,9.227h30.9l-5.165-9.227Z" transform="translate(-515.994 -198.437)" fill="url(#linear-gradient-3)"/>
+    </g>
+    <g id="그룹_12" data-name="그룹 12" transform="translate(431.99 196.128)">
+      <path id="패스_37" data-name="패스 37" d="M433.075,207.665h22.588v-9.226H434.288a1.213,1.213,0,0,0-1.213,1.214Z" transform="translate(-433.075 -198.439)" fill="url(#linear-gradient-4)"/>
+    </g>
+    <path id="패스_38" data-name="패스 38" d="M498.108,180.164V169.857a.776.776,0,0,0-1.294-.58v0l-16.681,13.751-16.683-13.751v.006a.774.774,0,0,0-1.293.578v35.5h9.225V187.772l8.023,6.615a1.213,1.213,0,0,0,.729.24,1.2,1.2,0,0,0,.761-.271Z" transform="translate(-3.375)" fill="url(#linear-gradient-5)"/>
+    <path id="패스_39" data-name="패스 39" d="M500.391,206.3V181.111l-9.23,7.61V206.3Z" transform="translate(-5.658 -0.947)" fill="url(#linear-gradient-6)"/>
+    <path id="패스_40" data-name="패스 40" d="M429.3,170.16h.936a25.128,25.128,0,0,1,25.13,25.129v.924H446.1v-.924a15.861,15.861,0,0,0-15.862-15.862H429.3Z" transform="translate(-0.788 -0.085)" fill="url(#linear-gradient-7)"/>
+  </g>
+</svg>

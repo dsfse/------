@@ -140,9 +140,367 @@
 }
 .project .tit h2 {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -80px;
+    top: 155px;
     font-size: 100px;
     font-weight: 700;
     transform:rotate(270deg);
+}
+.project .list  ul li a {
+    display: block;
+    float: right;
+    margin-bottom: 70px;
+}
+.project .list  ul li:last-child {
+    margin-bottom: 0;
+}
+.project .list  ul li a .prj_bg1  {
+    background: url(../images/main/project_bg1.png) no-repeat center center / cover;
+}
+.project .list  ul li a .prj_bg2 {
+    background: url(../images/main/project_bg2.png) no-repeat center center / cover;
+}
+.project .list  ul li a .prj_bg1,
+.project .list  ul li a .prj_bg2 {
+    width: 1580px;
+    height: 800px;
+    padding: 554px 40px 0 40px;
+    color: #FFF;
+}
+.project .list  ul li a .prj_bg1 .txt {
+    display: flex;
+    justify-content: space-between;
+}
+.project .list  ul li a .prj_bg1 .txt .txt_main .tit {
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.project .list  ul li a .prj_bg1 .txt .txt_main .detail_txt {
+    width: 1160px;
+    font-size: 20px;
+}
+.project .list  ul li a .prj_bg1 .txt .txt_info {
+    margin-top: 79px;
+    font-size: 20px;
+}
+.project .list  ul li a .prj_bg1 .txt .txt_info .place {
+    margin-bottom: 10px;
+}
+.project .list  ul li a .prj_bg2 .txt {
+    display: flex;
+    justify-content: space-between;
+}
+.project .list  ul li a .prj_bg2 .txt .txt_main .tit {
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.project .list  ul li a .prj_bg2 .txt .txt_main .detail_txt {
+    width: 1160px;
+    font-size: 20px;
+}
+.project .list  ul li a .prj_bg2 .txt .txt_info {
+    margin-top: 79px;
+    font-size: 20px;
+}
+.project .list  ul li a .prj_bg2 .txt .txt_info .place {
+    margin-bottom: 10px;
+}
+@media screen and (max-width:1919px){
+    .project {
+        margin: 100px 0 0 40px;
+    }
+    .project .tit h2 {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 0 50px 0;
+        font-size: 100px;
+        transform:rotate(0deg);
+    }
+    .project .list  ul li a {
+        float: none;
+    }
+    .project .list  ul li a .prj_bg1,
+    .project .list  ul li a .prj_bg2 {
+        width: auto;
+        height: auto;
+        padding: 554px 40px 40px 40px;
+    }
+    .project .list  ul li a .prj_bg1 .txt {
+        display: block;
+    }
+    .project .list ul li a .prj_bg1 .txt .txt_info {
+        margin-top: 15px;
+    }
+    .project .list  ul li a .prj_bg2 .txt {
+        display: block;
+    }
+    .project .list ul li a .prj_bg2 .txt .txt_info {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:1300px){
+    .project {
+        margin: 70px 0 0 40px;
+    }
+    .project .tit h2 {
+        margin: 0 0 40px 0;
+        font-size: 80px;
+    }
+    .project .list  ul li a {
+        margin-bottom: 60px;
+    }
+    .project .list  ul li a .prj_bg1,
+    .project .list  ul li a .prj_bg2 {
+        padding: 500px 40px 40px 40px;
+    } 
+    .project .list  ul li a .prj_bg1 .txt .txt_main .tit {
+        font-size: 35px;
+    }
+    .project .list ul li a .prj_bg1 .txt .txt_main .detail_txt {
+        width: auto;
+        font-size: 15px;
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_info {
+        font-size: 18px;
+    }
+    .project .list  ul li a .prj_bg .txt .txt_main .tit {
+        font-size: 35px;
+    }
+    .project .list ul li a .prj_bg2 .txt .txt_main .detail_txt {
+        width: auto;
+        font-size: 15px;
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_info {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1100px){
+    .project {
+        margin: 60px 0 0 40px;
+    }
+    .project .tit h2 {
+        margin: 0 0 30px 0;
+        font-size: 60px;
+    }
+    .project .list  ul li a {
+        margin-bottom: 50px;
+    }
+    .project .list  ul li a .prj_bg1,
+    .project .list  ul li a .prj_bg2 {
+        padding: 400px 40px 40px 40px;
+    } 
+    .project .list  ul li a .prj_bg1 .txt .txt_main .tit {
+        font-size: 30px;
+    }
+    .project .list  ul li a .prj_bg .txt .txt_main .tit {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:800px){
+    .project {
+        margin: 40px 0 0 30px;
+    }
+    .project .tit h2 {
+        font-size: 45px;
+    }
+    .project .list  ul li a {
+        margin-bottom: 40px;
+    }
+    .project .list  ul li a .prj_bg1,
+    .project .list  ul li a .prj_bg2 {
+        padding: 350px 30px 30px 30px;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_main .tit {
+        font-size: 26px;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_info {
+        font-size: 15px;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_main .tit {
+        font-size: 26px;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_info {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:640px){
+    .project {
+        margin: 30px 0 0 20px;
+    }
+    .project .tit h2 {
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 30px;
+    }
+    .project .list  ul li a {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .project .list  ul li a .prj_bg1,
+    .project .list  ul li a .prj_bg2 {
+        width: auto;
+        height: auto;
+        padding: 241px 28px 30px 20px;
+    }
+    .project .list  ul li a .prj_bg1 .txt {
+        display: block;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_main .tit {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_main .detail_txt {
+        display: none;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_info {
+        margin-top: 0;
+        font-size: 13px;
+    }
+    .project .list  ul li a .prj_bg1 .txt .txt_info .place {
+        margin-bottom: 5px;
+    }
+    .project .list  ul li a .prj_bg2 .txt {
+        display: block;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_main .tit {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_main .detail_txt {
+        display: none;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_info {
+        margin-top: 0;
+        font-size: 13px;
+    }
+    .project .list  ul li a .prj_bg2 .txt .txt_info .place {
+        margin-bottom: 5px;
+    }
+}
+
+.news {
+    margin: 130px 0 200px 0;
+}
+.news .tit_edu {
+    position: relative;
+    height: 430px;
+    margin-bottom: 102px;
+}
+.news .tit_edu strong {
+    float: left;
+    margin-top: 76px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.news .tit_edu .list ul {
+    float: right;
+}
+.news .tit_edu .list ul li {
+    float: left;
+    width: 320px;
+    margin-right: 40px;
+}
+.news .tit_edu .list ul li:last-child {
+    margin-right: 0;
+}
+.news .tit_edu .list ul li img {
+    width: 100%;
+}
+.news .tit_edu .list ul li a {
+    display: block;
+}
+.news .tit_edu .list ul li a span {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 1.5em;
+    overflow: hidden;
+}
+.news .tit_edu .list ul li a p {
+    display: block;
+    font-size: 16px;
+}
+.news .tit_edu .btn {
+    position: absolute;
+    left: 80px;
+    top: 220px;
+}
+.news .tit_edu .btn button {
+    font-size: 16px;
+    border-bottom: 1px solid #707070;
+}
+
+.news .tit_cut {
+    position: relative;
+    height: 430px;
+    margin-bottom: 102px;
+}
+.news .tit_cut::after {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 1400px;
+    height: 1px;
+    border-bottom: 1px solid #CCCCCC;
+    content: "";
+}
+.news .tit_cut strong {
+    float: right;
+    margin-top: 76px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.news .tit_cut .list ul {
+    float: left;
+}
+.news .tit_cut .list ul li {
+    float: left;
+    width: 320px;
+    margin-right: 40px;
+}
+.news .tit_cut .list ul li:last-child {
+    margin-right: 0;
+}
+.news .tit_cut .list ul li a {
+    display: block;
+}
+.news .tit_cut .list ul li img {
+    width: 100%;
+}
+.news .tit_cut .list ul li a span {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 1.5em;
+    overflow: hidden;
+}
+.news .tit_cut .list ul li a p {
+    display: block;
+    font-size: 16px;
+}
+.news .tit_cut .btn {
+    position: absolute;
+    right: 80px;
+    top: 220px;
+}
+.news .tit_cut .btn button {
+    font-size: 16px;
+    border-bottom: 1px solid #707070;
+}
+@media screen and (max-width:640px){
+    
 }
