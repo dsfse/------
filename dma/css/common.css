@@ -118,10 +118,33 @@ html, body {
     color: #C10B12;
     font-weight: 700;
 }
+.header.fixed {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.header.fixed .logo a {
+    background: url(../images/common/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.header.fixed .gnb .gnb_wrap ul li a {
+    color: #3d3d3d;
+}
+.header.fixed .gnb .gnb_util ul li a {
+    color: #3d3d3d;
+}
+.header.fixed .gnb .gnb_util ul li:last-child a {
+    color: #C10B12;
+}
 @media screen and (max-width:1400px){
     .header .logo a {
         left: 60px;
         top: 41px;
+        width: 230px;
+        height: 25px;
+    }
+    .header.fixed .logo a {
         width: 230px;
         height: 25px;
     }
@@ -161,6 +184,10 @@ html, body {
         width: 131px;
         height: 16px;
     }
+    .header.fixed .logo a {
+        width: 131px;
+        height: 16px;
+    }
     .header .gnb .gnb_open {
         display: block;
         float: right;
@@ -170,30 +197,151 @@ html, body {
     }
     .header .gnb .gnb_open strong {
         display: none;
-      }
-      .header .gnb .gnb_open span {
+    }
+    .header .gnb .gnb_open span {
         position: absolute;
         right: 20px;
         width: 13px;
         height: 1px;
         background-color: #FFF;
         transition: 0.3s;
-      }
-      .header .gnb .gnb_open span.line1 { /*  span.line1  */
+    }
+    .header.fixed .gnb .gnb_open span {
+        position: absolute;
+        right: 20px;
+        width: 13px;
+        height: 1px;
+        background-color: #3D3D3D;
+        transition: 0.3s;
+    }
+    .header .gnb .gnb_open span.line1 { /*  span.line1  */
         top: 0;
-      }
-      .header .gnb .gnb_open span.line2 {
+    }
+    .header .gnb .gnb_open span.line2 {
         top: 6px;
         width: 9px;
-      }
-      .header .gnb .gnb_open span.line3 {
+    }
+    .header .gnb .gnb_open span.line3 {
         top: 12px;
-      }
+    }
     .header .gnb .gnb_wrap ul {
         display: none;
     }
     .header .gnb .gnb_util ul {
         display: none;
+    }
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 294px;
+    padding: 60px 0 0 0;
+    background-color: #3D3D3D;
+    color: #FFF;
+}
+.footer .f_logo {
+    float: left;
+    width: 130px;
+    height: 36px;
+}
+.footer .f_info {
+    text-align: center;
+}
+.footer .f_info span {
+    margin-right: 25px;
+    font-size: 20px;
+}
+.footer .f_info span:last-child {
+    margin-right: 0;
+}
+.footer .f_info span strong {
+    font-weight: 700;
+    color: #C10B12;
+}
+.footer .address {
+    margin: 20px 0;
+    font-size: 15px;
+    text-align: center;
+}
+.footer .copyrighy {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+.footer .btn_top {
+    position: absolute;
+    right: 8%;
+    bottom: 260px;
+    float: right;
+    width: 60px;
+    height: 60px;
+    background-color: #C10B12;
+    color: #FFF;
+    border-radius: 30px;
+}
+.footer .btn_top a {
+    display: block;
+    padding: 16px 0 0 12px;
+    font-size: 18px;
+}
+@media screen and (max-width:1200px){
+    .footer {
+        padding: 50px 0 0 0;
+    }
+    .footer .f_info span {
+        margin-right: 22px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer {
+        padding: 40px 0 0 0;
+    }
+    .footer .f_logo {
+        float: none;
+        margin: 0 0 30px 0;
+    }
+    .footer .f_info span {
+        margin-right: 20px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:750px){
+    .footer {
+        padding: 20px 0 0 0;
+        height: 350px;
+    }
+    .footer .f_logo {
+        width: 96px;
+        height: 29px;
+        text-align: center;
+    }
+    .footer .f_info {
+        text-align: inherit;
+    }
+    .footer .f_info span {
+        margin-right: 15px;
+        font-size: 13px;
+    }
+    .footer .address {
+        margin: 20px 0 10px 0;
+        font-size: 13px;
+        text-align: inherit;
+    }
+    .footer .copyrighy {
+        font-size: 13px;
+        text-align: inherit;
+    }
+    .footer .btn_top {
+        bottom: 331px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .footer .btn_top a {
+        padding: 11px 0 0 7px;
+        font-size: 13px;
     }
 }
 

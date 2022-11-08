@@ -399,11 +399,13 @@
 .news .tit_edu strong {
     float: left;
     margin-top: 76px;
+    width: 26%;
     font-size: 40px;
     font-weight: 700;
 }
-.news .tit_edu .list ul {
+.news .tit_edu .list {
     float: right;
+    width: 74%;
 }
 .news .tit_edu .list ul li {
     float: left;
@@ -413,11 +415,11 @@
 .news .tit_edu .list ul li:last-child {
     margin-right: 0;
 }
-.news .tit_edu .list ul li img {
-    width: 100%;
-}
 .news .tit_edu .list ul li a {
     display: block;
+}
+.news .tit_edu .list ul li a img {
+    width: 100%;
 }
 .news .tit_edu .list ul li a span {
     display: block;
@@ -437,11 +439,11 @@
     left: 80px;
     top: 220px;
 }
-.news .tit_edu .btn button {
+.news .tit_edu .btn button a {
+    display: block;
     font-size: 16px;
     border-bottom: 1px solid #707070;
 }
-
 .news .tit_cut {
     position: relative;
     height: 430px;
@@ -451,7 +453,7 @@
     position: absolute;
     left: 0;
     top: -50px;
-    width: 1400px;
+    width: 100%;
     height: 1px;
     border-bottom: 1px solid #CCCCCC;
     content: "";
@@ -462,8 +464,9 @@
     font-size: 40px;
     font-weight: 700;
 }
-.news .tit_cut .list ul {
+.news .tit_cut .list {
     float: left;
+    width: 74%;
 }
 .news .tit_cut .list ul li {
     float: left;
@@ -476,7 +479,7 @@
 .news .tit_cut .list ul li a {
     display: block;
 }
-.news .tit_cut .list ul li img {
+.news .tit_cut .list ul li a img {
     width: 100%;
 }
 .news .tit_cut .list ul li a span {
@@ -497,10 +500,430 @@
     right: 80px;
     top: 220px;
 }
-.news .tit_cut .btn button {
+.news .tit_cut .btn button a {
+    display: block;
     font-size: 16px;
     border-bottom: 1px solid #707070;
 }
+@media screen and (max-width:1440px){
+    .news {
+        margin: 50px 0 150px 0;
+    }
+    .news .tit_edu {
+        height: auto;
+    }
+    .news .tit_edu strong {
+        float: none;
+        margin-top: 0;
+        width: auto;
+    }
+    .news .tit_edu .list {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .news .tit_edu .list ul li a p {
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+    .news .tit_cut {
+        height: auto;
+    }
+    .news .tit_cut strong {
+        float: none;
+        margin-top: 0;
+        width: auto;
+    }
+    .news .tit_cut .list {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .news .tit_cut .list ul li a p {
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:1000px){
+    .news {
+        margin: 50px 0 100px 0;
+    }
+    .news .tit_edu {
+        margin-bottom: 85px;
+    }
+    .news .tit_edu strong {
+        font-size: 35px;
+    }
+    .news .tit_edu .list ul li a span {
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+    }
+    .news .tit_edu .list ul li a p {
+        font-size: 15px;
+    }
+    .news .tit_cut {
+        margin-bottom: 85px;
+    }
+    .news .tit_cut strong {
+        font-size: 35px;
+    }
+    .news .tit_cut .list ul li a span {
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+    }
+    .news .tit_cut .list ul li a p {
+        font-size: 15px;
+    }
+    .news .tit_cut::after {
+        top: -35px;
+    }
+}
+@media screen and (max-width:800px){
+    .news {
+        margin: 50px 0 100px 0;
+    }
+    .news .tit_edu .list ul li a span {
+        font-size: 16px;
+    }
+    .news .tit_edu .list ul li a p {
+        font-size: 13px;
+    }
+    .news .tit_cut .list ul li a span {
+        font-size: 16px;
+    }
+    .news .tit_cut .list ul li a p {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width:640px){
+    .news {
+        margin: 20px 0 50px 0;
+    }
+    .news .tit_edu {
+        height: auto;
+        margin-bottom: 77px;
+    }
+    .news .tit_edu strong {
+        float: none;
+        margin-top: 0;
+        width: auto;
+        font-size: 30px;
+    }
+    .news .tit_edu .list {
+        float: none;
+        width: auto;
+        margin: 20px 0 0 0;
+    }
+    .news .tit_edu .list ul li {
+        width: 208px;
+        margin-right: 16px;
+    }
+    .news .tit_edu .list ul li a span {
+        margin: 10px 0 0 0;
+        font-size: 15px;
+    }
+    .news .tit_edu .list ul li a p {
+        display: none;
+    }
+    .news .tit_edu .btn {
+        left: 40%;
+        top: 105%;
+    }
+    .news .tit_edu .btn button a {
+        font-size: 13px;
+    }
+    .news .tit_cut {
+        height: auto;
+        padding-top: 30px;
+        margin-bottom: 77px;
+    }
+    .news .tit_cut::after {
+        top: 0;
+    }
+    .news .tit_cut strong {
+        float: none;
+        margin-top: 0;
+        width: auto;
+        font-size: 30px;
+    }
+    .news .tit_cut .list {
+        float: none;
+        width: auto;
+        margin: 20px 0 0 0;
+    }
+    .news .tit_cut .list ul li {
+        width: 208px;
+        margin-right: 16px;
+    }
+    .news .tit_cut .list ul li a span {
+        margin: 10px 0 0 0;
+        font-size: 15px;
+    }
+    .news .tit_cut .list ul li a p {
+        display: none;
+    }
+    .news .tit_cut .btn {
+        left: 40%;
+        top: 105%;
+    }
+    .news .tit_cut .btn button a {
+        font-size: 13px;
+    }
+}
+
+.sug {
+    margin: 100px 0 200px 0;
+}
+.sug .sug_bg {
+    background: url(../images/main/sug_bg.png)no-repeat center center / cover;
+    width: 100%;
+    height: 400px;
+    padding: 50px 0;
     
+}
+.sug .sug_bg .sug_txt {
+    padding: 90px 0 0 0;
+    background-color: rgba(255,255,255,0.8);
+    height: 300px;
+    text-align: center;
+}
+.sug .sug_bg .sug_txt span {
+    font-size: 25px;
+    font-weight: 700;
+}
+.sug .sug_bg .sug_txt p {
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+}
+.sug .sug_bg .sug_txt button {
+    font-size: 16px;
+    border-bottom: 1px solid #707070;
+}
+@media screen and (max-width:1000px){
+    .sug {
+        margin: 0 0 150px 0;
+    }
+    .sug .sug_bg {
+        height: auto;
+        padding: 40px 0;
+    }
+    .sug .sug_bg .sug_txt {
+        padding: 80px 0 0 0;
+        height: 280px;
+    }
+    .sug .sug_bg .sug_txt span {
+        font-size: 23px;
+    }
+    .sug .sug_bg .sug_txt p {
+        font-size: 18px;
+    }
+    .sug .sug_bg .sug_txt button {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1000px){
+    .sug {
+        margin: 0 0 100px 0;
+    }
+    .sug .sug_bg {
+        padding: 35px 0;
+    }
+    .sug .sug_bg .sug_txt {
+        padding: 70px 0 0 0;
+        height: 260px;
+    }
+    .sug .sug_bg .sug_txt span {
+        font-size: 20px;
+    }
+    .sug .sug_bg .sug_txt p {
+        font-size: 15px;
+    }
+    .sug .sug_bg .sug_txt button {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:640px){
+    .sug {
+        margin: 0 0 50px 0;
+    }
+    .sug .sug_bg {
+        padding: 30px 0;
+    }
+    .sug .sug_bg .sug_txt {
+        padding: 63px 0 0 0;
+        height: 240px;
+    }
+    .sug .sug_bg .sug_txt span {
+        font-size: 18px;
+    }
+    .sug .sug_bg .sug_txt p {
+        font-size: 13px;
+    }
+    .sug .sug_bg .sug_txt button {
+        font-size: 13px;
+    }
+}
+
+.product {
+    margin: 0 0 200px 0;
+}
+.product .tit {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.product .tit strong {
+    font-size: 20px;
+}
+.product .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.product .tit h2 span {
+    position: relative;
+}
+.product .tit h2 span::after {
+    position: absolute;
+    left: 115%;
+    top: 32px;
+    width: 120px;
+    height: 2px;
+    background: #CCCCCC;
+    content: ""; 
+}
+.product .tit h2 span::before {
+    position: absolute;
+    right: 115%;
+    top: 32px;
+    width: 120px;
+    height: 2px;
+    background: #CCCCCC;
+    content: ""; 
+}
+.product .list {
+    width: 100%;
+}
+.product .list ul li {
+    float: left;
+    width: 440px;
+    margin-right: 40px;
+}
+.product .list ul li:last-child {
+    margin-right: 0;
+}
+.product .list ul li a {
+    display: block;
+}
+.product .list ul li a img {
+    position: relative;
+    width: 100%;
+}
+.product .list ul li a .inner {
+    position: absolute;
+    left: 0;
+    bottom: 126px;
+    width: 91.5%;
+    background-color: #FFF;
+}
+.product .list ul li a .inner .name {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.product .list ul li a .inner .sub_tit {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+.product .list ul li a p {
+    margin: 10px 0 16px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 4.5em;
+    overflow: hidden;
+}
+.product .list ul li button a {
+    font-size: 16px;
+    border-bottom: 1px solid #707070;
+}
+@media screen and (max-width:1000px){
+    .product {
+        margin: 0 0 130px 0; 
+    }
+    .product .tit {
+        margin-bottom: 40px;
+    }
+    .product .tit strong {
+        font-size: 18px;
+    }
+    .product .tit h2 {
+        font-size: 35px;
+    }
+    .product .tit h2 span::after {
+        top: 24px;
+        width: 100px;
+    }
+    .product .tit h2 span::before {
+        top: 24px;
+        width: 100px;
+    }
+    .product .list ul li a .inner {
+        bottom: 91px;
+    }
+    .product .list ul li a .inner .name {
+        margin: 5px 0;
+        font-size: 13px;
+    }
+    .product .list ul li a .inner .sub_tit {
+        font-size: 18px;
+    }
+    .product .list ul li a p {
+        font-size: 15px;
+        height: 3em;
+    }
+    .product .list ul li button a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .product {
+        margin: 0 0 70px 0;
+    }
+    .product .tit {
+        margin-bottom: 20px;
+    }
+    .product .tit strong {
+        font-size: 13px;
+    }
+    .product .tit h2 {
+        font-size: 30px;
+    }
+    .product .tit h2 span::after {
+        width: 60px;
+    }
+    .product .tit h2 span::before {
+        width: 60px;
+    }
+    .product .list ul li {
+        width: auto;
+    }
+    .product .list ul li a .inner {
+        bottom: 78px;
+    }
+    .product .list ul li a .inner .sub_tit {
+        font-size: 15px;
+        line-height: 1.5;
+        height: 1.5em;
+        overflow: hidden;
+    }
+    .product .list ul li a p {
+        margin: 5px 0 10px 0;
+        font-size: 13px;
+    }
+    .product .list ul li button a {
+        font-size: 13px;
+    }
 }

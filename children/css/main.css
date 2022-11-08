@@ -410,7 +410,8 @@
 }
 .news .list ul li a span {
     display: block;
-    overflow: hidden;font-size: 0;
+    overflow: hidden;
+    font-size: 0;
     line-height: 0;
 }
 .news .list ul li a span img {

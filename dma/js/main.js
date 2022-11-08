@@ -36,4 +36,74 @@ $(document).ready(function(){
         }
     });//visual stop
 
+    const swiper_news = new Swiper('.news .tit_edu .list', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: 3,
+                spaceBetween: 20, 
+            },
+            800: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 30, 
+            },
+            1000: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 40, 
+            },
+           
+        },
+    });
+
+    const swiper_news2 = new Swiper('.news .tit_cut .list', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: 3,
+                spaceBetween: 40, 
+            },
+            800: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 30, 
+            },
+            1000: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 40, 
+            },
+           
+        },
+    });
+
+    const swiper_product = new Swiper('.product .list', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: 2,
+                spaceBetween: 30, 
+            },
+            1000: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 40, 
+            },
+           
+        },
+    });
+
+    
+
 });//document.ready
