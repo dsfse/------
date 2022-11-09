@@ -150,7 +150,7 @@ html, body {
         top: 40px;
     }
     .header .gnb .gnb_wrap ul li a {
-        padding: 0 15x;
+        padding: 0 15px;
         font-size: 15px;
     }
     .header .gnb_util {
