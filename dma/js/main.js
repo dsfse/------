@@ -36,6 +36,7 @@ $(document).ready(function(){
         }
     });//visual stop
 
+    
     const swiper_news = new Swiper('.news .tit_edu .list', { /* 팝업을 감싼는 요소의 class명 */
         slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
