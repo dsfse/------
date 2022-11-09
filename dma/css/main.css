@@ -12,7 +12,7 @@
     z-index: 10;
     transform: translate(0, -50%);
 }
-.visual .tit .txt span {
+.visual .tit .txt h2 {
     display: block;
     padding-bottom: 10px;
     font-size: 60px;
@@ -391,6 +391,10 @@
 .news {
     margin: 130px 0 200px 0;
 }
+.news h2 {
+    font-size: 0;
+    line-height: 0;
+}
 .news .tit_edu {
     position: relative;
     height: 430px;
@@ -675,6 +679,10 @@
 
 .sug {
     margin: 100px 0 200px 0;
+}
+.sug h2 {
+    font-size: 0;
+    line-height: 0;
 }
 .sug .sug_bg {
     background: url(../images/main/sug_bg.png)no-repeat center center / cover;
