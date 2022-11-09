@@ -81,7 +81,7 @@
     }
 }
 @media screen and (max-width:1200px){
-    .visual .tit .txt span {
+    .visual .tit .txt h2 {
         font-size: 50px;
     }
     .visual .tit .txt p {
@@ -92,7 +92,7 @@
     }
 }
 @media screen and (max-width:1000px){
-    .visual .tit .txt span {
+    .visual .tit .txt h2 {
         font-size: 40px;
     }
     .visual .tit .txt p {
@@ -109,7 +109,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-    .visual .tit .txt span {
+    .visual .tit .txt h2 {
         font-size: 30px;
     }
     .visual .tit .txt p {
@@ -688,7 +688,7 @@
     background: url(../images/main/sug_bg.png)no-repeat center center / cover;
     width: 100%;
     height: 400px;
-    padding: 50px 0;
+    padding: 50px 20px;
     
 }
 .sug .sug_bg .sug_txt {
@@ -833,6 +833,7 @@
     left: 0;
     bottom: 126px;
     width: 91.5%;
+    padding: 0 5px;
     background-color: #FFF;
 }
 .product .list ul li a .inner .name {
