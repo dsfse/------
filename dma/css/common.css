@@ -136,8 +136,8 @@ html, body {
         width: 230px;
         height: 25px;
     }
-    .header .gnb .gnb_wrap ul li {
-        margin: 0 40px 0 0;
+    .header .gnb .gnb_wrap ul li a {
+        padding: 0 20px;
         font-size: 18px;
     }
     .header .gnb_util ul li {
@@ -147,13 +147,17 @@ html, body {
 @media screen and (max-width:1300px){
     .header .logo {
         left: 40px;
+        top: 40px;
     }
-    .header .gnb .gnb_wrap ul li {
-        margin: 0 30px 0 0;
+    .header .gnb .gnb_wrap ul li a {
+        padding: 0 15x;
         font-size: 15px;
     }
-    .header .gnb_util ul li {
-        margin: 0 20px 0 0;
+    .header .gnb_util {
+        top: 40px;
+    }
+    .header .gnb_util ul li a {
+        padding: 0 10px;
         font-size: 15px;
     }
     .header .gnb_util ul li a i {
