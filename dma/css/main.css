@@ -443,7 +443,7 @@
     left: 80px;
     top: 220px;
 }
-.news .tit_edu .btn button a {
+.news .tit_edu .btn a {
     display: block;
     font-size: 16px;
     border-bottom: 1px solid #707070;
@@ -504,7 +504,7 @@
     right: 80px;
     top: 220px;
 }
-.news .tit_cut .btn button a {
+.news .tit_cut .btn a {
     display: block;
     font-size: 16px;
     border-bottom: 1px solid #707070;
@@ -635,7 +635,7 @@
         left: 40%;
         top: 105%;
     }
-    .news .tit_edu .btn button a {
+    .news .tit_edu .btn a {
         font-size: 13px;
     }
     .news .tit_cut {
@@ -672,7 +672,7 @@
         left: 40%;
         top: 105%;
     }
-    .news .tit_cut .btn button a {
+    .news .tit_cut .btn a {
         font-size: 13px;
     }
 }
@@ -705,7 +705,7 @@
     margin: 10px 0 20px 0;
     font-size: 20px;
 }
-.sug .sug_bg .sug_txt button {
+.sug .sug_bg .sug_txt a {
     font-size: 16px;
     border-bottom: 1px solid #707070;
 }
@@ -727,7 +727,7 @@
     .sug .sug_bg .sug_txt p {
         font-size: 18px;
     }
-    .sug .sug_bg .sug_txt button {
+    .sug .sug_bg .sug_txt a {
         font-size: 18px;
     }
 }
@@ -748,7 +748,7 @@
     .sug .sug_bg .sug_txt p {
         font-size: 15px;
     }
-    .sug .sug_bg .sug_txt button {
+    .sug .sug_bg .sug_txt a {
         font-size: 15px;
     }
 }
@@ -769,7 +769,7 @@
     .sug .sug_bg .sug_txt p {
         font-size: 13px;
     }
-    .sug .sug_bg .sug_txt button {
+    .sug .sug_bg .sug_txt a {
         font-size: 13px;
     }
 }
@@ -853,7 +853,8 @@
     height: 4.5em;
     overflow: hidden;
 }
-.product .list ul li button a {
+.product .list ul li a .more {
+    display: inline-block;
     font-size: 16px;
     border-bottom: 1px solid #707070;
 }
@@ -892,7 +893,7 @@
         font-size: 15px;
         height: 3em;
     }
-    .product .list ul li button a {
+    .product .list ul li a .more {
         font-size: 14px;
     }
 }
@@ -932,7 +933,7 @@
         margin: 5px 0 10px 0;
         font-size: 13px;
     }
-    .product .list ul li button a {
+    .product .list ul li a .more {
         font-size: 13px;
     }
 }
