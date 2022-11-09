@@ -72,7 +72,7 @@
 .visual .popup .btn_wrap .btn_stop.play {
     background-image: url(../images/main/visual_btn_play.svg);
 }
-@media screen and (max-width:1440px){
+@media screen and (max-width:1480px){
     .visual .tit {
         left: 40px;
     }
@@ -692,7 +692,7 @@
     
 }
 .sug .sug_bg .sug_txt {
-    padding: 90px 0 0 0;
+    padding: 90px 40px 0 40px;
     background-color: rgba(255,255,255,0.8);
     height: 300px;
     text-align: center;
@@ -718,7 +718,7 @@
         padding: 40px 0;
     }
     .sug .sug_bg .sug_txt {
-        padding: 80px 0 0 0;
+        padding: 80px 30px 0 30px;
         height: 280px;
     }
     .sug .sug_bg .sug_txt span {
@@ -739,7 +739,7 @@
         padding: 35px 0;
     }
     .sug .sug_bg .sug_txt {
-        padding: 70px 0 0 0;
+        padding: 70px 20px 0 20px;
         height: 260px;
     }
     .sug .sug_bg .sug_txt span {
@@ -760,7 +760,7 @@
         padding: 30px 0;
     }
     .sug .sug_bg .sug_txt {
-        padding: 63px 0 0 0;
+        padding: 63px 20px 0 20px;
         height: 240px;
     }
     .sug .sug_bg .sug_txt span {
