@@ -1,0 +1,109 @@
+@import url(default.css);
+@import url(common.css);
+
+.visual {
+    position: relative;
+    color: #FFF;
+}
+.visual .tit {
+    position: absolute;
+    left: calc(50% - 506px);
+    top: calc(50% - 71px);
+    z-index: 10;
+    text-align: center;
+}
+.visual .tit h2 {
+    display: block;
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+    font-weight: 700;
+}
+.visual .tit span {
+    display: block;
+    margin-top: 15px;
+    font-family: 'NanumSquareRound';
+    font-size: 40px;
+    font-weight: 700;
+}
+.visual .popup {
+    height: 100vh;
+}
+.visual .popup ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale3d(1.1,1.1,1);
+    transition: 2s;
+}
+.visual .popup ul li.swiper-slide-active img {
+    transform: scale3d(1,1,1);
+}
+.visual .popup .btn_wrap {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 63px);
+    top: calc(50% + 133px);
+    z-index: 10;
+}
+.visual .popup .btn_wrap .btn_paging {
+    display: flex;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .popup .btn_wrap .btn_paging span {
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.7);
+}
+.visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
+    opacity: 1;
+    border: 2px solid #F36608;
+}
+.visual .popup .btn_wrap .btn_stop {
+    width: 35px;
+    height: 20px;
+    background: url(../images/main/swiper_ico_stop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .popup .btn_wrap .btn_stop.play {
+    background-image: url(../images/main/swiper_ico_play.svg);
+}
+@media screen and (max-width:640px){
+    .visual .tit {
+        left: 20px;
+        top: calc(50% - 59px);
+    }
+    .visual .tit h2 {
+        font-size: 15px;
+    }
+    .visual .tit span {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .visual .tit span .m_no {
+        display: none;
+    }
+    .visual .popup {
+        height: 600px;
+    }
+    .visual .popup .btn_wrap {
+        left: 50%;
+        top: calc(50% + 79px);
+        transform: translate(-50%, 0);
+    }
+    .visual .popup .btn_wrap .btn_paging span {
+        width: 10px;
+        height: 10px;
+    }
+    .visual .popup .btn_wrap .btn_stop {
+       display: none;
+    }
+    
+}
