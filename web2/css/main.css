@@ -20,24 +20,19 @@ ul, li {
     width: 1200px;
     margin: 0 auto;
 }
+
 .header {
     position: relative;
-    z-index: 100;
     width: 100%;
     height: 100px;
+    z-index: 100;
 }
 .header .logo {
-    float: left;
     height: 100px;
+    float: left;
 }
 .header .logo a {
     display: block;
-    width: 230px;
-    height: 50px;
-    margin-top: 25px;
-    background: url(../images/logo.jpg) no-repeat center center / contain;
-    font-size: 0;
-    line-height: 0;
 }
 .header nav {
     height: 100px;
@@ -63,119 +58,109 @@ ul, li {
     left: 0;
     top: 100px;
     width: 100%;
-    height: 150px;
-    background-color: #FFF;
-}
-.header nav > ul > li.open > ul {
-    display: block;
+    height: 130px;
+    background-color: #fff;
 }
 .header nav > ul > li > ul > li {
-    padding: 5px 0;
+    padding: 5px 0 5px 0;
 }
-.header nav > ul:hover > li > ul > li > a {
+.header nav > ul.open > li > ul {
     display: block;
-    line-height: 30px;
 }
 .header nav > ul > li > a:hover {
-    background-color: #5e1742;
-    color: #FFF;
+    background-color: #333333;
+    color: #fff;
 }
-.header nav > ul > li > ul > li > a:hover {
-    background-color: #5e1742;
-    color: #FFF;
+.header nav > ul > li > ul > li:hover {
+    background-color: #333333;
+    color: #fff;
 }
 
 .slide {
     position: relative;
     height: 300px;
+    overflow: hidden;
 }
-.slide h2 {
-    font-size: 0;
-    line-height: 0;
-}
-.slide ul li {
-    opacity: 0.5;
+.slide ul {
+    width: 3600px;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
 }
-.slide ul li.active {
-    opacity: 1;
-    z-index: 2;
+.slide ul li {
+    float: left;
 }
 
-.content {
+
+.contents {
     display: flex;
-    margin: 20px 0 0 0;
     width: 1200px;
     height: 200px;
 }
-.content .bbs {
+.contents .bbs {
     position: relative;
-    margin-right: 30px;
     width: 400px;
+    padding-top: 20px;
 }
-.content .bbs > ul > li {
+.contents .bbs > ul > li {
     float: left;
     margin-right: 10px;
 }
-.content .bbs > ul > li > a {
+.contents .bbs > ul > li > a {
     display: block;
     font-size: 25px;
     font-weight: 700;
     color: #666;
 }
-.content .bbs > ul > li.active > a {
-    color: #1D1D1D;
+.contents .bbs > ul > li.active > a {
+    color: #1d1d1d;
 }
-.content .bbs > ul > li .detail {
+.contents .bbs > ul > li .detail {
     display: none;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
 }
-.content .bbs > ul > li.active .detail {
+.contents .bbs > ul > li.active .detail {
     display: block;
+    margin-top: 5px;
 }
-.content .bbs .notice ul li a {
+.contents .bbs .notice ul li a {
     display: block;
     line-height: 30px;
     border-bottom: 1px solid #ccc;
 }
-.content .bbs .notice ul li a span {
+.contents .bbs .notice ul li a span {
     float: right;
     color: #666;
 }
-.content .bbs .gallery .detail ul li {
+.contents .bbs .gallery .detail ul li {
     float: left;
+    margin-top: 5px;
     width: 33.33%;
     text-align: center;
 }
-.content .bbs .gallery .detail ul li a {
+.contents .bbs .gallery .detail ul li a {
     display: block;
 }
-.content .baner {
-    margin-right: 30px;
-    height: 400px;
+.contents .baner {
+    margin: 0 30px;
+    width: 370px;
 }
-.content .baner .banner_bg a {
+.contents .baner a {
     display: block;
 }
-.content .baner .banner_bg a img {
+.contents .baner a img {
     padding: 20px 0 0 0;
 }
-.content .link {
-    height: 400px;
+.contents .link {
+    height: 370px;
 }
-.content .link .link_bg a {
+.contents .link a {
     display: block;
 }
-.content .link .link_bg a img {
+.contents .link a img {
     padding: 20px 0 0 0;
 }
 
@@ -183,26 +168,27 @@ ul, li {
     display: none;
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 30%;
     z-index: 200;
     padding: 40px 30px 30px 30px;
     width: 500px;
-    background-color: #5e1742;
-    color: #FFF;
+    background-color: #fff;
+    color: #333333;
+    border: 1px solid #333333;
     transform: translateX(-50%);
 }
 .modal h2 {
     margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-size: 700;
 }
 .modal button {
     position: absolute;
     right: 0;
     top: 0;
     padding: 10px;
-    background-color: #FFF;
-    color: #5e1742;
+    background-color: #fff;
+    color: #333333;
 }
 
 .footer {
@@ -215,19 +201,23 @@ ul, li {
 }
 .footer .inner {
     display: flex;
-}
-.footer .inner .copyright {
-    margin: 30px 0 0 0;
-    width: 800px;
-    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
     text-align: center;
 }
-.footer .inner .family {
-    margin: 20px;
-    width: 200px; 
+.footer .inner .f_menu {
+    margin: 25px 0 10px 0;
 }
-.footer .inner .family a {
-    display: block;
-    margin-bottom: 5px;
+.footer .inner .f_menu ul li {
+    float: left;
     font-size: 15px;
 }
+.footer .inner .f_menu ul li a {
+    display: block;
+    margin-right: 10px;
+}
+.footer .inner .copyright {
+    font-size: 15px;
+}
+

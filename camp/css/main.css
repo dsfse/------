@@ -75,6 +75,55 @@
 .visual .popup .btn_wrap .btn_stop.play {
     background-image: url(../images/main/swiper_ico_play.svg);
 }
+@media screen and (max-width:1440px){ 
+    .visual .tit {
+        left: calc(50% - 420px);
+    }
+    .visual .tit h2 {
+        font-size: 28px;
+    }
+    .visual .tit span {
+        margin-top: 10px;
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:1000px){ 
+    .visual .tit {
+        left: calc(50% - 355px);
+    }
+    .visual .tit h2 {
+        font-size: 25px;
+    }
+    .visual .tit span {
+        font-size: 30px;
+    }
+    .visual .popup .btn_wrap {
+        left: 50%;
+        top: calc(50% + 100px);
+        transform: translate(-50%, 0);
+    }
+    .visual .popup .btn_wrap .btn_paging span {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (max-width:800px){ 
+    .visual .tit {
+        left: 40px;
+    }
+    .visual .tit h2 {
+        font-size: 25px;
+    }
+    .visual .tit span {
+        font-size: 30px;
+    }
+    .visual .tit span .m_no {
+        display: none;
+    }
+    .visual .popup .btn_wrap {
+        top: calc(50% + 150px);
+    }
+}
 @media screen and (max-width:640px){
     .visual .tit {
         left: 20px;
@@ -87,16 +136,11 @@
         margin-top: 10px;
         font-size: 20px;
     }
-    .visual .tit span .m_no {
-        display: none;
-    }
     .visual .popup {
         height: 600px;
     }
     .visual .popup .btn_wrap {
-        left: 50%;
         top: calc(50% + 79px);
-        transform: translate(-50%, 0);
     }
     .visual .popup .btn_wrap .btn_paging span {
         width: 10px;
@@ -105,5 +149,73 @@
     .visual .popup .btn_wrap .btn_stop {
        display: none;
     }
-    
 }
+
+.introduce {
+    position: relative;
+    height: 1000px;
+}
+.introduce .inner {
+    display: flex;
+    margin: 100px 40px 0 0;
+}
+.introduce .inner .int_left {
+    padding-right: 40px;
+    width: 44%;
+}
+.introduce .inner .int_left a {
+    display: block;
+    height: 800px;
+}
+.introduce .inner .int_left a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.introduce .inner .int_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+    width: 56%;
+}
+.introduce .inner .int_right .tit {
+    margin: 118px 340px 0 0;
+    width: 680px;
+}
+.introduce .inner .int_right .tit span {
+    display: block; 
+    font-family: 'NanumSquareRound';
+    font-size: 25px;
+}
+.introduce .inner .int_right .tit strong {
+    display: block; 
+    padding: 23px 0 22px 0;
+    font-family: 'NanumSquareRound';
+    font-size: 40px;
+    font-weight: 700;
+}
+.introduce .inner .int_right .tit p {
+    display: block; 
+    font-family: 'NanumSquareRound';
+    font-size: 20px;
+}
+.introduce .inner .int_right .list ul li {
+    float: left;
+    width: calc(33.33% - 20px);
+}
+.introduce .inner .int_right .list ul li:nth-child(2) {
+    margin: 0 30px;
+}
+.introduce .inner .int_right .list ul li a {
+    display: block;
+}
+.introduce .inner .int_right .list ul li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
