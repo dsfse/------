@@ -188,7 +188,7 @@
     margin: 118px 340px 0 0;
     width: 680px;
 }
-.introduce .inner .int_right .tit span {
+.introduce .inner .int_right .tit h2 {
     display: block; 
     font-family: 'NanumSquareRound';
     font-size: 25px;
@@ -272,7 +272,7 @@
     .introduce .inner .int_right .tit {
         margin: 50px 0 0 0;
     }
-    .introduce .inner .int_right .tit span {
+    .introduce .inner .int_right .tit h2 {
         font-size: 23px;
     }
     .introduce .inner .int_right .tit strong {
@@ -303,7 +303,7 @@
         margin: 20px 0;
         width: auto;
     }
-    .introduce .inner .int_right .tit span {
+    .introduce .inner .int_right .tit h2 {
         font-size: 20px;
     }
     .introduce .inner .int_right .tit strong {
@@ -351,7 +351,7 @@
         margin: 40px 0 0 0;
         width: auto;
     }
-    .introduce .inner .int_right .tit span {
+    .introduce .inner .int_right .tit h2 {
         font-size: 15px;
     }
     .introduce .inner .int_right .tit strong {
@@ -546,6 +546,7 @@
 
 .reserve {
     margin-bottom: 150px;
+    text-align: center;
 }
 .reserve .bg {
     position: relative;
@@ -557,7 +558,6 @@
     display: block;
     padding-top: 114px;
     color: #FFF;
-    text-align: center;
 }
 .reserve .bg .txt h2 {
     display: block;
@@ -573,13 +573,11 @@
     font-weight: 700;
 }
 .reserve .bg .btn {
-    position: absolute;
-    left: 50%;
-    top: 65%;
+    display: inline-block;
+    margin-top: 30px;
     width: 180px;
     height: 45px;
     color: #FFF;
-    transform: translate(-50%, -0);
 }
 .reserve .bg .btn a {
     display: block;
@@ -626,6 +624,7 @@
         font-size: 18px;
     }
     .reserve .bg .btn {
+        margin-top: 25px;
         width: 150px;
         height: 40px;
     }
@@ -653,6 +652,7 @@
         font-size: 15px;
     }
     .reserve .bg .btn {
+        margin-top: 20px;
         width: 126px;
         height: 31px;
     }
