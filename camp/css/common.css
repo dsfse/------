@@ -213,7 +213,190 @@ html, body {
         display: none;
     }
 }
-    
 
-
+.footer {
+    padding: 66px 0 81px 0;
+    color: #3D3D3D;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+.footer .f_total {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .f_total .inner {
+    display: flex;
+    flex-direction: column;
+}
+.footer .f_total .inner .f_tit h2 {
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+    line-height: 50px;
+}
+.footer .f_total .inner .f_tit h2 strong {
+    display: block;
+    color: #F36608;
+    font-weight: 700;
+}
+.footer .f_total .inner .family {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 40px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #3D3D3D;
+}
+.footer .f_total .inner .family a {
+    display: block;
+    font-weight: 700;
+}
+.footer .f_total .inner .family i {
+    width: 15px;
+    height: 9px;
+    line-height: 40px;
+}
+.footer .f_total .inner2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.footer .f_total .inner2 .inner3 {
+    display: flex;
+}
+.footer .f_total .inner2 .inner3 .position {
+    margin-right: 40px;
+    width: 200px;
+}
+.footer .f_total .inner2 .inner3 .position strong {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+}
+.footer .f_total .inner2 .inner3 .position span {
+    color: rgba(0,0,0,0.5);
+    line-height: 25px;
+}
+.footer .f_total .inner2 .inner3 .tell {
+    width: 200px;
+}
+.footer .f_total .inner2 .inner3 .tell strong {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+}
+.footer .f_total .inner2 .inner3 .tell span {
+    display: block;
+    margin-bottom: 7px;
+    color: rgba(0,0,0,0.5);
+}
+.footer .inner2 .copyright {
+    margin-top: 40px;
+}
+.footer .inner2 .copyright span {
+    color: rgba(0,0,0,0.5);
+}
+.footer .btn_top {
+    position: absolute;
+    right: 8%;
+    bottom: 350px;
+    float: right;
+    width: 60px;
+    height: 60px;
+    padding: 16px 0 0 12px;
+    font-size: 18px;
+    background-color: #F36608;
+    color: #FFF;
+    border-radius: 30px;
+}
+@media screen and (max-width:1440px){
+    .footer .f_total .inner .f_tit h2 {
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .footer .f_total .inner2 .inner3 .position strong {
+        font-size: 25px;
+    }
+    .footer .f_total .inner2 .inner3 .tell strong {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer .f_total .inner .f_tit h2 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .footer .f_total .inner2 .inner3 .position strong {
+        font-size: 20px;
+    }
+    .footer .f_total .inner2 .inner3 .tell strong {
+        font-size: 20px;
+    }
+    .footer .btn_top {
+        bottom: 313px;
+    }
+}
+@media screen and (max-width:700px){
+    .footer {
+        padding: 20px 0 60px 0;
+    }
+    .footer .f_total {
+        display: block;
+    }
+    .footer .f_total .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer .f_total .inner .f_tit h2 {
+        width: 120px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .footer .f_total .inner .family {
+        padding: 0 10px;
+        margin-top: 30px;
+        margin-right: 20px;
+        width: 131px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .footer .f_total .inner .family i {
+        line-height: 35px;
+    }
+    .footer .f_total .inner2 .inner3 {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .footer .f_total .inner2 .inner3 .position {
+        width: auto;
+    }
+    .footer .f_total .inner2 .inner3 .position strong {
+        font-size: 15px;
+    }
+    .footer .f_total .inner2 .inner3 .tell {
+        width: auto;
+    }
+    .footer .f_total .inner2 .inner3 .tell strong {
+        font-size: 15px;
+    }
+    .footer .btn_top {
+        bottom: 350px;
+        width: 40px;
+        height: 40px;
+        padding: 11px 0 0 7px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width:400px){
+    .footer .f_total .inner .family {
+        margin-right: 0;
+    }
+    .footer .btn_top {
+        bottom: 410px;
+    }
+}
 

@@ -538,6 +538,10 @@
         display: block;
         padding-top: 10px;
     }
+    .event .list ul li a:hover {
+        transform: translate(0, 0);
+        box-shadow: 0;
+    }
 }
 
 .reserve {
@@ -745,15 +749,77 @@
 .news .inner .news1 .detail ul li:hover {
     color: #F36608;
 }
-@media screen and (max-width:640px){ 
+@media screen and (max-width:1440px){  
+    .news .inner .news1 {
+        width: 600px;
+        margin-right: 40px;
+    }
+    .news .inner .suggest {
+        width: 480px;
+    }
+}
+@media screen and (max-width:1200px){ 
+    .news .inner .news1 {
+        width: 550px;
+    }
+    .news .inner .news1 .detail ul li a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .news .inner .news1 .detail ul li a span {
+        display: none;
+    }
+}
+@media screen and (max-width:1000px){ 
     .news {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
     .news .inner {
         display: block;
     }
     .news .inner .news1 {
         width: auto;
+        margin-right: 0;
+    }
+    .news .inner .news1 h2 {
+        font-size: 35px;
+    }
+    .news .inner .news1 h2 a {
+        margin-top: 17px;
+    }
+    .news .inner .news1 .detail ul li {
+        font-size: 15px;
+    }
+    .news .inner .news1 .detail ul li a {
+        line-height: 80px;
+    }
+    .news .inner .suggest {
+        margin-top: 50px;
+        width: auto;
+    }
+    .news .inner .suggest h2 {
+        font-size: 35px;
+    }
+    .news .inner .suggest h2 a {
+        margin-top: 17px;
+    }
+    .news .inner .suggest .detail {
+        padding: 100px 40px 0 40px;
+        height: 250px;
+    }
+    .news .inner .suggest .detail a span {
+        font-size: 20px;
+    }
+    .news .inner .suggest .detail a p {
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:640px){ 
+    .news {
+        margin-bottom: 50px;
     }
     .news .inner .news1 h2 {
         font-size: 30px;
@@ -766,58 +832,24 @@
     }
     .news .inner .news1 .detail ul li a {
         line-height: 60px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .news .inner .news1 .detail ul li a span {
-        display: none;
     }
     .news .inner .suggest {
-        width: auto;
+        margin-top: 50px;
     }
     .news .inner .suggest h2 {
         font-size: 30px;
-        border-bottom: 1px solid rgba(0,0,0,0.1) ;
     }
     .news .inner .suggest h2 a {
-        display: block;
-        float: right;
-        margin-top: 22px;
-        font-family: 'NanumSquareRound';
-        font-size: 15px;
+        margin-top: 13px;
     }
     .news .inner .suggest .detail {
-        padding: 144px 96px 0 96px;
-        margin-top: 20px;
-        background: url(../images/main/suggest.png)no-repeat center center / cover;
-        width: 100%;
-        height: 380px;
-        color: #FFF;
-        border-radius: 30px;
-        text-align: center;
+        padding: 61px 20px 0 20px;
+        height: 200px;
     }
     .news .inner .suggest .detail a span {
-        display: block;
-        margin-bottom: 10px;
-        font-family: 'NanumSquareRound';
-        font-size: 25px;
-        font-weight: 700;
-    }
-    .news .inner .suggest .detail a p {
-        display: block;
-        font-family: 'NanumSquareRound';
         font-size: 15px;
     }
-    .news .inner .news1 h2 a:hover {
-        color: #F36608;
-        font-weight: 700;
-    }
-    .news .inner .suggest h2 a:hover {
-        color: #F36608;
-        font-weight: 700;
-    }
-    .news .inner .news1 .detail ul li:hover {
-        color: #F36608;
+    .news .inner .suggest .detail a p {
+        font-size: 13px;
     }
 }
