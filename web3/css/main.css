@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #333;
+    font-family: 'Malgun Gothic','맑은고딕';
+    font-size: 15px;
+}
+ul, li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+}
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+.header .inner .gnb {
+    z-index: 100;
+}
+.header .inner .gnb > ul > li {
+    position: relative;
+    float: left;
+    width: 120px;
+}
+.header .inner .gnb > ul > li > a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100px;
+    text-align: center;
+}
+.header .inner .gnb > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+.header .inner .gnb > ul.open > li > ul {
+    display: block;
+}
+.header .inner .gnb > ul > li > ul > li {
+    width: 120px;
+    line-height: 40px;
+    text-align: center;
+}
+.header .inner .gnb > ul > li > ul > li > a {
+    display: block;
+}
+.header .inner .gnb > ul > li:hover {
+    background-color: #333;
+    color: #fff;
+}
+.header .inner .gnb > ul > li > ul:hover {
+    background-color: #333;
+    color: #fff;
+}
+.header .inner .gnb > ul > li > ul > li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.slide {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.slide ul li {
+    height: 300px;
+}
+
+.contents {
+    padding: 10px 0 0 0;
+    width: 1200px;
+    height: 200px;
+}
+.contents .inner {
+    display: flex;
+}
+.contents .inner .notice {
+    padding: 0 20px 0 0;
+    width: 400px;
+}
+.contents .inner .notice h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.contents .inner .notice .detail {
+    margin-top: 5px;
+}
+.contents .inner .notice .detail ul li a {
+    display: block;
+    font-size: 15px;
+    line-height: 35px;
+    border-bottom: 1px solid #ccc;
+}
+.contents .inner .notice .detail ul li a span {
+    float: right;
+    font-size: 13px;
+}
+.contents .inner .gallery {
+    margin: 0 30px;
+    padding: 0 20px 0 0;
+    width: 370px;
+}
+.contents .inner .gallery h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.contents .inner .gallery .detail {
+    margin-top: 5px;
+}
+.contents .inner .gallery .detail ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.contents .inner .gallery .detail ul li a {
+    display: block;
+}
+.contents .inner .link {
+    margin-top: 20px;
+    width: 370px;
+}
+.contents .inner .link a {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    padding: 30px 20px 0 20px;
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transform: translate(-50%, 0);
+}
+.modal h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+.modal p {
+    margin-top: 10px;
+}
+.modal button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer {
+    margin-top: 10px;
+    height: 100px;
+    border-top: 1px solid #ccc;
+}
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .inner .copyright {
+    width: 1000px;
+    text-align: center;
+}
+.footer .inner .copyright span {
+    font-size: 20px;
+    line-height: 100px;
+    color: rgba(0,0,0,0.7);
+}
+.footer .inner .inner2 {
+    display: flex;
+    flex-direction: column;
+}
+.footer .inner .inner2 .sns {
+    padding: 0 20px;
+}
+.footer .inner .inner2 .sns ul li {
+    float: left;
+    margin-right: 15px;
+}
+.footer .inner .inner2 .sns ul li:last-child {
+    margin-right: 0;
+}
+.footer .inner .inner2 .sns ul li a {
+    display: block;
+}
+.footer .inner .inner2 .sns ul li a img {
+    width: 40px;
+    height: 40px;
+}
+.footer .inner .inner2 .family {
+    padding: 15px 0;
+}
+.footer .inner .inner2 .family > ul > li {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+.footer .inner .inner2 .family > ul > li > a {
+    display: block;
+    width: 200px;
+}
+.footer .inner .inner2 .family > ul > li > ul > li {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    width: 200px;
+    height: 100px;
+    line-height: 30px;
+}
+.footer .inner .inner2 .family > ul > li > ul > li > a {
+    display: block;
+}
