@@ -1,0 +1,347 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Serif KR', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 320px;
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+@media screen and (max-width:1000px){
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.header .logo {
+    position: absolute;
+    left: 4%;
+    top: 35px;
+}
+.header .logo a {
+    display: block;
+    width: 256px;
+    height: 31px;
+    background-image: url(../images/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb .gnb_wrap ul {
+    display: flex;
+    justify-content: center;
+}
+.header .gnb .gnb_wrap ul li a {
+    display: block;
+    padding: 0 23px;
+    font-size: 20px;
+    line-height: 100px;
+}
+.header .gnb_util {
+    position: absolute;
+    right: 3.5%;
+    top: 35px;
+}
+.header .gnb_util ul {
+    display: flex;
+}
+.header .gnb_util ul li a {
+    display: block;
+    padding: 0 15px;
+    font-size: 20px;
+}
+.header .gnb_util ul li a i {
+    margin-right: 3px;
+    font-size: 17px;
+}
+.header .gnb_util ul li.red a {
+    color: #C10B12;
+    font-weight: 700;
+}
+.header.fixed {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.header.fixed .logo a {
+    background: url(../images/common/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.header.fixed .gnb .gnb_wrap ul li a {
+    color: #3d3d3d;
+}
+.header.fixed .gnb_util ul li a {
+    color: #3d3d3d;
+}
+.header.fixed .gnb_util ul li:last-child a {
+    color: #C10B12;
+}
+.header .gnb .gnb_wrap ul li:hover {
+    color: #C10B12;
+}
+@media screen and (max-width:1400px){
+    .header .logo a {
+        width: 230px;
+        height: 25px;
+    }
+    .header.fixed .logo a {
+        width: 230px;
+        height: 25px;
+    }
+    .header .gnb .gnb_wrap ul li a {
+        padding: 0 20px;
+        font-size: 18px;
+    }
+    .header .gnb_util ul li {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1300px){
+    .header .logo {
+        left: 40px;
+        top: 40px;
+    }
+    .header .gnb .gnb_wrap ul li a {
+        padding: 0 15px;
+        font-size: 15px;
+    }
+    .header .gnb_util {
+        top: 40px;
+    }
+    .header .gnb_util ul li a {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+    .header .gnb_util ul li a i {
+        font-size: 13px;
+    }
+
+}
+@media screen and (max-width:1000px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        left: 20px;
+        top: 22px;
+    }
+    .header .logo a {
+        width: 131px;
+        height: 16px;
+    }
+    .header.fixed .logo a {
+        width: 131px;
+        height: 16px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 22px;
+    }
+    .header .gnb .gnb_open strong {
+        display: none;
+    }
+    .header .gnb .gnb_open span {
+        position: absolute;
+        right: 20px;
+        width: 13px;
+        height: 1px;
+        background-color: #FFF;
+        transition: 0.3s;
+    }
+    .header.fixed .gnb .gnb_open span {
+        position: absolute;
+        right: 20px;
+        width: 13px;
+        height: 1px;
+        background-color: #3D3D3D;
+        transition: 0.3s;
+    }
+    .header .gnb .gnb_open span.line1 { /*  span.line1  */
+        top: 0;
+    }
+    .header .gnb .gnb_open span.line2 {
+        top: 6px;
+        width: 9px;
+    }
+    .header .gnb .gnb_open span.line3 {
+        top: 12px;
+    }
+    .header .gnb .gnb_wrap ul {
+        display: none;
+    }
+    .header .gnb_util ul {
+        display: none;
+    }
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 294px;
+    padding: 60px 0 0 0;
+    background-color: #3D3D3D;
+    color: #FFF;
+}
+.footer .f_logo {
+    float: left;
+    width: 130px;
+    height: 36px;
+}
+.footer .f_info {
+    text-align: center;
+}
+.footer .f_info span {
+    margin-right: 25px;
+    font-size: 20px;
+}
+.footer .f_info span:last-child {
+    margin-right: 0;
+}
+.footer .f_info span strong {
+    font-weight: 700;
+    color: #C10B12;
+}
+.footer .address {
+    margin: 20px 0;
+    font-size: 15px;
+    text-align: center;
+}
+.footer .copyrighy {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+.footer .btn_top {
+    position: absolute;
+    right: 8%;
+    bottom: 260px;
+    float: right;
+    width: 60px;
+    height: 60px;
+    padding: 16px 0 0 12px;
+    font-size: 18px;
+    background-color: #C10B12;
+    color: #FFF;
+    border-radius: 30px;
+}
+@media screen and (max-width:1200px){
+    .footer {
+        padding: 50px 0 0 0;
+    }
+    .footer .f_info span {
+        margin-right: 22px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer {
+        padding: 40px 0 0 0;
+    }
+    .footer .f_logo {
+        float: none;
+        margin: 0 0 30px 0;
+    }
+    .footer .f_info span {
+        margin-right: 20px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:750px){
+    .footer {
+        padding: 20px 0 0 0;
+        height: 350px;
+    }
+    .footer .f_logo {
+        width: 96px;
+        height: 29px;
+        text-align: center;
+    }
+    .footer .f_info {
+        text-align: inherit;
+    }
+    .footer .f_info span {
+        margin-right: 15px;
+        font-size: 13px;
+    }
+    .footer .address {
+        margin: 20px 0 10px 0;
+        font-size: 13px;
+        text-align: inherit;
+    }
+    .footer .copyrighy {
+        font-size: 13px;
+        text-align: inherit;
+    }
+    .footer .btn_top {
+        bottom: 331px;
+        width: 40px;
+        height: 40px;
+        padding: 11px 0 0 7px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+}
+
+
+
+
