@@ -540,7 +540,7 @@
     }
     .event .list ul li a:hover {
         transform: translate(0, 0);
-        box-shadow: 0;
+        box-shadow: npne;
     }
 }
 
