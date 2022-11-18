@@ -10,7 +10,8 @@ $(document).ready(function(){
         $('.content .bbs > ul > li').removeClass('active')
         $(this).addClass('active')
     });
-
+    
+    // fade in, fade out
     let idx=1 
     setInterval(function(){
         if(idx < 3){

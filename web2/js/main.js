@@ -7,6 +7,9 @@ $(document).ready(function(){
         $(this).removeClass('open')
     })
 
+
+    // 좌우 슬라이드
+
     let idx = 1
     let pop_left
     

@@ -220,15 +220,3 @@ a{
     display: block;
     width: 200px;
 }
-.footer .inner .inner2 .family > ul > li > ul > li {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: -40px;
-    width: 200px;
-    height: 100px;
-    line-height: 30px;
-}
-.footer .inner .inner2 .family > ul > li > ul > li > a {
-    display: block;
-}

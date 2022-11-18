@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
 
     $('.header .gnb > ul > li').on('mouseenter focusin',function(){
         $(this).addClass('open')
@@ -7,7 +7,7 @@ $(document).ready(function(){
         $(this).removeClass('open')
     });
 
-
+    
     let idx = 1
     let pop_left
 

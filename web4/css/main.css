@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Malgun Gothic','맑은고딕';
+    font-size: 13px;
+    color: #333;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    z-index: 100;
+    height: 100px;
+}
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+.header .inner .logo a {
+    display: block;
+}
+.header .gnb .depth1 > li {
+    position: relative;
+    float: left;
+    width: 170px;
+    text-align: center;
+}
+.header .gnb .depth1 > li > a  {
+    display: block;
+    line-height: 100px;
+    font-size: 22px;
+    color: #1d1d1d;
+}
+.header .gnb .depth1 > li.open .depth2 {
+    display: block;
+}
+.header .gnb .depth1 > li > a:hover {
+    background-color: blueviolet;
+    color: #FFF;
+}
+.header .gnb .depth2 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+}
+.header .gnb .depth2 > li {
+    background-color: #FFF;                            
+}
+.header .gnb .depth2 > li > a {
+    display: block;
+    line-height: 30px;
+}
+.header .gnb .depth2 > li > a:hover {
+    background-color: blueviolet;
+    color: #FFF;
+}
+
+.slide {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.slide ul li {
+    height: 300px;
+}
+
+.contents {
+    height: 200px;
+}
+.contents .inner {
+    display: flex;
+}
+.contents .inner .bbs {
+    position: relative;
+    width: 400px;
+}
+.contents .inner .bbs > ul > li {
+    float: left;
+}
+.contents .inner .bbs > ul > li > a {
+    display: block;
+    padding-top: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #ccc;
+}
+.contents .inner .bbs > ul > li.active > a {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.contents .inner .bbs > ul > li.active .detail {
+    display: block;
+}
+.contents .inner .bbs .detail {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding-right: 20px;
+    width: 100%;
+}
+.contents .inner .bbs > ul > li.active .detail {
+    display: block;
+}
+.contents .inner .bbs .notice .detail ul li a {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.contents .inner .bbs .detail ul li a span {
+    float: right;
+    color: #666;
+}
+.contents .inner .bbs .gallery ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+.contents .inner .bbs .gallery ul li a {
+    display: block;
+}
+
+.contents .inner .baner {
+    margin: 0 30px;
+    padding-top: 20px;
+    width: 370px;
+}
+.contents .inner .baner a {
+    display: block;
+}
+
+.contents .inner .link {
+    padding-top: 20px;
+    width: 370px;
+}
+.contents .inner .link a {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    padding: 40px 30px 0 30px;
+    width: 400px;
+    height: 250px;
+    background-color: #FFF;
+    border: 1px solid #666;
+    transform: translate(-50%, 0);
+}
+.modal h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.modal p {
+    margin: 10px 0 0 0;
+}
+.modal button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.footer {
+    height: 100px;
+    border-top: 1px solid #ccc;
+}
+.footer .inner {
+    display: flex;
+}
+.footer .inner .f_logo {
+    width: 200px;
+}
+.footer .inner .copyright {
+    padding: 40px 0 0 0;
+    width: 800px;
+    text-align: center;
+}
+.footer .inner .copyright span {
+    font-size: 20px;
+    color: #666;
+}
+.footer .inner .sns {
+    padding: 20px 5px 0 5px ;
+    width: 200px;
+
+}
+.footer .inner .sns ul li {
+    float: left;
+    margin-right: 10px;
+}
+.footer .inner .sns ul li:last-child {
+    margin-right: 0;
+}

@@ -1,16 +1,14 @@
 $(document).ready(function(){
-    $('.header .inner .gnb > ul').on('mouseenter focusin',function(){
+    $('.header .gnb .depth1 > li').on('mouseenter focusin', function(){
         $(this).addClass('open')
     });
-    $('.header .inner .gnb > ul').on('mouseleave',function(){
+    $('.header .gnb .depth1 > li').on('mouseleave', function(){
         $(this).removeClass('open')
     });
-    
-
-    // fade in fade out 
 
     let idx = 1
-    let obj_top 
+    let obj_top
+
     setInterval(function(){
         if(idx < 3){
             idx ++
@@ -24,10 +22,16 @@ $(document).ready(function(){
         console.log(idx)
     },3000);
 
-    $('.notice .pop').on('click',function(){
+    $('.contents .inner .bbs > ul > li').on('click',function(){
+        $('.contents .inner .bbs > ul > li').removeClass('active')
+        $(this).addClass('active')
+    });
+
+    $('.contents .inner .bbs .notice .detail ul li').on('click',function(){
         $('.modal').show()
     });
     $('.modal button').on('click',function(){
         $('.modal').hide()
     });
+
 });
