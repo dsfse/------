@@ -1,0 +1,129 @@
+@import url(common.css);
+@import url(default.css);
+
+.visual {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.visual .tit {
+    position: absolute;
+    left: calc(50% - 700px);
+    top: 50%;
+    z-index: 10;
+    color: #fff;
+    transform: translate(0, -50%);
+}
+.visual .tit h2 {
+    margin-bottom: 20px;
+    font-family: 'Jua', sans-serif;
+    font-size: 50px;
+    line-height: 1.3;
+}
+.visual .tit span {
+    font-size: 20px;
+}
+.visual video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product .inner {
+    position: relative;
+    display: flex;
+}
+.product .bg {
+    background-image : url(../images/product_menu_bg.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    padding: 100px 0 0 100px;
+    width: 43%;
+    height: 800px;
+}
+.product .inner .bg h2 {
+    font-family: 'Jua', sans-serif;
+    font-size: 70px;
+    color: #fff;
+}
+.product .inner .bg .menu {
+    margin-top: 50px;
+    width: 172px;
+}
+.product .inner .bg .menu ul li {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+}
+.product .inner .bg .menu ul li a {
+    display: block;
+}
+.product .inner .bg .menu ul li:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.product .inner .contents {
+    width: 57%; 
+}
+.product .inner .contents .main_pic {
+    position: absolute;
+    left: 37%;
+    top: 168px;
+    width: 100%;
+    height: 100%;
+}
+.product .inner .contents .total {
+    margin: 120px 0 0 240px;
+}
+.product .inner .contents .total strong {
+    font-family: 'Jua', sans-serif;
+    font-size: 50px;
+    color: #016ECE;
+}
+.product .inner .contents .total p {
+    margin: 50px 0;
+    font-size: 20px;
+}
+.product .inner .contents .total p span {
+    display: block;
+}
+.product .inner .contents .total ul {
+    display: flex;
+    align-items: flex-end;
+}
+.product .inner .contents .total ul li {
+    
+    margin-right: 90px;
+}
+.product .inner .contents .total .btn {
+    position: absolute;
+    right: 4.6%;
+    top: 128px;
+}
+.product .inner .contents .total .btn a {
+    display: block;
+    width: 172px;
+    height: 40px;
+    line-height: 40px;
+    color: #016ECE;
+    border: 1px solid #016ECE;
+    border-radius: 20px;
+}
+.product .inner .contents .total .btn a:hover {
+    background-color: #016ECE;
+    color: #fff;
+}
+.product .inner .contents .total .btn a span {
+    float: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.product .inner .contents .total .btn a i {
+    float: right;
+    margin-right: 20px;
+    line-height: 40px;
+}
