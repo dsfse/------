@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>동아오츠카</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
@@ -80,154 +82,238 @@
             </video>
         </section>
         <section class="product">
-            <div class="inner"> <!-- 포카리 -->
-                <div class="bg">
-                    <h2>DONGA BRAND</h2>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#n">포카리스웨트</a></li>
-                            <li><a href="#n">오로나민 C</a></li>
-                            <li><a href="#n">데미소다</a></li>
-                            <li><a href="#n">나랑드사이다</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="contents">
-                    <div class="main_pic">
-                        <img src="images/pocari00.png" alt="포카리스웨트 사진">
-                    </div>
-                    <div class="total">
-                        <strong>포카리스웨트</strong>
-                        <p>내 몸에 가까운 물 포카리스웨트,<br>
-                            너의 수분 밸런스는 어때? 너의 끝없는 갈증, 포카리가 채워줄게.
-                            <span>걱정은 포카리 한잔에 털어버려!</span></p>
-                        <ul>
-                            <li><a href="#n"><img src="images/pocari01.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari02.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari03.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari04.png" alt="포카리스웨트 사진"></a></li>
-                        </ul>
-                        <div class="btn">
-                            <a href="#n">
-                                <span>자세히 보기</span>
-                                <i class="material-symbols-outlined">add</i>
-                            </a>
-                        </div>
-                    </div> 
+            <div class="product_menu">
+                <h2>DONGA BRAND</h2>
+                <div class="menu">
+                    <ul>
+                        <li class="active" data-name="pocari"><a href="#n">포카리스웨트</a></li>
+                        <li data-name="oronamin"><a href="#n">오로나민 C</a></li>
+                        <li data-name="demisoda"><a href="#n">데미소다</a></li>
+                        <li data-name="narangd"><a href="#n">나랑드사이다</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="inner"> <!-- 오로나민C -->
-                <div class="bg">
-                    <h2>DONGA BRAND</h2>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#n">포카리스웨트</a></li>
-                            <li><a href="#n">오로나민 C</a></li>
-                            <li><a href="#n">데미소다</a></li>
-                            <li><a href="#n">나랑드사이다</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="contents">
-                    <div class="main_pic">
-                        <img src="images/pocari00.png" alt="포카리스웨트 사진">
-                    </div>
-                    <div class="total">
-                        <strong>포카리스웨트</strong>
-                        <p>내 몸에 가까운 물 포카리스웨트,<br>
-                            너의 수분 밸런스는 어때? 너의 끝없는 갈증, 포카리가 채워줄게.
-                            <span>걱정은 포카리 한잔에 털어버려!</span></p>
-                        <ul>
-                            <li><a href="#n"><img src="images/pocari01.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari02.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari03.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari04.png" alt="포카리스웨트 사진"></a></li>
-                        </ul>
-                        <div class="btn">
-                            <a href="#n">
-                                <span>자세히 보기</span>
-                                <i class="material-symbols-outlined">add</i>
-                            </a>
+            <div class="product_detail">
+                <ul>
+                    <li class="pocari active"> <!-- 포카리 -->
+                        <div class="bg"></div>
+                        <div class="contents">
+                            <div class="main_pic">
+                                <img src="images/pocari00.png" alt="포카리스웨트 사진">
+                            </div>
+                            <div class="total">
+                                <strong>포카리스웨트</strong>
+                                <p>내 몸에 가까운 물 포카리스웨트,<br>
+                                    너의 수분 밸런스는 어때? 너의 끝없는 갈증, 포카리가 채워줄게.
+                                    <span>걱정은 포카리 한잔에 털어버려!</span></p>
+                                <ul>
+                                    <li><a href="#n"><img src="images/pocari01.png" alt="포카리스웨트 사진"></a></li>
+                                    <li><a href="#n"><img src="images/pocari02.png" alt="포카리스웨트 사진"></a></li>
+                                    <li><a href="#n"><img src="images/pocari03.png" alt="포카리스웨트 사진"></a></li>
+                                    <li><a href="#n"><img src="images/pocari04.png" alt="포카리스웨트 사진"></a></li>
+                                </ul>
+                                <div class="btn">
+                                    <a href="#n">
+                                        <span>자세히 보기</span>
+                                        <i class="material-symbols-outlined">add</i>
+                                    </a>
+                                </div>
+                            </div> 
                         </div>
-                    </div> 
-                </div>
+                    </li>
+                    <li class="oronamin "> <!-- 오로나민C -->
+                        <div class="bg"></div>
+                        <div class="contents">
+                            <div class="main_pic">
+                                <img src="images/oronamin00.png" alt="오로나민 C 사진">
+                            </div>
+                            <div class="total">
+                                <strong>오로나민 C</strong>
+                                <p>생기발랄 탄산드링크,<br>
+                                    하루 1병만으로 5종료의 비타민, 3종류의 필수 아미노산,
+                                    <span>치악산 사양벌꿀을 간편하게 섭취할 수 있는 맛있는 건강드링크입니다.</span></p>
+                                <ul>
+                                    <li><a href="#n"><img src="images/oronamin01.png" alt="오로나민 C 사진"></a></li>
+                                    <li><a href="#n"><img src="images/oronamin02.png" alt="오로나민 C 사진"></a></li>
+                                    <li><a href="#n"><img src="images/oronamin03.png" alt="오로나민 C 사진"></a></li>
+                                    <li><a href="#n"><img src="images/oronamin04.png" alt="오로나민 C 사진"></a></li>
+                                </ul>
+                                <div class="btn">
+                                    <a href="#n">
+                                        <span>자세히 보기</span>
+                                        <i class="material-symbols-outlined">add</i>
+                                    </a>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                    <li class="demisoda "> <!-- 데미소다 -->
+                        <div class="bg"></div>
+                        <div class="contents">
+                            <div class="main_pic">
+                                <img src="images/demisoda00.png" alt="데미소다 사진">
+                            </div>
+                            <div class="total">
+                                <strong>데미소다</strong>
+                                <p>과일의 상큼함과 저탄산의 부드러움!<br>
+                                    일반 탄산음료보다 절반 가량 낮은 탄산으로  깔끔함을 더했다.
+                                    <span>천연과즙을 넣어 과일의 풍미를 살린 다양한 과일 맛 탄산음료</span></p>
+                                <ul>
+                                    <li><a href="#n"><img src="images/demisoda01.png" alt="데미소다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/demisoda02.png" alt="데미소다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/demisoda03.png" alt="데미소다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/demisoda04.png" alt="데미소다 사진"></a></li>
+                                </ul>
+                                <div class="btn">
+                                    <a href="#n">
+                                        <span>자세히 보기</span>
+                                        <i class="material-symbols-outlined">add</i>
+                                    </a>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                    <li class="narangd "> <!-- 나랑드사이다 -->
+                        <div class="bg"></div>
+                        <div class="contents">
+                            <div class="main_pic">
+                                <img src="images/narangd00.png" alt="나랑드사이다 사진">
+                            </div>
+                            <div class="total">
+                                <strong>나랑드사이다</strong>
+                                <p>맛있는 짜릿한 탄산이 생각날때,<br>
+                                    한 톨의 설탕도 넣지 않아 인위적인 단맛 제로!
+                                    <span>다양한 맛으로 취향껏 즐기고 칼로리 걱정없이 마실 수 있는 탄산음료</span></p>
+                                <ul>
+                                    <li><a href="#n"><img src="images/narangd01.png" alt="나랑드사이다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/narangd02.png" alt="나랑드사이다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/narangd03.png" alt="나랑드사이다 사진"></a></li>
+                                    <li><a href="#n"><img src="images/narangd04.png" alt="나랑드사이다 사진"></a></li>
+                                </ul>
+                                <div class="btn">
+                                    <a href="#n">
+                                        <span>자세히 보기</span>
+                                        <i class="material-symbols-outlined">add</i>
+                                    </a>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="inner"> <!-- 데미소다 -->
-                <div class="bg">
-                    <h2>DONGA BRAND</h2>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#n">포카리스웨트</a></li>
-                            <li><a href="#n">오로나민 C</a></li>
-                            <li><a href="#n">데미소다</a></li>
-                            <li><a href="#n">나랑드사이다</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="contents">
-                    <div class="main_pic">
-                        <img src="images/pocari00.png" alt="포카리스웨트 사진">
-                    </div>
-                    <div class="total">
-                        <strong>포카리스웨트</strong>
-                        <p>내 몸에 가까운 물 포카리스웨트,<br>
-                            너의 수분 밸런스는 어때? 너의 끝없는 갈증, 포카리가 채워줄게.
-                            <span>걱정은 포카리 한잔에 털어버려!</span></p>
-                        <ul>
-                            <li><a href="#n"><img src="images/pocari01.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari02.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari03.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari04.png" alt="포카리스웨트 사진"></a></li>
-                        </ul>
-                        <div class="btn">
-                            <a href="#n">
-                                <span>자세히 보기</span>
-                                <i class="material-symbols-outlined">add</i>
-                            </a>
-                        </div>
-                    </div> 
-                </div>
+        </section>
+        <section class="event">
+            <div class="tit">
+                <h2>NEWS & EVENT</h2>
+                <p>고객의 건강을 생각하는 동아오츠카의 최신 소식을 전해 드립니다.</p>
             </div>
-            <div class="inner "> <!-- 나랑드사이다 -->
-                <div class="bg">
-                    <h2>DONGA BRAND</h2>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#n">포카리스웨트</a></li>
-                            <li><a href="#n">오로나민 C</a></li>
-                            <li><a href="#n">데미소다</a></li>
-                            <li><a href="#n">나랑드사이다</a></li>
-                        </ul>
-                    </div>
+            <div class="detail">
+                <div class="main_txt">
+                    <strong>DONGA-OTSUKA</strong>
+                    <span>동아오츠카의 즐거운 소식을 지금 만나보세요</span>
                 </div>
-                <div class="contents">
-                    <div class="main_pic">
-                        <img src="images/pocari00.png" alt="포카리스웨트 사진">
-                    </div>
-                    <div class="total">
-                        <strong>포카리스웨트</strong>
-                        <p>내 몸에 가까운 물 포카리스웨트,<br>
-                            너의 수분 밸런스는 어때? 너의 끝없는 갈증, 포카리가 채워줄게.
-                            <span>걱정은 포카리 한잔에 털어버려!</span></p>
-                        <ul>
-                            <li><a href="#n"><img src="images/pocari01.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari02.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari03.png" alt="포카리스웨트 사진"></a></li>
-                            <li><a href="#n"><img src="images/pocari04.png" alt="포카리스웨트 사진"></a></li>
-                        </ul>
-                        <div class="btn">
-                            <a href="#n">
-                                <span>자세히 보기</span>
-                                <i class="material-symbols-outlined">add</i>
-                            </a>
-                        </div>
-                    </div> 
+                <ul>
+                    <li class="sct01">
+                        <a href="#n">
+                            <img src="images/news01.png" alt="D&cafe">
+                            <div class="inner">
+                                <strong>01</strong>
+                                <span>D&cafe</span>
+                            </div>
+                            <p>동아오츠카는 카라멜라떼는 달콤한 카라멜과 부드러운 우유 성분을 함유하고, 콜롬비아 아라비카 커피를 딥 로스팅해 풍부한 맛을 자랑한다고 설명했다.</p>
+                        </a>
+                    </li>
+                    <li class="sct02">
+                        <a href="#n">
+                            <p>동아오츠카는 소비자의 니즈를 조사해 한국인이 가장 좋아하는 과일 망고를 선정 저탄산 과즙음료 데미소다의 신규 플레이버 '레드애플’과 '망고'를 출시했다.</p>
+                            <div class="inner">
+                                <strong>02</strong>
+                                <span>Demisoda</span>
+                            </div>
+                            <img src="images/news02.png" alt="Demisoda">
+                        </a>
+                    </li>
+                    <li class="sct01">
+                        <a href="#n">
+                            <img src="images/news03.png" alt="Narangd">
+                            <div class="inner">
+                                <strong>03</strong>
+                                <span>Narangd</span>
+                            </div>
+                            <p>피트니스 소비층을 중심으로 유투브, 인스타그램 등 SNS상에서 자발적인 나랑드사이다 제품 추천 콘텐츠가 늘어났고 이는 일반 소비층에게까지 이어져 브랜드  인지도 확대와 매출 상승</p>
+                        </a>
+                    </li>
+                    <li class="sct02">
+                        <a href="#n">
+                            <p>동아오츠카는 SNS 통해 일상 공유, 특별한 경험을 찾아다니는 MZ세대 취향 반영하여  ‘오로나민C 나이트 아웃(Night Out)’ 팝업 체험존’을 열었다.</p>
+                            <div class="inner">
+                                <strong>04</strong>
+                                <span>Night Out</span>
+                            </div>
+                            <img src="images/news04.png" alt="Night Out">
+                        </a>
+                    </li>
+                    <li class="sct01">
+                        <a href="#n">
+                            <img src="images/news05.png" alt="League">
+                            <div class="inner">
+                                <strong>05</strong>
+                                <span>League</span>
+                            </div>
+                            <p>동아오츠카는 지난 15일 경기도 시흥에 위치한 솔트베이 GC에서 ‘포카리스웨트 이온워터 여성 챔피언십’ 오프라인 필드 대회를 개최했다고 16일 밝혔다.</p>
+                        </a>
+                    </li>
+                    <li class="sct02">
+                        <a href="#n">
+                            <p>동아오츠카의 포카리스웨트가 ‘2022 포카리스웨트 블루라벨 캠페인’을 진행한다고 12일 밝혔다.</p>
+                            <div class="inner">
+                                <strong>06</strong>
+                                <span>Blue label</span>
+                            </div>
+                            <img src="images/news06.png" alt="Blue label">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="sns">
+            <div class="tit">
+                <h2>SNS</h2>
+                <p>DONGA-OTSUKA INSTARGRAM</p>
+            </div>
+            <div class="list swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns01.png" alt="sns 사진"></a></li>
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns02.png" alt="sns 사진"></a></li>
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns03.png" alt="sns 사진"></a></li>
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns04.png" alt="sns 사진"></a></li>
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns05.png" alt="sns 사진"></a></li>
+                    <li class="swiper-slide"><a href="#n"><img src="images/sns06.png" alt="sns 사진"></a></li>
+                </ul>
+            </div>
+            <div class="bg_txt">DONGA-OTSUKA INSTARGRAM</div>
+        </section>
+        <section class="center">
+            <h2>center</h2>
+            <div class="inner">
+                <div class="recruit">
+                    <strong>인재채용</strong>
+                    <p>동아오츠카에서 무한한 가능성을 키우고<br> 이상을 맘껏 펼쳐보세요.</p>
+                    <a href="#n">
+                        <span>채용공고</span>
+                        <i class="material-symbols-outlined">arrow_forward</i>
+                    </a>
+                </div>
+                <div class="service">
+                    <strong>고객센터</strong>
+                    <p>제품에 대한 문의사항, 동아오츠카 자판기/냉장고 AS접수 등의<br> 궁금하신 사항이나 불만 사항이 있으시면 연락주세요.</p>
+                    <a href="#n">
+                        <span>고객상담</span>
+                        <i class="material-symbols-outlined">arrow_forward</i>
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="event"></section>
-        <section class="sns"></section>
-        <section class="center"></section>
         <footer class="footer"></footer>
     </div>
 </body>

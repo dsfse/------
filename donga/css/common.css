@@ -66,6 +66,10 @@ header .logo {
 header .logo a {
     display: block;
 }
+header .logo a img {
+    width: 196px;
+    height: 30px;
+}
 header .gnb {
     float: right;
     padding-right: 50px;
