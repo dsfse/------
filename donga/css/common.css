@@ -91,7 +91,143 @@ header .gnb {
 .header .gnb .gnb_open i {
     width: 23px;
     height: 19px;
+    line-height: 100px;
 }
 .header .gnb .gnb_close {
     display: none;
+}
+@media screen and (max-width:640px){
+    header {
+        height: 60px;
+    }
+    header .logo {
+        padding-left: 20px;
+        line-height: 60px;
+    }
+    header .logo a img {
+        width: 102px;
+        height: 16px;
+    }
+    header .gnb {
+        padding-right: 20px;
+    }
+    header .gnb {
+        height: 60px;
+    }
+    .header .gnb .gnb_open {
+        line-height: 60px;
+    }
+    .header .gnb .gnb_open i {
+        line-height: 60px;
+    }
+}
+
+footer {
+    margin: 100px 0 140px 0;
+    height: 400px;
+}
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .inner2 {
+    display: flex;
+    flex-direction: column;
+}
+footer .inner .inner2 .f_logo {
+    width: 196px;
+    height: 30px;
+}
+footer .inner .inner2 .f_logo img {
+    width: 100%;
+}
+footer .inner .inner2 .f_menu {
+    margin: 30px 0 20px 0;
+    font-size: 20px;
+}
+footer .inner .inner2 .f_menu span {
+    margin-right: 50px;
+}
+footer .inner .inner2 .f_info {
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 20px;
+}
+footer .inner .inner2 .copyright {
+    color: #777;
+    font-size: 20px;
+}
+footer .inner .inner3 {
+    display: flex;
+    flex-direction: column;
+}
+footer .inner .inner3 .family {
+    padding: 0 20px;
+    margin: 80px 0 20px 0;
+    width: 210px;
+    height: 45px;
+    border: 1px solid #777;
+    line-height: 45px;
+}
+footer .inner .inner3 .family a {
+    display: block;
+    float: left;
+}
+footer .inner .inner3 .family i {
+    float: right;
+    font-size: 23px;
+    line-height: 45px;
+}
+footer .inner .inner3 .sns ul {
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width:800px){
+    footer {
+        margin: 50px 0 80px 0;
+        height: 320px;
+    }
+    footer .inner {
+        flex-direction: column;
+    }
+    footer .inner .inner2 {
+        align-items: center;
+    }
+    footer .inner .inner2 .f_logo {
+        width: 102px;
+        height: 16px;
+    }
+    footer .inner .inner2 .f_menu {
+        margin: 20px 0 20px 0;
+        font-size: 13px;
+    }
+    footer .inner .inner2 .f_menu span {
+        margin-right: 20px;
+    }
+    footer .inner .inner2 .f_info {
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    footer .inner .inner2 .copyright {
+        font-size: 13px;
+    }
+    footer .inner .inner3 {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+    }
+    footer .inner .inner3 .family {
+        padding: 0 10px;
+        margin: 0;
+        width: 119px;
+        height: 40px;
+        line-height: 40px;
+    }
+    footer .inner .inner3 .family i {
+        font-size: 15px;
+        line-height: 40px;
+    }
+    footer .inner .inner3 .sns ul li {
+        margin-right: 10px;
+    }
 }

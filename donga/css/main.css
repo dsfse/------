@@ -384,7 +384,7 @@
         font-size: 30px;
     }
     .product .product_detail > ul > li .contents .total p {
-        margin: 30px 0;
+        margin: 50px 0;
     }
 }
 @media screen and (max-width:1050px){
@@ -715,6 +715,7 @@ animation-timing-function: linear;
 }
 
 .center {
+    margin-bottom: 150px;
     height: 400px;
 }
 .center h2 {
@@ -726,9 +727,12 @@ animation-timing-function: linear;
     color: #fff;
 }
 .center .inner .recruit {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
     background: url(../images/center01.png) no-repeat center center /cover;
     padding: 85px 0 0 159px;
-    width: 960px;
+    width: 50%;
     height: 400px;
 }
 .center .inner .recruit strong {
@@ -736,11 +740,171 @@ animation-timing-function: linear;
     font-size: 50px;
 }
 .center .inner .recruit p {
+    margin: 10px 0 52px 0;
     font-size: 20px;
 }
 .center .inner .service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     background: url(../images/center02.png) no-repeat center center /cover;
-    padding: 85px 159px 0 0;
-    width: 960px;
+    padding: 85px 167px 0 0;
+    width: 50%;
     height: 400px;
+}
+.center .inner .service strong {
+    font-family: 'Jua';
+    font-size: 50px;
+}
+.center .inner .service p {
+    margin: 10px 0 52px 0;
+    font-size: 20px;
+}
+.center .inner .recruit a {
+    display: block;
+    padding: 0 20px;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.center .inner .recruit a span {
+    float: left;
+}
+.center .inner .recruit a i {
+    float: right;
+    line-height: 40px;
+}
+.center .inner .service a {
+    display: block;
+    padding: 0 20px;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.center .inner .service a span {
+    float: left;
+}
+.center .inner .service a i {
+    float: right;
+    line-height: 40px;
+}
+@media screen and (max-width:1440px){ 
+    .center {
+        margin-bottom: 130px;
+        height: 350px;
+    }
+    .center .inner .recruit {
+        align-items: center;
+        padding: 85px 0 0 0;
+        height: 350px;
+    }
+    .center .inner .recruit strong {
+        font-size: 40px;
+    }
+    .center .inner .recruit p {
+        margin: 10px 0 40px 0;
+        text-align: center;
+    }
+    .center .inner .service {
+        align-items: center;
+        padding: 85px 0 0 0;
+        height: 350px;
+    }
+    .center .inner .service strong {
+        font-size: 40px;
+    }
+    .center .inner .service p {
+        margin: 10px 0 40px 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width:1000px){ 
+    .center {
+        margin-bottom: 80px;
+        height: 250px;
+    }
+    .center .inner .recruit {
+        padding: 50px 20px 0 20px;
+        height: 250px;
+    }
+    .center .inner .recruit strong {
+        font-size: 35px;
+    }
+    .center .inner .recruit p {
+        margin: 10px 0 15px 0;
+        font-size: 15px;
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+    .center .inner .service {
+        padding: 50px 20px 0 20px;
+        height: 250px;
+    }
+    .center .inner .service strong {
+        font-size: 35px;
+    }
+    .center .inner .service p {
+        margin: 10px 0 15px 0;
+        font-size: 15px;
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:640px){ 
+    .center {
+        margin-bottom: 50px;
+        height: 150px;
+    }
+    .center .inner .recruit {
+        padding: 40px 0 0 0;
+        height: 150px;
+        align-items: center;
+    }
+    .center .inner .recruit strong {
+        font-size: 30px;
+    }
+    .center .inner .recruit p {
+        display: none;
+    }
+    .center .inner .recruit a {
+        margin-top: 10px;
+        padding: 0 10px;
+        width: 102px;
+        height: 30px;
+        border-radius: 15px;
+        line-height: 30px;
+    }
+    .center .inner .recruit a i {
+        font-size: 13px;
+        line-height: 30px;
+    }
+    .center .inner .service {
+        padding: 40px 0 0 0;
+        height: 150px;
+        align-items: center;
+    }
+    .center .inner .service a {
+        margin-top: 10px;
+        padding: 0 10px;
+        width: 102px;
+        height: 30px;
+        border-radius: 15px;
+        line-height: 30px;
+    }
+    .center .inner .service a i {
+        font-size: 13px;
+        line-height: 30px;
+    }
+    .center .inner .service strong {
+        font-size: 30px;
+    }
+    .center .inner .service p {
+        display: none;
+    }
 }
