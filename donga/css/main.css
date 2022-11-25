@@ -489,11 +489,11 @@
 }
 
 .event {
-    margin: 150px 0 285px 0;
+    margin: 150px 0 0 0;
 }
 .event .tit {
     text-align: center;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 .event .tit h2 {
     font-family: 'Jua', sans-serif;
@@ -506,36 +506,31 @@
 }
 .event .detail {
     position: relative;
-    left: calc(50% - 500px);
-    top: 0;
-    width: calc(50% + 500px);
-}
-.event .detail .main_txt {
-    position: absolute;
-    left: -300px;
-    top: 110px;
-    transform: rotate(90deg);
-}
-.event .detail .main_txt strong {
-    display: block;
-    font-family: 'Jua', sans-serif;
-    font-size: 30px;
-    color: #90D7FC;
-}
-.event .detail .main_txt p {
-    font-size: 20px;
+    padding: 150px 0 285px 0;
 }
 .event .detail ul {
     display: flex;
 }
 .event .detail ul li {
-    margin-right: 80px;
-}
-.event .detail ul li:last-child {
-    margin-right: 0;
-}
-.event .detail ul li {
     position: relative;
+    width: 200px;
+}
+.event .detail ul::after {
+    position: absolute;
+    left: -340px;
+    top: 150px;
+    font-size: 20px;
+    transform: rotate(90deg);
+    content: "동아오츠카의 즐거운 소식을 지금 만나보세요";
+}
+.event .detail ul::before {
+    position: absolute;
+    left: -230px;
+    top: 70px;
+    color: #90D7FC;
+    font-size: 30px;
+    transform: rotate(90deg);
+    content: "DONGA-OTSUKA";
 }
 .event .detail ul li::after {
     position: absolute;
@@ -591,6 +586,90 @@
 }
 .event .detail ul li.sct02 img {
     margin-top: 26px;
+}
+@media screen and (max-width:1400px){
+    .event {
+        margin: 120px 0 0 0;
+    }
+    .event .tit h2 {
+        font-size: 40px;
+    }
+    .event .tit p {
+        font-size: 18px;
+    }
+    .event .detail {
+        padding: 100px 0 200px 0;
+    }
+}
+@media screen and (max-width:1000px){
+    .event {
+        margin: 80px 0 0 0;
+    }
+    .event .tit h2 {
+        font-size: 30px;
+    }
+    .event .tit p {
+        font-size: 15px;
+    }
+    .event .detail {
+        padding: 100px 0 150px 0;
+    }
+}
+@media screen and (max-width:640px){
+    .event {
+        margin: 50px 0 0 0;
+    }
+    .event .tit p {
+        font-size: 13px;
+    }
+    .event .detail {
+        position: relative;
+        padding: 50px 0;
+    }
+    .event .detail ul li {
+        width: 96px;
+    }
+    .event .detail ul li a {
+        display: block;
+    }
+    .event .detail ul li a img {
+        width: 96px;
+    }
+    .event .detail ul::after {
+        left: -210px;
+        top: 110px;
+        font-size: 13px;
+    }
+    .event .detail ul::before {
+        left: -120px;
+        top: 45px;
+        font-size: 15px;
+    }
+    .event .detail ul li::after {
+        left: -40px;
+        top: 0;
+        height: 239px;
+    }
+    .event .detail ul li.sct01 .inner strong {
+        font-size: 20px;
+    }
+    .event .detail ul li.sct01 .inner span {
+        font-size: 13px;
+    }
+    .event .detail ul li.sct01 p {
+        margin-top: 15px;
+        height: 6em;
+    }
+    .event .detail ul li.sct02 p {
+        margin: 10px 0 20px 0;
+        height: 6em;
+    }
+    .event .detail ul li.sct02 .inner strong {
+        font-size: 20px;
+    }
+    .event .detail ul li.sct02 img {
+        margin-top: 32px;
+    }
 }
 
 .sns {

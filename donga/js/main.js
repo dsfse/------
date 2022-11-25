@@ -26,4 +26,49 @@ $(document).ready(function(){
         },
     });
 
+
+    const swiper_event = new Swiper(".event .detail ", {
+        slidesPerView: 'auto',
+        spaceBetween: 80,
+        mousewheel: true,
+        centeredSlides: true,
+        on: {
+            slideChange: function() {
+                setTimeout(function () {
+                    swiper_event.params.touchReleaseOnEdges = false;  
+                    swiper_event.params.mousewheel.releaseOnEdges = false;
+                });
+            },
+            reachEnd: function() {
+                setTimeout(function () {
+                    swiper_event.params.touchReleaseOnEdges = true;
+                    swiper_event.params.mousewheel.releaseOnEdges = true;
+                }, 500);
+            },
+            reachBeginning: function() {
+                setTimeout(function () {
+                    swiper_event.params.touchReleaseOnEdges = true;
+                    swiper_event.params.mousewheel.releaseOnEdges = true;
+                }, 500);
+            }
+        }
+    });
+
+    let event_h = $('.event').height()
+    let event_top = $('.event').offset().top
+    let scrolling = $(window).scrollTop()
+    $(window).scroll(function(){
+        
+    });
+
+    function event_chk(){
+        event_h = $('.event').height()
+        event_top = $('.event').offset().top
+        scrolling = $(window).scrollTop()
+        if((scrolling > event_top)&&(scrolling < event_top + event_h)){
+            swiper_event.params.touchReleaseOnEdges = false;  
+            swiper_event.params.mousewheel.releaseOnEdges = false;
+        }
+    }
+
 });
